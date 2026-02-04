@@ -1,10 +1,5 @@
-# BrianLeeWestfall.com — Project Handoff Document
+# ⚠️ DEPRECATED — This file has been replaced
 
-See full document in Claude Project files. Last updated Feb 2, 2026.
+See **[HANDOFF-BrianLeeWestfall-Website.md](../HANDOFF-BrianLeeWestfall-Website.md)** in the repo root.
 
-## Quick Status
-- **forensic-visualization.html** ✅ Live in repo
-- **index.html** ❌ Needs rebuild and push
-- **Brand:** AI Vision Designs (AVD)
-- **Design:** Navy #0A1628 + Gold #C49A3C, Playfair Display / DM Sans / Cormorant Garamond
-- **Next step:** Build and push complete homepage
+This file can be safely deleted along with the `/docs` folder.
