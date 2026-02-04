@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Brian Lee Westfall | AI Vision Designs — Fort Worth 3D Pool Designer</title>
+    <meta name="description" content="Meet Brian Lee Westfall — 20+ years transforming outdoor spaces with 3D design, forensic visualization & pool inspections. Fort Worth, TX.">
+    <meta name="author" content="Brian Lee Westfall — AI Vision Designs">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="About Brian Lee Westfall | AI Vision Designs">
+    <meta property="og:description" content="The visionary behind 20+ years of luxury pool design. Meet Brian, explore his studio, and discover the craft behind every render.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://brianleewestfall.com/about">
+    <meta property="og:image" content="https://brianleewestfall.com/images/about-brian-1200w.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="1500">
+    <meta property="og:site_name" content="Brian Lee Westfall — AI Vision Designs">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About Brian Lee Westfall | AI Vision Designs">
+    <meta name="twitter:description" content="20+ years of pool design, forensic visualization & licensed insurance adjuster. Fort Worth, TX.">
+    <meta name="twitter:image" content="https://brianleewestfall.com/images/about-brian-1200w.webp">
+    <link rel="canonical" href="https://brianleewestfall.com/about">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #C49A3C;
+            --gold-light: #D4AF5C;
+            --gold-pale: #E8D5A8;
+            --blue: #3498DB;
+            --blue-light: #5DADE2;
+            --navy: #111214;
+            --navy-light: #1A1B1E;
+            --navy-mid: #222326;
+            --white: #F5F0E8;
+            --text-primary: #E8E0D0;
+            --text-secondary: #9A9488;
+            --font-heading: 'Playfair Display', Georgia, serif;
+            --font-body: 'DM Sans', system-ui, sans-serif;
+            --font-elegant: 'Cormorant Garamond', Georgia, serif;
+        }
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--font-body); background: var(--navy); color: var(--text-primary); line-height: 1.6; overflow-x: hidden; }
+        img { max-width: 100%; height: auto; display: block; }
+        a { color: var(--gold); text-decoration: none; transition: color 0.3s; }
+        a:hover { color: var(--gold-light); }
+
+        /* NAV */
+        .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 1.25rem 2rem; display: flex; align-items: center; justify-content: space-between; background: rgba(17,18,20,0.92); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(196,154,60,0.08); transition: all 0.4s; }
+        .nav.scrolled { padding: 0.75rem 2rem; background: rgba(17,18,20,0.97); }
+        .nav-brand { font-family: var(--font-heading); font-size: 1.35rem; font-weight: 600; color: var(--gold); letter-spacing: 0.02em; }
+        .nav-brand span { color: var(--white); font-weight: 400; }
+        .nav-links { display: flex; gap: 2rem; align-items: center; }
+        .nav-links a { font-size: 0.85rem; font-weight: 500; color: var(--text-secondary); letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.3s; }
+        .nav-links a:hover, .nav-links a.active { color: var(--gold); }
+        .nav-cta { background: var(--gold); color: var(--navy) !important; padding: 0.6rem 1.5rem; border-radius: 6px; font-weight: 600; font-size: 0.8rem; letter-spacing: 0.06em; }
+        .nav-cta:hover { background: var(--gold-light); color: var(--navy) !important; }
+
+        /* MOBILE NAV */
+        .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
+        .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--gold); margin: 5px 0; transition: 0.3s; }
+
+        /* HERO BANNER */
+        .about-hero { padding: 10rem 2rem 5rem; text-align: center; background: linear-gradient(180deg, var(--navy) 0%, var(--navy-light) 100%); position: relative; }
+        .about-hero::after { content: ''; position: absolute; bottom: 0; left: 10%; right: 10%; height: 1px; background: linear-gradient(90deg, transparent, var(--blue), transparent); opacity: 0.3; }
+        .about-hero .section-label { font-family: var(--font-body); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--blue); margin-bottom: 1rem; }
+        .about-hero h1 { font-family: var(--font-heading); font-size: clamp(2.2rem, 5vw, 3.5rem); font-weight: 600; color: var(--white); line-height: 1.15; margin-bottom: 1rem; }
+        .about-hero h1 em { font-style: italic; color: var(--blue); }
+        .about-hero .subtitle { font-family: var(--font-elegant); font-size: 1.25rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto; font-style: italic; }
+
+        /* SECTIONS */
+        .section { padding: 5rem 2rem; }
+        .section-inner { max-width: 1100px; margin: 0 auto; }
+
+        /* MY STORY — split layout */
+        .story { background: var(--navy-light); }
+        .story-grid { display: grid; grid-template-columns: 400px 1fr; gap: 4rem; align-items: start; }
+        .story-portrait { border-radius: 16px; overflow: hidden; position: relative; box-shadow: 0 20px 60px rgba(0,0,0,0.4); }
+        .story-portrait img { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: top; }
+        .story-portrait::after { content: ''; position: absolute; inset: 0; border: 1px solid rgba(196,154,60,0.15); border-radius: 16px; pointer-events: none; }
+        .story-content { padding-top: 0.5rem; }
+        .story-content .section-label { font-family: var(--font-body); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--blue); margin-bottom: 0.75rem; }
+        .story-content h2 { font-family: var(--font-heading); font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 600; color: var(--white); margin-bottom: 1.5rem; line-height: 1.2; }
+        .story-content p { font-size: 1rem; line-height: 1.8; color: var(--text-primary); margin-bottom: 1.25rem; }
+        .story-content p:last-of-type { margin-bottom: 0; }
+
+        /* JULIE SECTION */
+        .julie { background: var(--navy); }
+        .julie-grid { display: grid; grid-template-columns: 1fr 450px; gap: 4rem; align-items: center; }
+        .julie-content .section-label { font-family: var(--font-body); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--blue); margin-bottom: 0.75rem; }
+        .julie-content h2 { font-family: var(--font-heading); font-size: clamp(1.8rem, 3vw, 2.2rem); font-weight: 600; color: var(--white); margin-bottom: 1.5rem; line-height: 1.2; }
+        .julie-content p { font-size: 1rem; line-height: 1.8; color: var(--text-primary); margin-bottom: 1.25rem; }
+        .julie-photo { border-radius: 16px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.4); }
+        .julie-photo img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
+
+        /* STUDIO SECTION */
+        .studio { background: var(--navy-light); }
+        .studio-header { text-align: center; margin-bottom: 3rem; }
+        .studio-header .section-label { font-family: var(--font-body); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--blue); margin-bottom: 0.75rem; }
+        .studio-header h2 { font-family: var(--font-heading); font-size: clamp(1.8rem, 3vw, 2.5rem); font-weight: 600; color: var(--white); margin-bottom: 1rem; }
+        .studio-header p { font-family: var(--font-elegant); font-size: 1.15rem; color: var(--text-secondary); font-style: italic; max-width: 600px; margin: 0 auto; }
+        .studio-photos { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 3rem; }
+        .studio-photo { border-radius: 12px; overflow: hidden; box-shadow: 0 12px 40px rgba(0,0,0,0.3); }
+        .studio-photo img { width: 100%; aspect-ratio: 16/9; object-fit: cover; }
+        .studio-photo figcaption { padding: 1rem 1.25rem; background: var(--navy); font-size: 0.85rem; color: var(--text-secondary); }
+        .studio-photo figcaption strong { color: var(--blue); font-weight: 600; }
+
+        /* TECH LOGO GRID */
+        .tech-label { text-align: center; font-family: var(--font-body); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 1.5rem; }
+        .tech-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; align-items: center; }
+        .tech-logo { display: flex; align-items: center; justify-content: center; background: var(--navy); border: 1px solid rgba(196,154,60,0.08); border-radius: 12px; padding: 1.25rem; width: 120px; height: 120px; transition: all 0.3s; }
+        .tech-logo:hover { border-color: var(--blue); transform: translateY(-3px); box-shadow: 0 8px 25px rgba(52,152,219,0.12); }
+        .tech-logo img { max-width: 90px; max-height: 90px; object-fit: contain; filter: brightness(0.85); transition: filter 0.3s; }
+        .tech-logo:hover img { filter: brightness(1.1); }
+
+        /* LICENSE */
+        .license { background: var(--navy-light); }
+        .license-grid { display: grid; grid-template-columns: 420px 1fr; gap: 3rem; align-items: center; }
+        .license-image { border-radius: 12px; overflow: hidden; border: 1px solid rgba(52,152,219,0.15); box-shadow: 0 8px 32px rgba(0,0,0,0.3); }
+        .license-image img { width: 100%; display: block; }
+        .license-content .section-label { font-family: var(--font-body); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--blue); margin-bottom: 1rem; }
+        .license-content h2 { font-family: var(--font-heading); font-size: clamp(1.4rem, 2.5vw, 1.8rem); color: var(--white); margin-bottom: 1.25rem; }
+        .license-content p { font-size: 1rem; color: var(--text-secondary); line-height: 1.8; margin-bottom: 1rem; }
+        .license-detail { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: var(--text-secondary); padding: 0.5rem 1rem; background: rgba(52,152,219,0.08); border: 1px solid rgba(52,152,219,0.15); border-radius: 8px; margin-right: 0.75rem; margin-bottom: 0.5rem; }
+        .license-detail strong { color: var(--blue); font-weight: 600; }
+        @media (max-width: 900px) {
+            .license-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .license-image { max-width: 380px; margin: 0 auto; }
+        }
+
+        /* CTA */
+        .cta-section { background: linear-gradient(135deg, var(--navy-mid) 0%, var(--navy) 100%); text-align: center; padding: 5rem 2rem; position: relative; }
+        .cta-section::before { content: ''; position: absolute; top: 0; left: 10%; right: 10%; height: 1px; background: linear-gradient(90deg, transparent, var(--blue), transparent); opacity: 0.3; }
+        .cta-section h2 { font-family: var(--font-heading); font-size: clamp(1.8rem, 3vw, 2.5rem); color: var(--white); margin-bottom: 1rem; }
+        .cta-section p { font-family: var(--font-elegant); font-size: 1.15rem; color: var(--text-secondary); font-style: italic; margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto; margin-bottom: 2rem; }
+        .btn-gold { display: inline-block; background: var(--gold); color: var(--navy); font-weight: 600; font-size: 0.9rem; letter-spacing: 0.06em; padding: 1rem 2.5rem; border-radius: 8px; text-transform: uppercase; transition: all 0.3s; }
+        .btn-gold:hover { background: var(--gold-light); color: var(--navy); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(196,154,60,0.25); }
+
+        /* FOOTER */
+        footer { background: var(--navy); padding: 3rem 2rem 1.5rem; border-top: 1px solid rgba(196,154,60,0.08); text-align: center; }
+        .footer-brand { font-family: var(--font-heading); font-size: 1.1rem; color: var(--gold); margin-bottom: 0.5rem; }
+        .footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 1.5rem; }
+        .footer-links a { font-size: 0.8rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.08em; }
+        .footer-copy { font-size: 0.75rem; color: var(--text-secondary); opacity: 0.6; }
+
+        /* SCROLL REVEAL */
+        .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            .story-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+            .story-portrait { max-width: 350px; margin: 0 auto; }
+            .julie-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+            .julie-photo { order: -1; max-width: 450px; margin: 0 auto; }
+            .studio-photos { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(17,18,20,0.98); flex-direction: column; justify-content: center; align-items: center; gap: 2rem; }
+            .nav-links.open { display: flex; }
+            .nav-toggle { display: block; z-index: 101; }
+            .about-hero { padding: 8rem 1.5rem 3.5rem; }
+            .section { padding: 3.5rem 1.5rem; }
+            .story-portrait { max-width: 280px; }
+        }
+    </style>
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "mainEntity": {
+            "@type": "Person",
+            "name": "Brian Lee Westfall",
+            "jobTitle": "AI Visual Design Artist, Pool Designer & Licensed Insurance Adjuster",
+            "description": "Over 20 years transforming outdoor spaces with photorealistic 3D visualization, cinematic walkthroughs, construction-ready plans, and forensic visualization services.",
+            "url": "https://brianleewestfall.com/about",
+            "hasCredential": {
+                "@type": "EducationalOccupationalCredential",
+                "credentialCategory": "license",
+                "name": "Texas All-Lines Insurance Adjuster License",
+                "recognizedBy": {
+                    "@type": "Organization",
+                    "name": "Texas Department of Insurance"
+                }
+            },
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Fort Worth",
+                "addressRegion": "TX",
+                "addressCountry": "US"
+            },
+            "worksFor": {
+                "@type": "Organization",
+                "name": "AI Vision Designs",
+                "url": "https://brianleewestfall.com"
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <a href="index.html" class="nav-brand">AI Vision <span>Designs</span></a>
+        <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+            <span></span><span></span><span></span>
+        </button>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="forensic-visualization.html">Forensic</a>
+            <a href="pool-safety.html">Pool Safety</a>
+            <a href="index.html#portfolio">Portfolio</a>
+            <a href="tel:9404334333" class="nav-cta">Call (940) 433-4333</a>
+        </div>
+    </nav>
+
+    <!-- HERO BANNER -->
+    <section class="about-hero">
+        <p class="section-label reveal">About</p>
+        <h1 class="reveal">Meet the <em>Visionary</em> Behind the Design</h1>
+        <p class="subtitle reveal">20+ years of turning dreams into photorealistic reality</p>
+    </section>
+
+    <!-- MY STORY -->
+    <section class="section story">
+        <div class="section-inner">
+            <div class="story-grid">
+                <div class="story-portrait reveal">
+                    <picture>
+                        <source srcset="images/about-brian-400w.webp 400w, images/about-brian-800w.webp 800w, images/about-brian-1200w.webp 1200w" sizes="(max-width:768px) 280px, 400px" type="image/webp">
+                        <img src="images/about-brian-1200w.webp" alt="Brian Lee Westfall — 3D Pool & Landscape Designer, Fort Worth Texas" width="400" height="500" loading="eager">
+                    </picture>
+                </div>
+                <div class="story-content reveal">
+                    <p class="section-label">My Story</p>
+                    <h2>Hello, I'm Brian Westfall</h2>
+                    <p>For over two decades, my passion has been helping people create the outdoor oasis they've always dreamed of. From owning a pool construction company to hands-on building, I've been involved in every phase of the process — design, construction, outdoor living spaces, and everything in between.</p>
+                    <p>My journey brought me to Fort Worth, where I met my incredible wife, Julie. Her inspiration has been the foundation for this chapter of my career, allowing me to focus on the part of the process I love most: the design.</p>
+                    <p>Today I work as an AI Visual Design Artist, combining my deep construction knowledge with state-of-the-art technology to help clients see and experience their vision before a single stone is laid. My sophisticated yet approachable design process is built on a simple foundation: to reflect your aspirations and enhance your lifestyle.</p>
+                    <p>I also hold a Texas All-Lines Insurance Adjuster License and conduct swimming pool inspections — bringing the same attention to detail and commitment to safety that drives every project I touch.</p>
+                    <p>I enhance projects by incorporating natural elements — light, water, and location — to create a space that perfectly reflects my clients' desires. By extensively integrating unique aquatic features, my designs stand out and deliver that "wow factor" you're seeking.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JULIE -->
+    <section class="section julie">
+        <div class="section-inner">
+            <div class="julie-grid">
+                <div class="julie-content reveal">
+                    <p class="section-label">The Foundation</p>
+                    <h2>Creating Dreams Together</h2>
+                    <p>My wife Julie has been the inspiration behind everything I do. Her encouragement gave me the freedom to focus entirely on design — the part of this work that lights me up every single day. Together, we've built not just a business, but a life centered around creativity, craftsmanship, and helping families realize their vision of the perfect outdoor space.</p>
+                    <p>Every project begins with a conversation, and every conversation begins with understanding what matters most to you. That personal connection is what transforms a design from good to extraordinary.</p>
+                </div>
+                <div class="julie-photo reveal">
+                    <picture>
+                        <source srcset="images/about-couple-400w.webp 400w, images/about-couple-800w.webp 800w, images/about-couple-1200w.webp 1200w" sizes="(max-width:900px) 100vw, 450px" type="image/webp">
+                        <img src="images/about-couple-1200w.webp" alt="Brian and Julie Westfall" width="450" height="338" loading="lazy">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DESIGN STUDIO -->
+    <section class="section studio">
+        <div class="section-inner">
+            <div class="studio-header reveal">
+                <p class="section-label">The Design Studio</p>
+                <h2>Where Vision Meets Technology</h2>
+                <p>A high-performance digital design studio built to bring your vision to life with photorealistic accuracy</p>
+            </div>
+            <div class="studio-photos">
+                <figure class="studio-photo reveal">
+                    <picture>
+                        <source srcset="images/about-studio-monitors-400w.webp 400w, images/about-studio-monitors-800w.webp 800w, images/about-studio-monitors-1200w.webp 1200w" sizes="(max-width:900px) 100vw, 50vw" type="image/webp">
+                        <img src="images/about-studio-monitors-1200w.webp" alt="Triple-monitor design workstation" width="600" height="338" loading="lazy">
+                    </picture>
+                    <figcaption><strong>Command Center</strong> — Triple curved monitors for immersive design work</figcaption>
+                </figure>
+                <figure class="studio-photo reveal">
+                    <picture>
+                        <source srcset="images/about-studio-wide-400w.webp 400w, images/about-studio-wide-800w.webp 800w, images/about-studio-wide-1200w.webp 1200w" sizes="(max-width:900px) 100vw, 50vw" type="image/webp">
+                        <img src="images/about-studio-wide-1200w.webp" alt="Full design studio with multi-computer setup" width="600" height="338" loading="lazy">
+                    </picture>
+                    <figcaption><strong>Full Studio</strong> — Multi-system rendering powered by RTX 4090 graphics</figcaption>
+                </figure>
+            </div>
+            <p class="tech-label reveal">My Digital Toolkit Includes Technology From</p>
+            <div class="tech-grid reveal">
+                <a href="https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/rtx-4090/" target="_blank" rel="noopener" class="tech-logo" title="NVIDIA GeForce RTX 4090"><img src="images/logo-nvidia.webp" alt="NVIDIA RTX 4090" width="90" height="90" loading="lazy"></a>
+                <a href="https://www.intel.com/content/www/us/en/products/docs/processors/core/13th-gen-core-desktop-brief.html" target="_blank" rel="noopener" class="tech-logo" title="Intel Core i9-13900KS"><img src="images/logo-intel.webp" alt="Intel i9-13900KS" width="90" height="90" loading="lazy"></a>
+                <a href="https://www.dell.com/en-us/gaming" target="_blank" rel="noopener" class="tech-logo" title="Alienware Gaming PCs"><img src="images/logo-alienware.webp" alt="Alienware" width="90" height="90" loading="lazy"></a>
+                <a href="https://us.msi.com/Desktop/Aegis-RS-13th" target="_blank" rel="noopener" class="tech-logo" title="MSI Gaming Series"><img src="images/logo-msi.webp" alt="MSI" width="90" height="90" loading="lazy"></a>
+                <a href="https://www.asus.com/us/site/gaming/" target="_blank" rel="noopener" class="tech-logo" title="ASUS Republic of Gamers"><img src="images/logo-asus.webp" alt="ASUS ROG" width="90" height="90" loading="lazy"></a>
+                <a href="https://secretlab.co/" target="_blank" rel="noopener" class="tech-logo" title="Secretlab Gaming Chairs"><img src="images/logo-secretlab.webp" alt="Secretlab" width="90" height="90" loading="lazy"></a>
+                <a href="https://www.logitechg.com/en-us/products/gaming-mice.html" target="_blank" rel="noopener" class="tech-logo" title="Logitech G Gaming"><img src="images/logo-logitech.webp" alt="Logitech" width="90" height="90" loading="lazy"></a>
+                <a href="https://www.razer.com/pc/gaming-keyboards-and-keypads" target="_blank" rel="noopener" class="tech-logo" title="Razer Gaming Peripherals"><img src="images/logo-razer.webp" alt="Razer" width="90" height="90" loading="lazy"></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- LICENSE & CREDENTIALS -->
+    <section class="section license">
+        <div class="section-inner">
+            <div class="license-grid reveal">
+                <div class="license-image">
+                    <picture>
+                        <source srcset="images/adjuster-license-600w.webp 600w, images/adjuster-license.webp 1647w" sizes="420px" type="image/webp">
+                        <img src="images/adjuster-license.webp" alt="Texas Department of Insurance — Adjuster All Lines License, Brian Lee Westfall, License No. 2270028" width="420" height="510" loading="lazy">
+                    </picture>
+                </div>
+                <div class="license-content">
+                    <p class="section-label">Licensed & Certified</p>
+                    <h2>Texas All-Lines Insurance Adjuster</h2>
+                    <p>In addition to design and construction expertise, I hold a Texas All-Lines Insurance Adjuster License issued by the Texas Department of Insurance. This credential supports my forensic visualization work and swimming pool inspection services — giving attorneys, insurers, and homeowners confidence in the technical accuracy behind every project.</p>
+                    <div style="margin-top:1rem;">
+                        <span class="license-detail"><strong>License #</strong> 2270028</span>
+                        <span class="license-detail"><strong>Issued</strong> 02-12-2018</span>
+                        <span class="license-detail"><strong>Type</strong> Adjuster — All Lines</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <h2 class="reveal">Let's Begin Your Journey</h2>
+        <p class="reveal">Ready to create your dream outdoor space? Let's bring your vision to life.</p>
+        <a href="tel:9404334333" class="btn-gold reveal">Call (940) 433-4333</a>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p class="footer-brand">Brian Lee Westfall <span style="font-weight:400;color:var(--text-secondary);font-size:0.85em;">"AI Vision Designs"</span></p>
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="pool-safety.html">Pool Safety</a>
+            <a href="forensic-visualization.html">Forensic</a>
+            <a href="index.html#portfolio">Portfolio</a>
+            <a href="/cdn-cgi/l/email-protection#2260504b434c6e47477547515644434e4e62454f434b4e0c414d4f">Email</a>
+        </div>
+        <p class="footer-copy">&copy; 2026 Brian Lee Westfall — AI Vision Designs · Fort Worth, Texas</p>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Nav scroll effect
+        window.addEventListener('scroll', () => {
+            document.querySelector('.nav').classList.toggle('scrolled', window.scrollY > 60);
+        });
+
+        // Scroll reveal
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObserver.unobserve(e.target); }});
+        }, { threshold: 0.
