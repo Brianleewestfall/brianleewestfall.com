@@ -1,34 +1,55 @@
-# START HERE — Project Context for Future Sessions
+# START HERE — Project Context
 
 ## Quick Onboarding
-Any new Claude session should run these two queries first:
+
+New Claude sessions: Run these queries first to get context:
 
 ```sql
--- Get current project status and notes
-SELECT topic, note FROM session_notes WHERE status = 'active' ORDER BY topic, created_at;
+-- Current project notes
+SELECT topic, note FROM session_notes WHERE status = 'active' ORDER BY topic;
 
--- Get full asset inventory
-SELECT category, client_name, asset_type, date_original, key_quote, notes 
-FROM project_assets ORDER BY category, date_original;
+-- Asset inventory  
+SELECT category, asset_type, notes FROM project_assets ORDER BY category;
 ```
 
-## Key Resources
-- **Supabase project**: hhqbugfxtblrmzxnxfes
-- **GitHub repo**: Brianleewestfall/brianleewestfall.com
-- **Storage base URL**: https://hhqbugfxtblrmzxnxfes.supabase.co/storage/v1/object/public/website-assets/
-- **Design system**: Navy #111214, Gold #C49A3C, Blue #3498DB
+## Resources
 
-## Database Tables
-- `project_assets` — Master registry of all uploaded files with metadata and key quotes
-- `session_notes` — Cross-conversation continuity notes (check status='active')
+| Resource | Location |
+|----------|----------|
+| **Live Site** | https://brianleewestfall.github.io/brianleewestfall.com/ |
+| **GitHub** | Brianleewestfall/brianleewestfall.com |
+| **Supabase** | hhqbugfxtblrmzxnxfes |
+| **Storage** | https://hhqbugfxtblrmzxnxfes.supabase.co/storage/v1/object/public/project-assets/ |
 
-## Important Files in This Repo
-- `docs/forensic-facts-vs-speculation.md` — CRITICAL: separates verified facts from Sonnet speculation
-- `docs/START-HERE.md` — This file
+## Design System
 
-## Active Workstreams
-1. **Forensic visualization page** — waiting on Brian's Y/N answers (see forensic-facts-vs-speculation.md)
-2. **About page timeline** — 1987→wireless→2004→pools→2016→3D viz→2026→forensic+AI
-3. **SEO fixes** — index.html and forensic-visualization.html need updates
-4. **Asset integration** — 45 archived assets ready to embed in website sections
-5. **Demo video** — Brian creating hypothetical forensic scenario from Szablowski condo model
+- **Gold:** #C49A3C
+- **Blue:** #3498DB  
+- **Dark:** #111214, #1A1B1E
+- **Fonts:** Playfair Display, DM Sans, Cormorant Garamond
+
+## Pages
+
+| Page | File | Status |
+|------|------|--------|
+| Homepage | index.html | ✅ Complete |
+| About | about.html | ✅ Complete |
+| Pool Safety | pool-safety.html | ✅ Complete |
+| Forensic | forensic-visualization.html | ✅ Complete |
+
+## Reference Docs
+
+- `forensic-facts-vs-speculation.md` — Verified vs speculative content for forensic page
+- `godaddy-site-archive-manifest.md` — Legacy site archive before migration
+- `handoff-inspections-page.md` — Inspections page build specs
+
+## Known Issues
+
+⚠️ **CSS Animation Bug**: Pages use reveal animations that hide content (`opacity: 0`) until JavaScript triggers. If JS doesn't execute, content stays hidden. Fix: Set content visible by default, animate only when `.js-loaded` class present.
+
+## Next Steps
+
+- [ ] Push corrected HTML files with CSS fix
+- [ ] Add permit plan thumbnails to images/plans/
+- [ ] Point DNS to GitHub Pages
+- [ ] Submit sitemap to Google Search Console
