@@ -37,7 +37,27 @@
         .insp-card ul { list-style: none; padding: 0; margin: 0; }
         .insp-card li { padding: 0.5rem 0; padding-left: 1.5rem; position: relative; font-size: 0.95rem; color: var(--text-primary); }
         .insp-card li::before { content: '✓'; position: absolute; left: 0; color: var(--gold); font-weight: 700; }
-        .credentials { background: var(--navy); }
+        /* Photo Gallery */
+        .gallery-section { background: var(--navy); }
+        .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+        .gallery-item { border-radius: 12px; overflow: hidden; position: relative; aspect-ratio: 16/10; cursor: pointer; border: 1px solid rgba(196,154,60,0.08); transition: all 0.3s; }
+        .gallery-item:hover { border-color: var(--gold); transform: translateY(-3px); box-shadow: 0 12px 40px rgba(0,0,0,0.4); }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s; }
+        .gallery-item:hover img { transform: scale(1.05); }
+        .gallery-item .gallery-caption { position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem 1rem 0.75rem; background: linear-gradient(transparent, rgba(0,0,0,0.8)); font-size: 0.8rem; color: var(--white); font-weight: 500; letter-spacing: 0.02em; opacity: 0; transition: opacity 0.3s; }
+        .gallery-item:hover .gallery-caption { opacity: 1; }
+        /* Lightbox */
+        .lightbox { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0,0,0,0.92); align-items: center; justify-content: center; padding: 2rem; }
+        .lightbox.active { display: flex; }
+        .lightbox img { max-width: 90vw; max-height: 85vh; border-radius: 8px; box-shadow: 0 20px 80px rgba(0,0,0,0.6); }
+        .lightbox-close { position: absolute; top: 1.5rem; right: 1.5rem; width: 44px; height: 44px; border: none; background: rgba(255,255,255,0.1); color: #fff; font-size: 1.5rem; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.3s; }
+        .lightbox-close:hover { background: rgba(255,255,255,0.25); }
+        .lightbox-caption { position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); color: var(--white); font-family: var(--font-heading); font-size: 1.1rem; text-align: center; }
+        .lightbox-nav { position: absolute; top: 50%; transform: translateY(-50%); width: 48px; height: 48px; border: none; background: rgba(255,255,255,0.1); color: #fff; font-size: 1.5rem; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: background 0.3s; }
+        .lightbox-nav:hover { background: rgba(255,255,255,0.25); }
+        .lightbox-prev { left: 1.5rem; }
+        .lightbox-next { right: 1.5rem; }
+        .credentials { background: var(--navy-light); }
         .cred-grid { display: grid; grid-template-columns: 300px 1fr; gap: 4rem; align-items: center; }
         .cred-image { border-radius: 16px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.4); border: 2px solid rgba(196,154,60,0.2); }
         .cred-image img { width: 100%; height: auto; display: block; }
@@ -46,14 +66,15 @@
         .license-badge { display: inline-block; background: linear-gradient(135deg, rgba(196,154,60,0.15), rgba(196,154,60,0.05)); border: 1px solid var(--gold); border-radius: 12px; padding: 1rem 1.5rem; margin-top: 1rem; }
         .license-badge .license-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--gold); font-weight: 600; }
         .license-badge .license-number { font-family: var(--font-heading); font-size: 1.25rem; color: var(--white); margin-top: 0.25rem; }
-        .diff-section { background: var(--navy-light); }
+        .diff-section { background: var(--navy); }
         .diff-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
-        .diff-item { text-align: center; padding: 2.5rem 2rem; background: var(--navy); border-radius: 16px; border: 1px solid rgba(52,152,219,0.08); transition: all 0.3s; }
+        .diff-item { text-align: center; padding: 2.5rem 2rem; background: var(--navy-light); border-radius: 16px; border: 1px solid rgba(52,152,219,0.08); transition: all 0.3s; }
         .diff-item:hover { border-color: var(--blue); transform: translateY(-3px); }
         .diff-item .diff-icon { font-size: 2rem; margin-bottom: 1rem; }
         .diff-item h3 { font-family: var(--font-heading); font-size: 1.15rem; font-weight: 600; color: var(--white); margin-bottom: 0.75rem; }
         .diff-item p { font-size: 0.9rem; line-height: 1.7; color: var(--text-secondary); }
-        @media (max-width: 900px) { .insp-grid { grid-template-columns: 1fr; } .cred-grid { grid-template-columns: 1fr; text-align: center; } .cred-image { max-width: 300px; margin: 0 auto; } .diff-grid { grid-template-columns: 1fr; } }
+        @media (max-width: 900px) { .insp-grid { grid-template-columns: 1fr; } .cred-grid { grid-template-columns: 1fr; text-align: center; } .cred-image { max-width: 300px; margin: 0 auto; } .diff-grid { grid-template-columns: 1fr; } .gallery-grid { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 600px) { .gallery-grid { grid-template-columns: 1fr; } }
         @media (max-width: 768px) { .insp-hero { padding: 8rem 1.5rem 3.5rem; } }
     </style>
 </head>
@@ -73,11 +94,34 @@
             <div class="insp-card reveal"><div class="card-icon" aria-hidden="true">🏠</div><h3>Pre-Purchase Inspections</h3><p>Don't rely on a general home inspector for your pool. I perform specialized testing to catch expensive problems — like plumbing leaks or structural failure — before you buy. My goal is to ensure your dream home doesn't come with a nightmare pool.</p><ul><li>Plumbing pressure testing</li><li>Equipment condition evaluation</li><li>Surface &amp; structural assessment</li><li>Code compliance review</li><li>Estimated repair cost report</li></ul></div>
         </div>
     </div></section>
+
+    <section class="section gallery-section" aria-label="Inspection photo gallery"><div class="section-inner">
+        <div class="section-header center reveal"><p class="section-label">Field Work</p><h2 class="section-title">Inspection Gallery</h2><p class="section-subtitle">Real inspections — from fire damage and equipment erosion to pre-purchase pool assessments and commercial construction oversight.</p></div>
+        <div class="gallery-grid">
+            <div class="gallery-item reveal" onclick="openLightbox(0)"><picture><source srcset="https://hhqbugfxtblrmzxnxfes.supabase.co/storage/v1/object/public/website-assets/inspections-webp/inspection-fire-damage-400w.webp 400w, https://hhqbugfxtblrmzxnxfes.supabase.co/storage/v1/object/public/website-assets/inspections-webp/inspection-fire-damage-800w.webp 800w, https://hhqbugfxtblrmzxnxfes.supabase.co/storage/v1/object/public/website-assets/inspections-webp/inspection-fire-damage.webp 1200w" sizes="(max-width:600px) 100vw, (max-width:900px) 50vw, 33vw" type="image/webp"><img src="https://hhqbugfxtblrmzxnxfes.supabase.co/storage/v1/object/public/website-assets/inspections-webp/inspection-fire-damage-800w.webp" alt="Fire damage to pool equipment — melted pump, filter, and charred fencing from structure fire" width="800" height="500" loading="lazy"></picture><span class="gallery-caption">Fire Damage — Equipment Assessment</span></div>
+            <div class="gallery-item reveal" onclick="openLightbox(1)"><picture><source srcset="https://hhqbugfxtblrmzxnxfes.supabase.co/storage/v1/object/public/website-assets/inspections-webp/inspection-residential-spa-400w.webp 400w, https://hhqbugfxtblrmzxnxfes.supabase.co/storage/v1/object/public/website-assets/inspections-webp/inspection-residential-spa-800w.webp 800w, https://hhqbugfxtblrmzxnxfes.supabase.co/storage/v1/object/public/website-assets/inspections-webp/inspection-residential-spa.webp 1200w" sizes="(max-width:600px) 100vw, (max-width:900px) 50vw, 33vw" type="image/webp"><img src="https://hhqbugfxtblrmzxnxfes.supabase.co/storage/v1/object/public/website-assets/inspections-webp/inspection-residential-spa-800w.webp" alt="Residential pool equipment pad erosion and plumbing exposure requiring inspection" width="800" height="500" loading="lazy"></picture><span class="gallery-caption">Residential — Equipment Pad Erosion</span></div>
+            <div class="gallery-item reveal" onclick="openLightbox(2)"><picture><source srcset="https://hhqbugfxtblrmzxnxfes.supabase.co/storage/v1/object/public/website-assets/inspections-webp/inspection-equipment-erosion-400w.webp 400w, https://hhqbugfxtblrmzxnxfes.supabase.co/storage/v1/object/public/website-assets/inspections-webp/inspection-equipment-erosion-800w.webp 800w, https://hhqbugfxtblrmzxnxfes.supabase.co/storage/v1/object/public/website-assets/inspections-webp/inspection-equipment-erosion.webp 1200w" sizes="(max-width:600px) 100vw, (max-width:900px) 50vw, 33vw" type="image/webp"><img src="https://hhqbugfxtblrmzxnxfes.supabase.co/storage/v1/object/public/website-assets/inspections-webp/inspection-equipment-erosion-800w.webp" alt="Pool with rock waterfall slide and spa — pre-purchase inspection documentation" width="800" height="500" loading="lazy"></picture><span class="gallery-caption">Pre-Purchase — Pool & Spa Assessment</span></div>
+            <div class="gallery-item reveal" onclick="openLightbox(3)"><picture><source srcset="https://hhqbugfxtblrmzxnxfes.supabase.co/storage/v1/object/public/website-assets/inspections-webp/inspection-tile-spa-400w.webp 400w, https://hhqbugfxtblrmzxnxfes.supabase.co/storage/v1/object/public/website-assets/inspections-webp/inspection-tile-spa-800w.webp 800w, https://hhqbugfxtblrmzxnxfes.supabase.co/storage/v1/object/public/website-assets/inspections-webp/inspection-tile-spa.webp 1200w" sizes="(max-width:600px) 100vw, (max-width:900px) 50vw, 33vw" type="image/webp"><img src="https://hhqbugfxtblrmzxnxfes.supabase.co/storage/v1/object/public/website-assets/inspections-webp/inspection-tile-spa-800w.webp" alt="Luxury glass tile spa with spillover — construction quality inspection" width="800" height="500" loading="lazy"></picture><span class="gallery-caption">Tile Spa — Construction Quality Review</span></div>
+            <div class="gallery-item reveal" onclick="openLightbox(4)"><picture><source srcset="https://hhqbugfxtblrmzxnxfes.supabase.co/storage/v1/object/public/website-assets/inspections-webp/inspection-commercial-construction-400w.webp 400w, https://hhqbugfxtblrmzxnxfes.supabase.co/storage/v1/object/public/website-assets/inspections-webp/inspection-commercial-construction-800w.webp 800w, https://hhqbugfxtblrmzxnxfes.supabase.co/storage/v1/object/public/website-assets/inspections-webp/inspection-commercial-construction.webp 1200w" sizes="(max-width:600px) 100vw, (max-width:900px) 50vw, 33vw" type="image/webp"><img src="https://hhqbugfxtblrmzxnxfes.supabase.co/storage/v1/object/public/website-assets/inspections-webp/inspection-commercial-construction-800w.webp" alt="Commercial municipal pool resurfacing with crew — construction oversight inspection" width="800" height="500" loading="lazy"></picture><span class="gallery-caption">Commercial — Municipal Pool Resurfacing</span></div>
+            <div class="gallery-item reveal" onclick="openLightbox(5)"><picture><source srcset="https://hhqbugfxtblrmzxnxfes.supabase.co/storage/v1/object/public/website-assets/inspections-webp/inspection-waterfall-pool-400w.webp 400w, https://hhqbugfxtblrmzxnxfes.supabase.co/storage/v1/object/public/website-assets/inspections-webp/inspection-waterfall-pool-800w.webp 800w, https://hhqbugfxtblrmzxnxfes.supabase.co/storage/v1/object/public/website-assets/inspections-webp/inspection-waterfall-pool.webp 1200w" sizes="(max-width:600px) 100vw, (max-width:900px) 50vw, 33vw" type="image/webp"><img src="https://hhqbugfxtblrmzxnxfes.supabase.co/storage/v1/object/public/website-assets/inspections-webp/inspection-waterfall-pool-800w.webp" alt="Freeform pool with waterfall and raised spa — property documentation inspection" width="800" height="500" loading="lazy"></picture><span class="gallery-caption">Property Documentation — Pool & Features</span></div>
+            <div class="gallery-item reveal" onclick="openLightbox(6)"><picture><source srcset="https://hhqbugfxtblrmzxnxfes.supabase.co/storage/v1/object/public/website-assets/inspections-webp/inspection-property-doc-400w.webp 400w, https://hhqbugfxtblrmzxnxfes.supabase.co/storage/v1/object/public/website-assets/inspections-webp/inspection-property-doc-800w.webp 800w, https://hhqbugfxtblrmzxnxfes.supabase.co/storage/v1/object/public/website-assets/inspections-webp/inspection-property-doc.webp 1200w" sizes="(max-width:600px) 100vw, (max-width:900px) 50vw, 33vw" type="image/webp"><img src="https://hhqbugfxtblrmzxnxfes.supabase.co/storage/v1/object/public/website-assets/inspections-webp/inspection-property-doc-800w.webp" alt="Freeform pool with pergola, spa, and rock waterfall — pre-purchase property documentation" width="800" height="500" loading="lazy"></picture><span class="gallery-caption">Pre-Purchase — Full Property Assessment</span></div>
+        </div>
+    </div></section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-label="Image lightbox">
+        <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close lightbox">&times;</button>
+        <button class="lightbox-nav lightbox-prev" onclick="navLightbox(-1)" aria-label="Previous image">&#8249;</button>
+        <button class="lightbox-nav lightbox-next" onclick="navLightbox(1)" aria-label="Next image">&#8250;</button>
+        <img id="lightbox-img" src="" alt="">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+
     <section class="section credentials" aria-label="Credentials"><div class="section-inner"><div class="cred-grid">
         <div class="cred-image reveal"><picture><source srcset="images/adjuster-license-600w.webp 600w, images/adjuster-license.webp 1200w" sizes="(max-width:900px) 300px, 300px" type="image/webp"><img src="images/adjuster-license.webp" alt="Texas All-Lines Insurance Adjuster License — Brian Lee Westfall" width="600" height="780" loading="lazy"></picture></div>
         <div class="cred-content reveal"><p class="section-label">Licensed &amp; Experienced</p><h2>Not Just an Inspector — A Licensed Insurance Adjuster</h2><p>Most pool inspectors can tell you something is broken. I can tell you <em>why</em> it broke, whether it's insurable, and exactly what it costs to fix — because I've built pools, repaired them, and worked the insurance side of the process.</p><p>My Texas All-Lines Insurance Adjuster License means I understand both the construction and insurance perspectives. This dual expertise gives my reports the credibility that insurance companies, attorneys, and homebuyers trust.</p><div class="license-badge"><div class="license-label">TX All-Lines Insurance Adjuster</div><div class="license-number">License #2270028</div></div></div>
     </div></div></section>
-    <section class="section diff-section" aria-label="Why choose us"><div class="section-inner">
+    <section class="section diff-section" aria-label="Why choose me"><div class="section-inner">
         <div class="section-header center reveal"><p class="section-label">The Difference</p><h2 class="section-title">Why Clients Trust My Inspections</h2></div>
         <div class="diff-grid">
             <div class="diff-item reveal"><div class="diff-icon" aria-hidden="true">🏗️</div><h3>Builder's Knowledge</h3><p>20+ years of hands-on pool construction means I know how pools are built — and how they fail.</p></div>
@@ -87,10 +131,29 @@
     </div></section>
     <section class="section cta-section" aria-label="Schedule inspection"><div class="section-inner"><div class="cta-inner reveal">
         <p class="section-label">Protect Your Investment</p><h2 class="section-title">Schedule an Inspection</h2><p class="section-subtitle">Whether you're filing an insurance claim or buying a home with a pool, get expert assessment from a licensed professional.</p>
-        <div class="hero-cta-group"><a href="tel:9404334333" class="btn-primary">Call (940) 433-4333</a><a href="mailto:BrianLeeWestfall@gmail.com" class="btn-secondary">Email Us</a></div>
+        <div class="hero-cta-group"><a href="tel:9404334333" class="btn-primary">Call (940) 433-4333</a><a href="mailto:BrianLeeWestfall@gmail.com" class="btn-secondary">Email Me</a></div>
     </div></div></section>
     </main>
     <div id="site-footer"></div>
     <script src="js/layout.js"></script>
+    <script>
+    (function(){
+        var imgs=[
+            {src:'https://hhqbugfxtblrmzxnxfes.supabase.co/storage/v1/object/public/website-assets/inspections-webp/inspection-fire-damage.webp',cap:'Fire Damage — Equipment Assessment'},
+            {src:'https://hhqbugfxtblrmzxnxfes.supabase.co/storage/v1/object/public/website-assets/inspections-webp/inspection-residential-spa.webp',cap:'Residential — Equipment Pad Erosion'},
+            {src:'https://hhqbugfxtblrmzxnxfes.supabase.co/storage/v1/object/public/website-assets/inspections-webp/inspection-equipment-erosion.webp',cap:'Pre-Purchase — Pool & Spa Assessment'},
+            {src:'https://hhqbugfxtblrmzxnxfes.supabase.co/storage/v1/object/public/website-assets/inspections-webp/inspection-tile-spa.webp',cap:'Tile Spa — Construction Quality Review'},
+            {src:'https://hhqbugfxtblrmzxnxfes.supabase.co/storage/v1/object/public/website-assets/inspections-webp/inspection-commercial-construction.webp',cap:'Commercial — Municipal Pool Resurfacing'},
+            {src:'https://hhqbugfxtblrmzxnxfes.supabase.co/storage/v1/object/public/website-assets/inspections-webp/inspection-waterfall-pool.webp',cap:'Property Documentation — Pool & Features'},
+            {src:'https://hhqbugfxtblrmzxnxfes.supabase.co/storage/v1/object/public/website-assets/inspections-webp/inspection-property-doc.webp',cap:'Pre-Purchase — Full Property Assessment'}
+        ];
+        var cur=0,lb=document.getElementById('lightbox'),lbImg=document.getElementById('lightbox-img'),lbCap=document.getElementById('lightbox-caption');
+        window.openLightbox=function(i){cur=i;lbImg.src=imgs[i].src;lbImg.alt=imgs[i].cap;lbCap.textContent=imgs[i].cap;lb.classList.add('active');document.body.style.overflow='hidden';};
+        window.closeLightbox=function(){lb.classList.remove('active');document.body.style.overflow='';};
+        window.navLightbox=function(d){cur=(cur+d+imgs.length)%imgs.length;lbImg.src=imgs[cur].src;lbImg.alt=imgs[cur].cap;lbCap.textContent=imgs[cur].cap;};
+        lb.addEventListener('click',function(e){if(e.target===lb)closeLightbox();});
+        document.addEventListener('keydown',function(e){if(!lb.classList.contains('active'))return;if(e.key==='Escape')closeLightbox();if(e.key==='ArrowLeft')navLightbox(-1);if(e.key==='ArrowRight')navLightbox(1);});
+    })();
+    </script>
 </body>
 </html>
