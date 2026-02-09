@@ -1,15 +1,14 @@
 /* BLW Crystal Logo — Header */
 .nav-logo-img {
-    width: 44px; height: 44px;
-    border-radius: 10px;
-    margin-right: 0.75rem;
+    width: 60px; height: 60px;
+    border-radius: 0;
+    margin-right: 0.85rem;
     flex-shrink: 0;
     object-fit: contain;
     transition: all 0.3s;
 }
 .nav-brand:hover .nav-logo-img {
-    filter: brightness(1.15);
-    box-shadow: 0 4px 12px rgba(196,154,60,0.3);
+    filter: brightness(1.2) drop-shadow(0 2px 8px rgba(52,152,219,0.4));
 }
 
 /* Legacy BLW text box — keep as fallback */
