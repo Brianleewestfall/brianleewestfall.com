@@ -6,46 +6,58 @@
 (function() {
     'use strict';
 
-    // --- Load shared components ---
-    const headerEl = document.getElementById('site-header');
-    const footerEl = document.getElementById('site-footer');
-
-    async function loadComponent(el, path) {
-        if (!el) return;
-        try {
-            const resp = await fetch(path);
-            if (resp.ok) {
-                el.innerHTML = await resp.text();
-            } else {
-                console.warn('Component load failed:', path, resp.status);
-            }
-        } catch(e) {
-            console.warn('Component fetch error:', path, e);
+    // --- Auto-detect base path from script location ---
+    var scripts = document.getElementsByTagName('script');
+    var basePath = '';
+    for (var i = 0; i < scripts.length; i++) {
+        var src = scripts[i].src || '';
+        if (src.indexOf('layout.js') !== -1) {
+            basePath = src.substring(0, src.lastIndexOf('js/layout.js'));
+            break;
         }
     }
 
+    // --- Load shared components ---
+    var headerEl = document.getElementById('site-header');
+    var footerEl = document.getElementById('site-footer');
+
+    function loadComponent(el, path) {
+        if (!el) return Promise.resolve();
+        return fetch(basePath + path)
+            .then(function(resp) {
+                if (resp.ok) return resp.text();
+                console.warn('Component load failed:', basePath + path, resp.status);
+                return '';
+            })
+            .then(function(html) {
+                if (html) el.innerHTML = html;
+            })
+            .catch(function(e) {
+                console.warn('Component fetch error:', basePath + path, e);
+            });
+    }
+
     Promise.all([
-        loadComponent(headerEl, '/components/header.html'),
-        loadComponent(footerEl, '/components/footer.html')
+        loadComponent(headerEl, 'components/header.html'),
+        loadComponent(footerEl, 'components/footer.html')
     ]).then(initInteractions);
 
     function initInteractions() {
         // --- Nav scroll effect ---
-        const nav = document.querySelector('.nav');
+        var nav = document.querySelector('.nav');
         if (nav) {
-            window.addEventListener('scroll', () => {
+            window.addEventListener('scroll', function() {
                 nav.classList.toggle('scrolled', window.scrollY > 50);
             }, { passive: true });
-            // Trigger on load in case page is already scrolled
             nav.classList.toggle('scrolled', window.scrollY > 50);
         }
 
         // --- Active nav link ---
-        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-        document.querySelectorAll('.nav-links a[data-page]').forEach(link => {
-            const page = link.getAttribute('data-page');
+        var currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        document.querySelectorAll('.nav-links a[data-page]').forEach(function(link) {
+            var page = link.getAttribute('data-page');
             if (
-                (page === 'home' && (currentPage === '' || currentPage === '/' || currentPage === 'index.html')) ||
+                (page === 'home' && (currentPage === '' || currentPage === 'index.html')) ||
                 (page === 'about' && currentPage === 'about.html') ||
                 (page === 'safety' && currentPage === 'pool-safety.html') ||
                 (page === 'services' && (
@@ -60,13 +72,13 @@
         });
 
         // --- Hamburger / Mobile Menu ---
-        const hamburger = document.querySelector('.hamburger');
-        const mobileMenu = document.querySelector('.mobile-menu');
-        const mobileOverlay = document.querySelector('.mobile-overlay');
+        var hamburger = document.querySelector('.hamburger');
+        var mobileMenu = document.querySelector('.mobile-menu');
+        var mobileOverlay = document.querySelector('.mobile-overlay');
 
         if (hamburger && mobileMenu && mobileOverlay) {
-            hamburger.addEventListener('click', () => {
-                const isOpen = mobileMenu.classList.toggle('open');
+            hamburger.addEventListener('click', function() {
+                var isOpen = mobileMenu.classList.toggle('open');
                 mobileOverlay.classList.toggle('open');
                 hamburger.classList.toggle('active');
                 hamburger.setAttribute('aria-expanded', isOpen);
@@ -74,7 +86,7 @@
             });
 
             mobileOverlay.addEventListener('click', closeMobile);
-            mobileMenu.querySelectorAll('a').forEach(l => l.addEventListener('click', closeMobile));
+            mobileMenu.querySelectorAll('a').forEach(function(l) { l.addEventListener('click', closeMobile); });
 
             function closeMobile() {
                 mobileMenu.classList.remove('open');
@@ -86,42 +98,34 @@
         }
 
         // --- Smooth scroll for hash links ---
-        document.querySelectorAll('a[href^="#"], a[href^="/#"]').forEach(a => {
+        document.querySelectorAll('a[href^="#"]').forEach(function(a) {
             a.addEventListener('click', function(e) {
-                let href = this.getAttribute('href');
-                // Handle /#section links on the homepage
-                if (href.startsWith('/#')) {
-                    if (currentPage === '' || currentPage === '/' || currentPage === 'index.html') {
-                        href = href.substring(1); // strip leading /
-                    } else {
-                        return; // Let browser navigate to homepage
-                    }
-                }
-                const t = document.querySelector(href);
+                var href = this.getAttribute('href');
+                var t = document.querySelector(href);
                 if (t) {
                     e.preventDefault();
-                    const navH = nav ? nav.offsetHeight : 80;
+                    var navH = nav ? nav.offsetHeight : 80;
                     window.scrollTo({ top: t.getBoundingClientRect().top + window.scrollY - navH, behavior: 'smooth' });
                 }
             });
         });
 
         // --- Scroll reveal ---
-        const ro = new IntersectionObserver((entries) => {
-            entries.forEach(e => {
+        var ro = new IntersectionObserver(function(entries) {
+            entries.forEach(function(e) {
                 if (e.isIntersecting) {
                     e.target.classList.add('visible');
                     ro.unobserve(e.target);
                 }
             });
         }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-        document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => ro.observe(el));
+        document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(function(el) { ro.observe(el); });
 
         // --- Lazy load Vimeo iframes ---
-        const vo = new IntersectionObserver((entries) => {
-            entries.forEach(e => {
+        var vo = new IntersectionObserver(function(entries) {
+            entries.forEach(function(e) {
                 if (e.isIntersecting) {
-                    const src = e.target.getAttribute('data-src');
+                    var src = e.target.getAttribute('data-src');
                     if (src) {
                         e.target.src = src;
                         e.target.removeAttribute('data-src');
@@ -130,6 +134,6 @@
                 }
             });
         }, { rootMargin: '200px' });
-        document.querySelectorAll('iframe[data-src]').forEach(el => vo.observe(el));
+        document.querySelectorAll('iframe[data-src]').forEach(function(el) { vo.observe(el); });
     }
 })();
