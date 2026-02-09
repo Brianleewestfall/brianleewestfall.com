@@ -1,14 +1,21 @@
 <!-- Shared Header — AI Vision Designs by Brian Lee Westfall -->
+<!-- TeslaQuake-style nav: Brand left | Core pages center | Dropdown overflow | CTA right -->
 <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
+        <!-- LEFT: Brand -->
         <a href="." class="nav-brand" aria-label="AI Vision Designs — Home">
             <img src="images/logo-nav.png" alt="AI Vision Designs" class="nav-logo-img" width="40" height="40">
             <span class="nav-brand-text">AI Vision Designs<span class="nav-brand-sub">by Brian Lee Westfall</span></span>
         </a>
+
+        <!-- CENTER + RIGHT: Core pages, dropdown, CTA -->
         <ul class="nav-links">
             <li><a href="." data-page="home">Home</a></li>
+            <li><a href="about.html" data-page="about">About</a></li>
+            <li><a href=".#portfolio" data-page="portfolio">Portfolio</a></li>
+            <li><a href="pool-safety.html" data-page="safety">Safety</a></li>
             <li class="nav-dropdown">
-                <a href="#" data-page="services">Services</a>
+                <a href="#" data-page="services">Services ▾</a>
                 <div class="dropdown-menu">
                     <a href="architectural-visualization.html">Architectural Visualization</a>
                     <a href="forensic-visualization.html">Forensic &amp; Litigation Support</a>
@@ -17,26 +24,32 @@
                     <a href="inspections.html">Pool Inspections</a>
                 </div>
             </li>
-            <li><a href=".#portfolio" data-page="portfolio">Portfolio</a></li>
-            <li><a href="about.html" data-page="about">About</a></li>
-            <li><a href="pool-safety.html" data-page="safety">Safety</a></li>
-            <li><a href=".#contact" class="nav-cta">Get Started</a></li>
+            <li class="nav-cta-wrap"><a href=".#contact" class="nav-cta">Get Started</a></li>
         </ul>
+
+        <!-- MOBILE: Hamburger -->
         <button class="hamburger" aria-label="Open menu" aria-expanded="false">
             <span></span><span></span><span></span>
         </button>
     </div>
 </nav>
+
+<!-- Mobile overlay + slide-out menu -->
 <div class="mobile-overlay" aria-hidden="true"></div>
 <div class="mobile-menu" role="dialog" aria-label="Mobile navigation">
     <a href=".">Home</a>
-    <a href="architectural-visualization.html">Architectural Visualization</a>
-    <a href="forensic-visualization.html">Forensic &amp; Litigation</a>
-    <a href="pool-landscape-design.html">Pool &amp; Landscape Design</a>
-    <a href="commercial-visualization.html">Commercial &amp; Real Estate</a>
-    <a href="inspections.html">Pool Inspections</a>
-    <a href=".#portfolio">Portfolio</a>
     <a href="about.html">About</a>
+    <a href=".#portfolio">Portfolio</a>
     <a href="pool-safety.html">Pool Safety</a>
-    <a href=".#contact">Get Started</a>
+    <div class="mobile-divider"></div>
+    <div class="mobile-section-label">Services</div>
+    <div class="mobile-sub">
+        <a href="architectural-visualization.html">Architectural Visualization</a>
+        <a href="forensic-visualization.html">Forensic &amp; Litigation</a>
+        <a href="pool-landscape-design.html">Pool &amp; Landscape Design</a>
+        <a href="commercial-visualization.html">Commercial &amp; Real Estate</a>
+        <a href="inspections.html">Pool Inspections</a>
+    </div>
+    <div class="mobile-divider"></div>
+    <a href=".#contact" class="mobile-cta">Get Started →</a>
 </div>
