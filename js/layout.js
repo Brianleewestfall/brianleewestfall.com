@@ -17,6 +17,13 @@
         }
     }
 
+    // --- Inject favicon ---
+    var fav = document.createElement("link");
+    fav.rel = "icon";
+    fav.type = "image/x-icon";
+    fav.href = basePath + "images/favicon.ico";
+    document.head.appendChild(fav);
+
     // --- Inject additions CSS ---
     var addCSS = document.createElement("link");
     addCSS.rel = "stylesheet";
