@@ -3,391 +3,219 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brian Lee Westfall | Nationwide 3D Pool & Landscape Design</title>
-    <meta name="description" content="Photorealistic 3D pool and landscape design, permit-ready construction plans, and cinematic video walkthroughs. Serving builders and homeowners nationwide from Fort Worth, TX.">
+    <title>AI Vision Designs — Brian Lee Westfall | See It Before It's Built</title>
+    <meta name="description" content="Photorealistic 3D visualization for architects, attorneys, developers, and homeowners. Architectural rendering, forensic animation, pool design, and commercial visualization — delivered nationwide.">
+    <meta name="keywords" content="3D visualization, architectural rendering, forensic animation, pool design, commercial rendering, photorealistic renders, construction plans, video walkthroughs">
     <link rel="canonical" href="https://brianleewestfall.com/">
+    <meta property="og:title" content="AI Vision Designs — Brian Lee Westfall | See It Before It's Built">
+    <meta property="og:description" content="Photorealistic 3D visualization for architects, attorneys, developers, and homeowners. Delivered nationwide.">
+    <meta property="og:url" content="https://brianleewestfall.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://brianleewestfall.com/images/hero-bg-1920w.webp">
+    <meta property="og:site_name" content="AI Vision Designs — Brian Lee Westfall">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI Vision Designs — See It Before It's Built">
+    <meta name="twitter:description" content="Photorealistic 3D visualization for architects, attorneys, developers, and homeowners.">
+    <meta name="twitter:image" content="https://brianleewestfall.com/images/hero-bg-1920w.webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --navy: #111214;
-            --navy-light: #1A1B1E;
-            --gold: #C49A3C;
-            --gold-light: #D4AF5E;
-            --gold-pale: #E8D5A8;
-            --white: #F8F6F0;
-            --text-secondary: #9CA3AF;
-            --font-heading: 'Playfair Display', Georgia, serif;
-            --font-body: 'DM Sans', sans-serif;
-            --font-elegant: 'Cormorant Garamond', Georgia, serif;
-        }
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body { font-family: var(--font-body); background: var(--navy); color: var(--white); line-height: 1.7; }
-        img { max-width: 100%; height: auto; display: block; }
-        a { color: var(--gold); text-decoration: none; }
-        a:hover { color: var(--gold-light); }
-        
-        /* NAV */
-        .nav { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; padding: 1.25rem 0; transition: all 0.4s; }
-        .nav.scrolled { background: rgba(10, 22, 40, 0.95); backdrop-filter: blur(20px); padding: 0.75rem 0; }
-        .nav-inner { max-width: 1340px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
-        .nav-brand { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
-        .nav-logo { width: 40px; height: 40px; background: linear-gradient(135deg, var(--gold), var(--gold-light)); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-family: var(--font-heading); font-weight: 700; font-size: 0.85rem; color: var(--navy); }
-        .nav-brand-text { font-family: var(--font-heading); font-size: 1.15rem; color: var(--white); }
-        .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
-        .nav-links a { font-size: 0.82rem; font-weight: 500; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 1.5px; }
-        .nav-links a:hover, .nav-links a.active { color: var(--gold); }
-        .nav-cta { background: linear-gradient(135deg, var(--gold), var(--gold-light)); color: var(--navy) !important; padding: 0.6rem 1.4rem; border-radius: 6px; font-weight: 600 !important; }
-        .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 8px; }
-        .hamburger span { width: 26px; height: 2px; background: var(--white); }
-        .mobile-menu { display: none; position: fixed; top: 0; right: -100%; width: 300px; height: 100vh; background: var(--navy-light); padding: 5rem 2rem; z-index: 999; transition: right 0.4s; }
-        .mobile-menu.open { right: 0; }
-        .mobile-menu a { display: block; padding: 1rem 0; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 1.5px; border-bottom: 1px solid rgba(196, 154, 60, 0.1); }
-        .mobile-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 998; opacity: 0; transition: opacity 0.3s; }
-        .mobile-overlay.open { opacity: 1; }
-
-        /* HERO */
-        .hero { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; }
-        .hero-bg { position: absolute; inset: 0; z-index: 1; }
-        .hero-bg-image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: brightness(0.4); }
-        .hero-bg-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10, 22, 40, 0.4) 0%, rgba(10, 22, 40, 0.85) 100%); }
-        .hero-content { position: relative; z-index: 3; max-width: 900px; padding: 0 2rem; }
-        .hero-eyebrow { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 4px; color: var(--gold); margin-bottom: 1.5rem; animation: fadeUp 0.8s ease forwards 0.3s; opacity: 0; }
-        .hero h1 { font-family: var(--font-heading); font-size: clamp(2.5rem, 5.5vw, 4.2rem); font-weight: 600; line-height: 1.15; margin-bottom: 1.5rem; animation: fadeUp 0.8s ease forwards 0.5s; opacity: 0; }
-        .hero h1 .gold { color: var(--gold); }
-        .hero-subtitle { font-family: var(--font-elegant); font-size: clamp(1.15rem, 2vw, 1.4rem); color: rgba(248, 246, 240, 0.85); max-width: 650px; margin: 0 auto 2.5rem; animation: fadeUp 0.8s ease forwards 0.7s; opacity: 0; }
-        .hero-cta-group { display: flex; gap: 1.25rem; justify-content: center; flex-wrap: wrap; animation: fadeUp 0.8s ease forwards 0.9s; opacity: 0; }
-        .btn-primary { background: linear-gradient(135deg, var(--gold), var(--gold-light)); color: var(--navy); padding: 1rem 2.25rem; border-radius: 8px; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; transition: transform 0.3s, box-shadow 0.3s; }
-        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(196, 154, 60, 0.4); color: var(--navy); }
-        .btn-secondary { color: var(--gold); padding: 1rem 2.25rem; border-radius: 8px; font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; border: 1.5px solid var(--gold); transition: all 0.3s; }
-        .btn-secondary:hover { background: rgba(196, 154, 60, 0.1); }
-        @keyframes fadeUp { from { opacity: 0; transform: translateY(25px); } to { opacity: 1; transform: translateY(0); } }
-
-        /* SECTIONS */
-        .section { padding: 6rem 2rem; }
-        .section-inner { max-width: 1200px; margin: 0 auto; }
-        .section-label { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 3px; color: var(--gold); margin-bottom: 1rem; }
-        .section-title { font-family: var(--font-heading); font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 600; margin-bottom: 1.25rem; }
-        .section-subtitle { font-family: var(--font-elegant); font-size: 1.15rem; color: var(--text-secondary); max-width: 600px; }
-        .section-header { margin-bottom: 3.5rem; }
-        .section-header.center { text-align: center; }
-        .section-header.center .section-subtitle { margin: 0 auto; }
-
-        /* REVEAL - Content visible by default */
-        .reveal { opacity: 1; transform: translateY(0); transition: opacity 0.7s ease, transform 0.7s ease; }
-        .reveal-left { opacity: 1; transform: translateX(0); transition: opacity 0.9s ease, transform 0.9s ease; }
-        .reveal-right { opacity: 1; transform: translateX(0); transition: opacity 0.9s ease, transform 0.9s ease; }
-        /* Only hide when JS confirms it's working */
-        .js-loaded .reveal:not(.visible) { opacity: 0; transform: translateY(30px); }
-        .js-loaded .reveal-left:not(.visible) { opacity: 0; transform: translateX(-80px); }
-        .js-loaded .reveal-right:not(.visible) { opacity: 0; transform: translateX(80px); }
-        .reveal.visible, .reveal-left.visible, .reveal-right.visible { opacity: 1; transform: translate(0); }
-
-        /* SERVICES */
-        .services { background: var(--navy); }
-        .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
-        .service-card { background: var(--navy-light); border: 1px solid rgba(196, 154, 60, 0.12); border-radius: 16px; padding: 2.5rem 2rem; transition: transform 0.4s, border-color 0.4s; }
-        .service-card:hover { transform: translateY(-6px); border-color: rgba(196, 154, 60, 0.3); }
-        .service-icon { width: 56px; height: 56px; background: rgba(196,154,60,0.1); border: 1px solid rgba(196,154,60,0.2); border-radius: 14px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; font-size: 1.5rem; }
-        .service-card h3 { font-family: var(--font-heading); font-size: 1.3rem; margin-bottom: 0.75rem; }
-        .service-card p { color: var(--text-secondary); font-size: 0.95rem; }
-
-        /* PORTFOLIO */
-        .portfolio { background: var(--navy); }
-        .portfolio-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
-        .portfolio-item:nth-child(1) { grid-column: span 2; grid-row: span 2; }
-        .portfolio-item { position: relative; border-radius: 12px; overflow: hidden; aspect-ratio: 16/10; }
-        .portfolio-item:nth-child(1) { aspect-ratio: auto; }
-        .portfolio-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s; }
-        .portfolio-item:hover img { transform: scale(1.06); }
-        .portfolio-overlay { position: absolute; bottom: 0; left: 0; width: 100%; padding: 2rem 1.25rem 1.25rem; background: linear-gradient(transparent, rgba(10, 22, 40, 0.9)); transform: translateY(100%); transition: transform 0.4s; }
-        .portfolio-item:hover .portfolio-overlay { transform: translateY(0); }
-        .portfolio-overlay h4 { font-family: var(--font-heading); font-size: 1rem; margin-bottom: 0.25rem; }
-        .portfolio-overlay span { font-size: 0.8rem; color: var(--gold); text-transform: uppercase; letter-spacing: 1px; }
-
-        /* VIDEO SHOWCASE */
-        .video-showcase { background: var(--navy-light); }
-        .video-row { display: grid; grid-template-columns: 1fr 1fr; min-height: 480px; }
-        .video-row.reverse { direction: rtl; }
-        .video-row.reverse > * { direction: ltr; }
-        .video-player { background: #000; }
-        .video-player iframe { width: 100%; height: 100%; min-height: 480px; border: none; }
-        .video-info { display: flex; flex-direction: column; justify-content: center; padding: 4rem; background: var(--navy); }
-        .video-number { font-family: var(--font-heading); font-size: 4rem; font-weight: 700; color: rgba(196, 154, 60, 0.12); margin-bottom: 1rem; }
-        .video-info h3 { font-family: var(--font-heading); font-size: 1.8rem; margin-bottom: 0.75rem; }
-        .video-info p { color: var(--text-secondary); margin-bottom: 1.5rem; }
-        .video-tag { display: inline-block; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; color: var(--gold); padding: 0.4rem 1rem; border: 1px solid rgba(196, 154, 60, 0.3); border-radius: 20px; }
-
-        /* FOURTH DIMENSION */
-        .fourth-dimension { background: var(--navy-light); }
-        .fd-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
-        .fd-quote { font-family: var(--font-elegant); font-size: 1.6rem; font-style: italic; color: var(--gold-pale); margin: 2rem 0; padding-left: 1.5rem; border-left: 3px solid var(--gold); }
-        .fd-text { color: var(--text-secondary); }
-        .fd-visual { height: 400px; border-radius: 16px; overflow: hidden; background: var(--navy); border: 1px solid rgba(196,154,60,0.15); }
-        .time-cycle { display: flex; width: 100%; height: 100%; }
-        .time-phase { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; padding-bottom: 2rem; }
-        .time-phase:nth-child(1) { background: linear-gradient(180deg, #1a3a5c, #0d2137); }
-        .time-phase:nth-child(2) { background: linear-gradient(180deg, #4a8bc2, #2d6da3); }
-        .time-phase:nth-child(3) { background: linear-gradient(180deg, #f0a030, #c07820); }
-        .time-phase:nth-child(4) { background: linear-gradient(180deg, #1a1a3a, #0a0a1f); }
-        .time-phase span { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; color: rgba(255,255,255,0.8); }
-
-        /* PROCESS */
-        .process { background: var(--navy); }
-        .timeline { display: flex; justify-content: space-between; position: relative; padding: 3rem 0 1rem; }
-        .timeline::before { content: ''; position: absolute; top: 3rem; left: 5%; right: 5%; height: 2px; background: linear-gradient(90deg, var(--gold), var(--gold-light)); opacity: 0.3; }
-        .timeline-step { display: flex; flex-direction: column; align-items: center; text-align: center; flex: 1; }
-        .timeline-dot { width: 16px; height: 16px; background: var(--gold); border: 3px solid var(--navy); border-radius: 50%; margin-bottom: 1.25rem; z-index: 2; box-shadow: 0 0 12px rgba(196,154,60,0.4); }
-        .timeline-step h4 { font-family: var(--font-heading); font-size: 0.95rem; margin-bottom: 0.35rem; }
-        .timeline-step p { font-size: 0.78rem; color: var(--text-secondary); max-width: 120px; }
-
-        /* TESTIMONIALS */
-        .testimonials { background: var(--navy-light); }
-        .testimonial-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
-        .testimonial-card { background: var(--navy); border: 1px solid rgba(196,154,60,0.1); border-radius: 16px; padding: 2rem; position: relative; }
-        .testimonial-card::before { content: '"'; font-family: var(--font-heading); font-size: 4rem; color: var(--gold); opacity: 0.2; position: absolute; top: 0.5rem; left: 1.25rem; }
-        .testimonial-text { font-family: var(--font-elegant); font-size: 1.05rem; font-style: italic; color: var(--gold-pale); margin-bottom: 1.25rem; position: relative; z-index: 1; }
-        .testimonial-author { font-size: 0.85rem; font-weight: 600; }
-        .testimonial-role { font-size: 0.78rem; color: var(--text-secondary); }
-
-        /* CTA */
-        .cta-section { background: var(--navy-light); position: relative; }
-        .cta-section::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at center, rgba(196,154,60,0.06) 0%, transparent 70%); }
-        .cta-inner { position: relative; text-align: center; max-width: 700px; margin: 0 auto; }
-        .contact-row { display: flex; justify-content: center; gap: 3rem; margin-top: 2.5rem; flex-wrap: wrap; }
-        .contact-item { text-align: center; }
-        .contact-item .label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; color: var(--text-secondary); margin-bottom: 0.35rem; }
-        .contact-item .value { font-family: var(--font-heading); font-size: 1.1rem; }
-        .contact-item .value a { color: var(--white); }
-        .contact-item .value a:hover { color: var(--gold); }
-
-        /* FOOTER */
-        .footer { background: var(--navy); border-top: 1px solid rgba(196,154,60,0.1); padding: 4rem 2rem 2rem; }
-        .footer-inner { max-width: 1200px; margin: 0 auto; }
-        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
-        .footer-brand p { color: var(--text-secondary); font-size: 0.9rem; margin-top: 1rem; max-width: 300px; }
-        .footer h4 { font-family: var(--font-heading); font-size: 1rem; margin-bottom: 1.25rem; color: var(--gold-pale); }
-        .footer-links { list-style: none; }
-        .footer-links li { margin-bottom: 0.6rem; }
-        .footer-links a { color: var(--text-secondary); font-size: 0.88rem; }
-        .footer-links a:hover { color: var(--gold); }
-        .footer-bottom { border-top: 1px solid rgba(196,154,60,0.1); padding-top: 1.5rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
-        .footer-bottom p { font-size: 0.8rem; color: var(--text-secondary); }
-
-        /* RESPONSIVE */
-        @media (max-width: 1024px) {
-            .services-grid, .testimonial-grid { grid-template-columns: repeat(2, 1fr); }
-            .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
-            .portfolio-item:nth-child(1) { grid-column: span 2; grid-row: span 1; }
-            .fd-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-            .footer-grid { grid-template-columns: 1fr 1fr; }
-            .video-row { grid-template-columns: 1fr; min-height: auto; }
-            .video-row.reverse { direction: ltr; }
-            .video-player iframe { min-height: 350px; }
-            .video-info { padding: 2.5rem; }
-        }
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .hamburger { display: flex; }
-            .mobile-menu { display: block; }
-            .section { padding: 4rem 1.25rem; }
-            .services-grid, .testimonial-grid { grid-template-columns: 1fr; }
-            .portfolio-grid { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
-            .timeline { flex-direction: column; gap: 1.5rem; padding-left: 2rem; }
-            .timeline::before { top: 0; bottom: 0; left: 0.5rem; right: auto; width: 2px; height: 100%; }
-            .timeline-step { flex-direction: row; text-align: left; gap: 1rem; }
-            .timeline-dot { margin-bottom: 0; }
-            .contact-row { flex-direction: column; gap: 1.5rem; }
-            .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
-            .footer-bottom { flex-direction: column; text-align: center; }
-        }
-        @media (max-width: 480px) {
-            .portfolio-grid { grid-template-columns: 1fr; }
-            .portfolio-item:nth-child(1) { grid-column: span 1; }
-            .hero h1 { font-size: 2rem; }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/global.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "AI Vision Designs — Brian Lee Westfall",
+        "url": "https://brianleewestfall.com",
+        "description": "Photorealistic 3D visualization studio serving architects, attorneys, developers, and homeowners nationwide."
+    }
+    </script>
 </head>
 <body>
-    <nav class="nav">
-        <div class="nav-inner">
-            <a href="/" class="nav-brand">
-                <div class="nav-logo">BLW</div>
-                <span class="nav-brand-text">Brian Lee Westfall</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="/" class="active">Home</a></li>
-                <li><a href="#services">Pool Design</a></li>
-                <li><a href="forensic-visualization.html">Forensic</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact" class="nav-cta">Get Started</a></li>
-            </ul>
-            <button class="hamburger" aria-label="Open menu">
-                <span></span><span></span><span></span>
-            </button>
-        </div>
-    </nav>
-    <div class="mobile-overlay"></div>
-    <div class="mobile-menu">
-        <a href="/">Home</a>
-        <a href="#services">Pool Design</a>
-        <a href="forensic-visualization.html">Forensic Visualization</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#about">About</a>
-        <a href="#contact">Get Started</a>
-    </div>
+    <a href="#main-content" class="skip-nav">Skip to main content</a>
 
-    <section class="hero">
+    <!-- SHARED HEADER -->
+    <div id="site-header"></div>
+
+    <!-- HERO -->
+    <section class="hero" aria-label="Homepage hero">
         <div class="hero-bg">
             <picture>
                 <source srcset="images/hero-bg-1280w.webp" media="(max-width: 1280px)">
-                <img class="hero-bg-image" src="images/hero-bg-1920w.webp" alt="" width="1920" height="823">
+                <source srcset="images/hero-bg-1920w.webp">
+                <img class="hero-bg-image" src="images/hero-bg-1920w.webp" alt="" aria-hidden="true" width="1920" height="823" fetchpriority="high">
             </picture>
             <div class="hero-bg-overlay"></div>
         </div>
         <div class="hero-content">
-            <p class="hero-eyebrow">AI Vision Designs — Nationwide 3D Design Studio</p>
-            <h1>Your Vision,<br><span class="gold">Brought to Life</span></h1>
-            <p class="hero-subtitle">Photorealistic 3D pool and landscape design, permit-ready construction plans, and cinematic video walkthroughs — serving builders and homeowners nationwide.</p>
+            <p class="hero-eyebrow">AI Vision Designs — Nationwide 3D Visualization Studio</p>
+            <h1>See It Before<br><span class="gold">It's Built</span></h1>
+            <p class="hero-subtitle">Photorealistic 3D visualization for architects, attorneys, developers, and homeowners. Powered by AI. Delivered nationwide.</p>
             <div class="hero-cta-group">
-                <a href="#contact" class="btn-primary">See Your Vision Come to Life →</a>
-                <a href="#video-showcase" class="btn-secondary">Watch Our Walkthroughs ▶</a>
+                <a href="#services" class="btn-primary">Explore Services →</a>
+                <a href="tel:9404334333" class="btn-secondary">Call (940) 433-4333</a>
             </div>
+        </div>
+        <div class="scroll-indicator" aria-hidden="true">
+            <a href="#services"><span>Explore</span><div class="scroll-arrow"></div></a>
         </div>
     </section>
 
-    <main>
-        <section id="services" class="section services">
+    <main id="main-content">
+        <!-- SERVICE VERTICALS -->
+        <section id="services" class="section services" aria-label="Service verticals">
             <div class="section-inner">
                 <div class="section-header center reveal">
                     <p class="section-label">What We Create</p>
-                    <h2 class="section-title">Mastery in Light, Water, and Form</h2>
-                    <p class="section-subtitle">Every project is a symphony of elements — designed to inspire confidence before the first shovel breaks ground.</p>
+                    <h2 class="section-title">Four Disciplines, One Studio</h2>
+                    <p class="section-subtitle">From courtroom evidence to luxury backyards — every project gets the same obsessive attention to light, detail, and realism.</p>
                 </div>
-                <div class="services-grid">
-                    <div class="service-card reveal">
-                        <div class="service-icon">🎨</div>
-                        <h3>Photorealistic 3D Visualization</h3>
-                        <p>See every detail before construction begins. Our RTX 4090-powered renders capture realistic lighting, water reflections, materials, and landscaping.</p>
-                    </div>
-                    <div class="service-card reveal">
-                        <div class="service-icon">📐</div>
-                        <h3>Permit-Ready Construction Plans</h3>
-                        <p>Complete CAD construction documents engineered for permit approval. Dimensioned plans, equipment layouts, plumbing schematics, and electrical.</p>
-                    </div>
-                    <div class="service-card reveal">
-                        <div class="service-icon">🎬</div>
-                        <h3>Cinematic Video Walkthroughs</h3>
-                        <p>Immersive flythrough animations with custom music, Adobe After Effects openers, and DaVinci Resolve post-production.</p>
-                    </div>
+                <div class="verticals-grid">
+                    <a href="/architectural-visualization.html" class="vertical-card reveal">
+                        <div class="service-icon" aria-hidden="true">🏛️</div>
+                        <h3>Architectural Visualization</h3>
+                        <p>Photorealistic exterior and interior renders for architects, designers, and developers. Sell the vision before breaking ground.</p>
+                        <span class="card-arrow">Learn More →</span>
+                    </a>
+                    <a href="/forensic-visualization.html" class="vertical-card reveal">
+                        <div class="service-icon" aria-hidden="true">⚖️</div>
+                        <h3>Forensic &amp; Litigation</h3>
+                        <p>3D accident reconstruction, scene visualization, and courtroom-ready animations for attorneys and insurance professionals.</p>
+                        <span class="card-arrow">Learn More →</span>
+                    </a>
+                    <a href="/pool-landscape-design.html" class="vertical-card reveal">
+                        <div class="service-icon" aria-hidden="true">🏊</div>
+                        <h3>Pool &amp; Landscape Design</h3>
+                        <p>Luxury pool visualization, permit-ready construction plans, and cinematic walkthroughs for builders and homeowners.</p>
+                        <span class="card-arrow">Learn More →</span>
+                    </a>
+                    <a href="/commercial-visualization.html" class="vertical-card reveal">
+                        <div class="service-icon" aria-hidden="true">🏢</div>
+                        <h3>Commercial &amp; Real Estate</h3>
+                        <p>Pre-construction marketing renders, renovation visualization, and virtual staging for developers and property managers.</p>
+                        <span class="card-arrow">Learn More →</span>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <section id="video-showcase" class="section video-showcase" style="padding: 0;">
-            <div style="max-width: 1200px; margin: 0 auto; padding: 4rem 2rem 2rem;">
-                <div class="section-header center reveal">
+        <!-- VIDEO SHOWCASE -->
+        <section id="video-showcase" class="section video-showcase" aria-label="Video walkthroughs" style="padding-left:0;padding-right:0;">
+            <div class="section-inner" style="max-width:100%;">
+                <div class="section-header center reveal" style="padding:0 2rem;max-width:1200px;margin:0 auto 3.5rem;">
                     <p class="section-label">Cinematic Walkthroughs</p>
-                    <h2 class="section-title">Experience the Design in Motion</h2>
-                    <p class="section-subtitle">Custom-scored flythrough animations with Adobe After Effects openers and DaVinci Resolve post-production.</p>
+                    <h2 class="section-title">Experience the Design</h2>
+                    <p class="section-subtitle">Immersive flythrough animations with custom music and professional post-production — the ultimate client presentation tool.</p>
                 </div>
-            </div>
-            <div class="video-row">
-                <div class="video-player reveal-left">
-                    <iframe src="https://player.vimeo.com/video/1046042575?autoplay=0&title=0&byline=0&portrait=0" allow="autoplay; fullscreen" allowfullscreen title="Southlake Pool Walkthrough"></iframe>
+                <div class="video-row">
+                    <div class="video-player">
+                        <iframe data-src="https://player.vimeo.com/video/1049498137?h=auto&amp;background=1&amp;autoplay=0&amp;loop=1&amp;muted=1" allow="autoplay; fullscreen" allowfullscreen title="Luxury Pool Walkthrough"></iframe>
+                    </div>
+                    <div class="video-info">
+                        <div class="video-number">01</div>
+                        <h3>Richardson Estate</h3>
+                        <p>A complete luxury outdoor living space featuring an infinity pool, outdoor kitchen, and custom landscaping — visualized from every angle at golden hour.</p>
+                        <span class="video-tag">Luxury Residential</span>
+                    </div>
                 </div>
-                <div class="video-info reveal-right">
-                    <div class="video-number">01</div>
-                    <h3>Southlake, Texas</h3>
-                    <p>A cinematic walkthrough of a luxury outdoor living space featuring an infinity-edge pool, custom fire features, and multi-level entertaining areas.</p>
-                    <span class="video-tag">Custom Music · AE Opener · DaVinci Resolve</span>
+                <div class="video-row reverse">
+                    <div class="video-player">
+                        <iframe data-src="https://player.vimeo.com/video/1049499498?h=auto&amp;background=1&amp;autoplay=0&amp;loop=1&amp;muted=1" allow="autoplay; fullscreen" allowfullscreen title="Modern Pool Design"></iframe>
+                    </div>
+                    <div class="video-info">
+                        <div class="video-number">02</div>
+                        <h3>Modern Geometric</h3>
+                        <p>Clean lines meet dramatic lighting in this contemporary pool design — showcasing the power of photorealistic rendering to sell a concept before construction.</p>
+                        <span class="video-tag">Contemporary Design</span>
+                    </div>
                 </div>
-            </div>
-            <div class="video-row reverse">
-                <div class="video-player reveal-right">
-                    <iframe src="https://player.vimeo.com/video/1044462407?autoplay=0&title=0&byline=0&portrait=0" allow="autoplay; fullscreen" allowfullscreen title="Lake House Pool Walkthrough"></iframe>
-                </div>
-                <div class="video-info reveal-left">
-                    <div class="video-number">02</div>
-                    <h3>Lake House Estate</h3>
-                    <p>An immersive flythrough of a lakefront property with resort-style pool, outdoor kitchen pavilion, and terraced landscaping.</p>
-                    <span class="video-tag">Custom Music · AE Opener · DaVinci Resolve</span>
-                </div>
-            </div>
-            <div class="video-row">
-                <div class="video-player reveal-left">
-                    <iframe src="https://player.vimeo.com/video/1007030671?autoplay=0&title=0&byline=0&portrait=0" allow="autoplay; fullscreen" allowfullscreen title="Dallas Pool Walkthrough"></iframe>
-                </div>
-                <div class="video-info reveal-right">
-                    <div class="video-number">03</div>
-                    <h3>Dallas, Texas</h3>
-                    <p>A breathtaking contemporary design walkthrough featuring dramatic water features, ambient lighting, and modern landscape architecture.</p>
-                    <span class="video-tag">Custom Music · AE Opener · DaVinci Resolve</span>
+                <div class="video-row">
+                    <div class="video-player">
+                        <iframe data-src="https://player.vimeo.com/video/1049500596?h=auto&amp;background=1&amp;autoplay=0&amp;loop=1&amp;muted=1" allow="autoplay; fullscreen" allowfullscreen title="Spanish Colonial Pool Design"></iframe>
+                    </div>
+                    <div class="video-info">
+                        <div class="video-number">03</div>
+                        <h3>Spanish Colonial</h3>
+                        <p>Mediterranean elegance brought to life through cinematic animation — from courtyard dining to poolside sunset, every detail rendered in photorealistic quality.</p>
+                        <span class="video-tag">Mediterranean Style</span>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="portfolio" class="section portfolio">
+        <!-- PORTFOLIO -->
+        <section id="portfolio" class="section portfolio" aria-label="Portfolio gallery">
             <div class="section-inner">
                 <div class="section-header center reveal">
-                    <p class="section-label">Featured Projects</p>
-                    <h2 class="section-title">A Portfolio of Possibilities</h2>
-                    <p class="section-subtitle">From intimate courtyards to sprawling estate-level outdoor living — every project crafted with precision.</p>
+                    <p class="section-label">Our Work</p>
+                    <h2 class="section-title">Portfolio</h2>
+                    <p class="section-subtitle">A selection of photorealistic 3D visualizations across residential, commercial, and architectural projects.</p>
                 </div>
                 <div class="portfolio-grid">
                     <div class="portfolio-item reveal">
-                        <img src="images/portfolio-13-1200w.webp" alt="Luxury brick estate pool" loading="lazy">
-                        <div class="portfolio-overlay"><h4>Brick Estate — Grand Scale</h4><span>Nationwide</span></div>
+                        <picture><source srcset="images/portfolio-1-400w.webp 400w, images/portfolio-1-800w.webp 800w, images/portfolio-1-1200w.webp 1200w" sizes="(max-width: 768px) 100vw, 50vw" type="image/webp"><img src="images/portfolio-1-1200w.webp" alt="Luxury resort-style pool with grotto and waterslide at sunset" loading="lazy" width="1200" height="675"></picture>
+                        <div class="portfolio-overlay"><h4>Resort-Style Estate</h4><span>Pool &amp; Landscape</span></div>
                     </div>
                     <div class="portfolio-item reveal">
-                        <img src="images/portfolio-1-800w.webp" alt="Stone estate water wall" loading="lazy">
-                        <div class="portfolio-overlay"><h4>Stone Estate Water Wall</h4><span>Texas Hill Country</span></div>
+                        <picture><source srcset="images/portfolio-3-400w.webp 400w, images/portfolio-3-800w.webp 800w, images/portfolio-3-1200w.webp 1200w" sizes="(max-width: 768px) 100vw, 25vw" type="image/webp"><img src="images/portfolio-3-1200w.webp" alt="Contemporary hillside home with infinity pool" loading="lazy" width="1200" height="675"></picture>
+                        <div class="portfolio-overlay"><h4>Hillside Infinity Pool</h4><span>Architectural</span></div>
                     </div>
                     <div class="portfolio-item reveal">
-                        <img src="images/portfolio-3-800w.webp" alt="Modern farmhouse pool" loading="lazy">
-                        <div class="portfolio-overlay"><h4>Modern Farmhouse Estate</h4><span>DFW, Texas</span></div>
+                        <picture><source srcset="images/portfolio-4-400w.webp 400w, images/portfolio-4-800w.webp 800w, images/portfolio-4-1200w.webp 1200w" sizes="(max-width: 768px) 100vw, 25vw" type="image/webp"><img src="images/portfolio-4-1200w.webp" alt="Modern backyard with fire bowls and negative edge pool" loading="lazy" width="1200" height="675"></picture>
+                        <div class="portfolio-overlay"><h4>Fire &amp; Water</h4><span>Pool &amp; Landscape</span></div>
                     </div>
                     <div class="portfolio-item reveal">
-                        <img src="images/portfolio-4-800w.webp" alt="Night fire and water" loading="lazy">
-                        <div class="portfolio-overlay"><h4>Night Fire & Water</h4><span>Fort Worth, TX</span></div>
+                        <picture><source srcset="images/portfolio-5-400w.webp 400w, images/portfolio-5-800w.webp 800w, images/portfolio-5-1200w.webp 1200w" sizes="(max-width: 768px) 100vw, 25vw" type="image/webp"><img src="images/portfolio-5-1200w.webp" alt="Tropical resort pool with lazy river and slide" loading="lazy" width="1200" height="675"></picture>
+                        <div class="portfolio-overlay"><h4>Tropical Resort</h4><span>Commercial</span></div>
                     </div>
                     <div class="portfolio-item reveal">
-                        <img src="images/portfolio-6-800w.webp" alt="Ultra-modern moonlit" loading="lazy">
-                        <div class="portfolio-overlay"><h4>Ultra-Modern Moonlit</h4><span>Dallas, TX</span></div>
+                        <picture><source srcset="images/portfolio-6-400w.webp 400w, images/portfolio-6-800w.webp 800w, images/portfolio-6-1200w.webp 1200w" sizes="(max-width: 768px) 100vw, 25vw" type="image/webp"><img src="images/portfolio-6-1200w.webp" alt="Spanish-style outdoor living with pool and courtyard" loading="lazy" width="1200" height="675"></picture>
+                        <div class="portfolio-overlay"><h4>Spanish Courtyard</h4><span>Architectural</span></div>
                     </div>
                     <div class="portfolio-item reveal">
-                        <img src="images/portfolio-5-800w.webp" alt="Fire pit lounge" loading="lazy">
-                        <div class="portfolio-overlay"><h4>Fire Pit Lounge</h4><span>Texas</span></div>
+                        <picture><source srcset="images/portfolio-10-400w.webp 400w, images/portfolio-10-800w.webp 800w, images/portfolio-10-1200w.webp 1200w" sizes="(max-width: 768px) 100vw, 25vw" type="image/webp"><img src="images/portfolio-10-1200w.webp" alt="Water curtain cabana with stone fireplace at twilight" loading="lazy" width="1200" height="514"></picture>
+                        <div class="portfolio-overlay"><h4>Water Curtain Cabana</h4><span>Pool &amp; Landscape</span></div>
                     </div>
                     <div class="portfolio-item reveal">
-                        <img src="images/portfolio-10-800w.webp" alt="Water curtain cabana" loading="lazy">
-                        <div class="portfolio-overlay"><h4>Water Curtain Cabana</h4><span>Texas</span></div>
+                        <picture><source srcset="images/portfolio-7-400w.webp 400w, images/portfolio-7-800w.webp 800w, images/portfolio-7-1200w.webp 1200w" sizes="(max-width: 768px) 100vw, 25vw" type="image/webp"><img src="images/portfolio-7-1200w.webp" alt="Spanish-style outdoor kitchen pavilion with bar seating" loading="lazy" width="1200" height="675"></picture>
+                        <div class="portfolio-overlay"><h4>Spanish Kitchen Pavilion</h4><span>Architectural</span></div>
                     </div>
                     <div class="portfolio-item reveal">
-                        <img src="images/portfolio-7-800w.webp" alt="Spanish kitchen pavilion" loading="lazy">
-                        <div class="portfolio-overlay"><h4>Spanish Kitchen Pavilion</h4><span>Florida</span></div>
+                        <picture><source srcset="images/portfolio-8-400w.webp 400w, images/portfolio-8-800w.webp 800w, images/portfolio-8-1200w.webp 1200w" sizes="(max-width: 768px) 100vw, 25vw" type="image/webp"><img src="images/portfolio-8-1200w.webp" alt="Classic home with pool, spa, and dramatic sunset" loading="lazy" width="1200" height="675"></picture>
+                        <div class="portfolio-overlay"><h4>Classic Pool &amp; Spa</h4><span>Pool &amp; Landscape</span></div>
                     </div>
                     <div class="portfolio-item reveal">
-                        <img src="images/portfolio-8-800w.webp" alt="Classic pool and spa" loading="lazy">
-                        <div class="portfolio-overlay"><h4>Classic Pool & Spa</h4><span>Southlake, TX</span></div>
+                        <picture><source srcset="images/portfolio-2-400w.webp 400w, images/portfolio-2-800w.webp 800w, images/portfolio-2-1200w.webp 1200w" sizes="(max-width: 768px) 100vw, 25vw" type="image/webp"><img src="images/portfolio-2-1200w.webp" alt="Modern condo towers with reflection pool at sunset" loading="lazy" width="1200" height="675"></picture>
+                        <div class="portfolio-overlay"><h4>Condo Tower Complex</h4><span>Commercial</span></div>
+                    </div>
+                    <div class="portfolio-item reveal">
+                        <picture><source srcset="images/portfolio-9-400w.webp 400w, images/portfolio-9-800w.webp 800w, images/portfolio-9-1200w.webp 1200w" sizes="(max-width: 768px) 100vw, 25vw" type="image/webp"><img src="images/portfolio-9-1200w.webp" alt="Modern white contemporary home with landscaping" loading="lazy" width="1200" height="675"></picture>
+                        <div class="portfolio-overlay"><h4>Contemporary Home</h4><span>Architectural</span></div>
+                    </div>
+                    <div class="portfolio-item reveal">
+                        <picture><source srcset="images/portfolio-11-400w.webp 400w, images/portfolio-11-800w.webp 800w, images/portfolio-11-1200w.webp 1200w" sizes="(max-width: 768px) 100vw, 25vw" type="image/webp"><img src="images/portfolio-11-1200w.webp" alt="Spanish colonial poolside with courtyard dining" loading="lazy" width="1200" height="675"></picture>
+                        <div class="portfolio-overlay"><h4>Spanish Colonial Courtyard</h4><span>Architectural</span></div>
+                    </div>
+                    <div class="portfolio-item reveal">
+                        <picture><source srcset="images/portfolio-12-400w.webp 400w, images/portfolio-12-800w.webp 800w, images/portfolio-12-1200w.webp 1200w" sizes="(max-width: 768px) 100vw, 25vw" type="image/webp"><img src="images/portfolio-12-1200w.webp" alt="Mediterranean stucco home with landscaping" loading="lazy" width="1200" height="675"></picture>
+                        <div class="portfolio-overlay"><h4>Mediterranean Estate</h4><span>Architectural</span></div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="about" class="section fourth-dimension">
+        <!-- FOURTH DIMENSION -->
+        <section id="about" class="section fourth-dimension" aria-label="Why AI Vision Designs">
             <div class="section-inner">
                 <div class="fd-grid">
                     <div class="fd-content reveal">
                         <p class="section-label">The Fourth Dimension</p>
                         <h2 class="section-title">A Symphony of Elements</h2>
                         <p class="fd-quote">Design lives in three dimensions — but it comes alive in the fourth: time.</p>
-                        <p class="fd-text">Light shifts from golden dawn to twilight blue. Water catches the last rays of sunset. Fire dances against a darkening sky. Our renders don't just show what a space looks like — they show what it feels like to live in, across every hour and every season.</p>
+                        <p class="fd-text">Light shifts from golden dawn to twilight blue. Water catches the last rays of sunset. Fire dances against a darkening sky. Our renders don't just show what a space looks like — they show what it <em>feels</em> like to live in, across every hour and every season.</p>
+                        <p class="fd-text" style="margin-top:1rem;">Powered by dual NVIDIA RTX 4090 GPUs, 20+ years of design experience, and a licensed insurance adjuster's eye for detail — we deliver photorealistic results that win clients, cases, and approvals.</p>
                     </div>
-                    <div class="fd-visual reveal">
+                    <div class="fd-visual reveal" aria-label="Day to night transition illustration">
                         <div class="time-cycle">
                             <div class="time-phase"><span>Dawn</span></div>
                             <div class="time-phase"><span>Day</span></div>
@@ -399,30 +227,37 @@
             </div>
         </section>
 
-        <section class="section process">
+        <!-- PROCESS -->
+        <section class="section process" aria-label="Our design process">
             <div class="section-inner">
                 <div class="section-header center reveal">
                     <p class="section-label">How We Work</p>
                     <h2 class="section-title">From Concept to Construction</h2>
-                    <p class="section-subtitle">A streamlined process built for builders and homeowners alike.</p>
+                    <p class="section-subtitle">A streamlined process built for professionals and homeowners alike.</p>
                 </div>
                 <div class="timeline reveal">
-                    <div class="timeline-step"><div class="timeline-dot"></div><h4>Consultation</h4><p>Discuss vision, budget</p></div>
+                    <div class="timeline-step"><div class="timeline-dot"></div><h4>Consultation</h4><p>Discuss vision, budget, scope</p></div>
                     <div class="timeline-step"><div class="timeline-dot"></div><h4>Site Analysis</h4><p>Survey, measurements</p></div>
                     <div class="timeline-step"><div class="timeline-dot"></div><h4>3D Design</h4><p>Photorealistic concepts</p></div>
                     <div class="timeline-step"><div class="timeline-dot"></div><h4>Revisions</h4><p>Refine until perfect</p></div>
-                    <div class="timeline-step"><div class="timeline-dot"></div><h4>Final Renders</h4><p>Production quality</p></div>
+                    <div class="timeline-step"><div class="timeline-dot"></div><h4>Final Renders</h4><p>Production-quality output</p></div>
                     <div class="timeline-step"><div class="timeline-dot"></div><h4>Plans</h4><p>Permit-ready docs</p></div>
                     <div class="timeline-step"><div class="timeline-dot"></div><h4>Delivery</h4><p>Files, video, support</p></div>
                 </div>
             </div>
         </section>
 
-        <section class="section testimonials">
+        <!-- TESTIMONIALS -->
+        <section class="section testimonials" aria-label="Testimonials">
             <div class="section-inner">
                 <div class="section-header center reveal">
-                    <p class="section-label">Trusted by Builders & Clients Nationwide</p>
+                    <p class="section-label">Trusted by Builders &amp; Clients Nationwide</p>
                     <h2 class="section-title">What Our Clients Say</h2>
+                    <p class="section-subtitle" style="display:inline-flex;align-items:center;gap:0.5rem;background:rgba(196,154,60,0.08);border:1px solid rgba(196,154,60,0.2);border-radius:2rem;padding:0.5rem 1.25rem;margin-top:0.75rem;font-size:0.95rem;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="#C49A3C"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <span style="color:var(--gold);font-weight:700;">100% Recommend</span>
+                        <span style="color:var(--text-secondary);">· 13 Reviews on Facebook</span>
+                    </p>
                 </div>
                 <div class="testimonial-grid">
                     <div class="testimonial-card reveal"><p class="testimonial-text">Brian creates beautifully intricate designs with incredible 3D presentations. Some of the best work I have seen.</p><p class="testimonial-author">Dennis Daniel</p><p class="testimonial-role">Industry Professional</p></div>
@@ -430,17 +265,37 @@
                     <div class="testimonial-card reveal"><p class="testimonial-text">Great company and people — easy to deal with and they deliver!</p><p class="testimonial-author">Chris Pilat</p><p class="testimonial-role">Client</p></div>
                     <div class="testimonial-card reveal"><p class="testimonial-text">Great work — has the best ideas and design. Highly recommend!</p><p class="testimonial-author">SpaceCity Pool Remodel</p><p class="testimonial-role">Pool Builder — Houston, TX</p></div>
                     <div class="testimonial-card reveal"><p class="testimonial-text">Amazing designs! Best of the best! Highly recommend!!!</p><p class="testimonial-author">Rouko Pools</p><p class="testimonial-role">Pool Builder</p></div>
+                    <div class="testimonial-card reveal"><p class="testimonial-text">Best pool builder in the area, with the best prices and high quality materials.</p><p class="testimonial-author">Gus Rockcreations Medina</p><p class="testimonial-role">Client</p></div>
                     <div class="testimonial-card reveal"><p class="testimonial-text">Brian has been a great guy to communicate with from this industry — not too many like you out there!</p><p class="testimonial-author">John Martese</p><p class="testimonial-role">Industry Professional</p></div>
+                    <div class="testimonial-card reveal"><p class="testimonial-text">Highly recommend — five star all the way!!</p><p class="testimonial-author">Josh Saunders</p><p class="testimonial-role">Client</p></div>
+                    <div class="testimonial-card reveal"><p class="testimonial-text">They do amazing work — recommend you check them out.</p><p class="testimonial-author">Pete Blagojevic</p><p class="testimonial-role">Client</p></div>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="section cta-section">
+        <!-- BLOG -->
+        <section id="insights" class="section blog" aria-label="Blog">
+            <div class="section-inner">
+                <div class="section-header center reveal">
+                    <p class="section-label">Insights</p>
+                    <h2 class="section-title">From the Design Studio</h2>
+                    <p class="section-subtitle">Expertise, trends, and behind-the-scenes from 20+ years in visualization.</p>
+                </div>
+                <div class="blog-grid">
+                    <article class="blog-card reveal"><div class="blog-thumb">Coming Soon</div><div class="blog-body"><span class="blog-tag">Forensic</span><h3>How Forensic Animation Wins Personal Injury Cases</h3><p>Why courtroom-ready 3D reconstruction is becoming essential for litigation support.</p></div></article>
+                    <article class="blog-card reveal"><div class="blog-thumb">Coming Soon</div><div class="blog-body"><span class="blog-tag">Architecture</span><h3>Why Architects Outsource 3D Rendering</h3><p>The business case for dedicated visualization partners in pre-construction marketing.</p></div></article>
+                    <article class="blog-card reveal"><div class="blog-thumb">Coming Soon</div><div class="blog-body"><span class="blog-tag">Technology</span><h3>The RTX 4090 Advantage: Why GPU Power Matters</h3><p>Inside the rendering hardware that delivers photorealistic results in hours, not days.</p></div></article>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA / CONTACT -->
+        <section id="contact" class="section cta-section" aria-label="Contact">
             <div class="section-inner">
                 <div class="cta-inner reveal">
-                    <p class="section-label">Your Outdoor Story Begins Here</p>
-                    <h2 class="section-title">Ready to Build Your Dream?</h2>
-                    <p class="section-subtitle" style="margin: 0 auto 2.5rem;">Let's create a space as unique as you are. Whether you're a homeowner with a vision or a builder who needs a design partner — we're ready.</p>
+                    <p class="section-label">Your Vision Begins Here</p>
+                    <h2 class="section-title">Ready to See It Before It's Built?</h2>
+                    <p class="section-subtitle">Whether you're an architect with plans, an attorney building a case, or a homeowner with a dream — we're ready to bring it to life.</p>
                     <div class="hero-cta-group">
                         <a href="tel:9404334333" class="btn-primary">Call (940) 433-4333</a>
                         <a href="mailto:BrianLeeWestfall@gmail.com" class="btn-secondary">Email Us</a>
@@ -455,63 +310,9 @@
         </section>
     </main>
 
-    <footer class="footer">
-        <div class="footer-inner">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="/" class="nav-brand"><div class="nav-logo">BLW</div><span class="nav-brand-text">Brian Lee Westfall</span></a>
-                    <p>Nationwide 3D pool and landscape design studio. Photorealistic visualization, permit-ready construction plans, and cinematic walkthroughs — powered by dual RTX 4090 GPUs.</p>
-                </div>
-                <div><h4>Services</h4><ul class="footer-links"><li><a href="#services">3D Visualization</a></li><li><a href="#services">Construction Plans</a></li><li><a href="#video-showcase">Video Walkthroughs</a></li><li><a href="forensic-visualization.html">Forensic Visualization</a></li></ul></div>
-                <div><h4>Company</h4><ul class="footer-links"><li><a href="#about">About</a></li><li><a href="#portfolio">Portfolio</a></li><li><a href="#contact">Contact</a></li></ul></div>
-                <div><h4>Contact</h4><ul class="footer-links"><li><a href="tel:9404334333">(940) 433-4333</a></li><li><a href="mailto:BrianLeeWestfall@gmail.com">Email Us</a></li><li>Fort Worth, TX</li><li>Serving Nationwide</li></ul></div>
-            </div>
-            <div class="footer-bottom">
-                <p>© 2026 Brian Lee Westfall. All rights reserved.</p>
-                <p style="font-size: 0.75rem; color: rgba(156,163,175,0.5);">BrianLeeWestfall.com · AiVisionDesigns.com · WestfallPools.com</p>
-            </div>
-        </div>
-    </footer>
+    <!-- SHARED FOOTER -->
+    <div id="site-footer"></div>
 
-    <script>
-        // Nav scroll
-        const nav = document.querySelector('.nav');
-        window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 50));
-
-        // Hamburger
-        const hamburger = document.querySelector('.hamburger');
-        const mobileMenu = document.querySelector('.mobile-menu');
-        const mobileOverlay = document.querySelector('.mobile-overlay');
-        hamburger.addEventListener('click', () => {
-            mobileMenu.classList.toggle('open');
-            mobileOverlay.classList.toggle('open');
-            document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
-        });
-        mobileOverlay.addEventListener('click', () => {
-            mobileMenu.classList.remove('open');
-            mobileOverlay.classList.remove('open');
-            document.body.style.overflow = '';
-        });
-        mobileMenu.querySelectorAll('a').forEach(l => l.addEventListener('click', () => {
-            mobileMenu.classList.remove('open');
-            mobileOverlay.classList.remove('open');
-            document.body.style.overflow = '';
-        }));
-
-        // Scroll reveal - add js-loaded to enable animations
-        document.body.classList.add('js-loaded');
-        const ro = new IntersectionObserver((entries) => {
-            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); ro.unobserve(e.target); } });
-        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-        document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(el => ro.observe(el));
-
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(a => {
-            a.addEventListener('click', function(e) {
-                const t = document.querySelector(this.getAttribute('href'));
-                if (t) { e.preventDefault(); window.scrollTo({ top: t.offsetTop - nav.offsetHeight, behavior: 'smooth' }); }
-            });
-        });
-    </script>
+    <script src="/js/layout.js"></script>
 </body>
 </html>
