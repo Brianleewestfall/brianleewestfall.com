@@ -17,6 +17,12 @@
         }
     }
 
+    // --- Inject additions CSS ---
+    var addCSS = document.createElement("link");
+    addCSS.rel = "stylesheet";
+    addCSS.href = basePath + "css/additions.css";
+    document.head.appendChild(addCSS);
+
     // --- Load shared components ---
     var headerEl = document.getElementById('site-header');
     var footerEl = document.getElementById('site-footer');
