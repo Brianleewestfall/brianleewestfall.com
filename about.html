@@ -52,10 +52,7 @@
             .julie-photo { order: -1; max-width: 450px; margin: 0 auto; }
             .studio-photos { grid-template-columns: 1fr; }
         }
-        @media (max-width: 768px) {
-            .about-hero { padding: 8rem 1.5rem 3.5rem; }
-            .story-portrait { max-width: 280px; }
-        }
+        @media (max-width: 768px) { .about-hero { padding: 8rem 1.5rem 3.5rem; } .story-portrait { max-width: 280px; } }
     </style>
 </head>
 <body>
@@ -67,84 +64,40 @@
         <h1 class="reveal">Meet the <em>Visionary</em> Behind the Design</h1>
         <p class="subtitle reveal">20+ years of turning dreams into photorealistic reality</p>
     </section>
-    <section class="section story">
+    <section class="section story"><div class="section-inner"><div class="story-grid">
+        <div class="story-portrait reveal"><picture><source srcset="images/about-brian-400w.webp 400w, images/about-brian-800w.webp 800w, images/about-brian-1200w.webp 1200w" sizes="(max-width:768px) 280px, 400px" type="image/webp"><img src="images/about-brian-1200w.webp" alt="Brian Lee Westfall" width="400" height="500" loading="eager"></picture></div>
+        <div class="story-content reveal"><p class="section-label">My Story</p><h2>Hello, I'm Brian Westfall</h2><p>For over two decades, my passion has been helping people create the outdoor oasis they've always dreamed of. After years of hands-on experience owning a successful pool construction company, my journey brought me to Fort Worth, where I met my incredible wife, Julie. Her inspiration has been the foundation for this chapter of my career, allowing me to focus on the part of the process I love most: the design.</p><p>I now combine my deep understanding of construction with state-of-the-art technology to help my clients see and experience their vision before a single stone is laid.</p><p>Understanding my client's unique tastes and aspirations is the heart of what I do. My sophisticated yet approachable design process is built on a simple foundation: to reflect your aspirations and enhance your lifestyle.</p><p>I enhance projects by incorporating natural elements — light, water, and location — to create a space that perfectly reflects my clients' desires. By extensively integrating unique aquatic features, my designs stand out and deliver that "wow factor" you're seeking.</p></div>
+    </div></div></section>
+    <section class="section julie"><div class="section-inner"><div class="julie-grid">
+        <div class="julie-content reveal"><p class="section-label">The Foundation</p><h2>Creating Dreams Together</h2><p>My wife Julie has been the inspiration behind everything I do. Her encouragement gave me the freedom to focus entirely on design — the part of this work that lights me up every single day. Together, we've built not just a business, but a life centered around creativity, craftsmanship, and helping families realize their vision of the perfect outdoor space.</p><p>Every project begins with a conversation, and every conversation begins with understanding what matters most to you. That personal connection is what transforms a design from good to extraordinary.</p></div>
+        <div class="julie-photo reveal"><picture><source srcset="images/about-couple-400w.webp 400w, images/about-couple-800w.webp 800w, images/about-couple-1200w.webp 1200w" sizes="(max-width:900px) 100vw, 450px" type="image/webp"><img src="images/about-couple-1200w.webp" alt="Brian and Julie Westfall" width="450" height="338" loading="lazy"></picture></div>
+    </div></div></section>
+    <section class="section studio"><div class="section-inner">
+        <div class="studio-header reveal"><p class="section-label">The Design Studio</p><h2>Where Vision Meets Technology</h2><p>A high-performance digital design studio built to bring your vision to life with photorealistic accuracy</p></div>
+        <div class="studio-photos">
+            <figure class="studio-photo reveal"><picture><source srcset="images/about-studio-monitors-400w.webp 400w, images/about-studio-monitors-800w.webp 800w, images/about-studio-monitors-1200w.webp 1200w" sizes="(max-width:900px) 100vw, 50vw" type="image/webp"><img src="images/about-studio-monitors-1200w.webp" alt="Triple-monitor design workstation" width="600" height="338" loading="lazy"></picture><figcaption><strong>Command Center</strong> — Triple curved monitors for immersive design work</figcaption></figure>
+            <figure class="studio-photo reveal"><picture><source srcset="images/about-studio-wide-400w.webp 400w, images/about-studio-wide-800w.webp 800w, images/about-studio-wide-1200w.webp 1200w" sizes="(max-width:900px) 100vw, 50vw" type="image/webp"><img src="images/about-studio-wide-1200w.webp" alt="Full design studio" width="600" height="338" loading="lazy"></picture><figcaption><strong>Full Studio</strong> — Multi-system rendering powered by RTX 4090 graphics</figcaption></figure>
+        </div>
+        <p class="tech-label reveal">My Digital Toolkit Includes Technology From</p>
+        <div class="tech-grid reveal">
+            <a href="https://www.nvidia.com/" target="_blank" rel="noopener" class="tech-logo" title="NVIDIA RTX 4090"><img src="images/logo-nvidia.webp" alt="NVIDIA" width="90" height="90" loading="lazy"></a>
+            <a href="https://www.intel.com/" target="_blank" rel="noopener" class="tech-logo" title="Intel Core i9"><img src="images/logo-intel.webp" alt="Intel" width="90" height="90" loading="lazy"></a>
+            <a href="https://www.dell.com/en-us/gaming" target="_blank" rel="noopener" class="tech-logo" title="Alienware"><img src="images/logo-alienware.webp" alt="Alienware" width="90" height="90" loading="lazy"></a>
+            <a href="https://us.msi.com/" target="_blank" rel="noopener" class="tech-logo" title="MSI"><img src="images/logo-msi.webp" alt="MSI" width="90" height="90" loading="lazy"></a>
+            <a href="https://www.asus.com/us/" target="_blank" rel="noopener" class="tech-logo" title="ASUS ROG"><img src="images/logo-asus.webp" alt="ASUS ROG" width="90" height="90" loading="lazy"></a>
+            <a href="https://secretlab.co/" target="_blank" rel="noopener" class="tech-logo" title="Secretlab"><img src="images/logo-secretlab.webp" alt="Secretlab" width="90" height="90" loading="lazy"></a>
+            <a href="https://www.logitechg.com/" target="_blank" rel="noopener" class="tech-logo" title="Logitech G"><img src="images/logo-logitech.webp" alt="Logitech" width="90" height="90" loading="lazy"></a>
+            <a href="https://www.razer.com/" target="_blank" rel="noopener" class="tech-logo" title="Razer"><img src="images/logo-razer.webp" alt="Razer" width="90" height="90" loading="lazy"></a>
+        </div>
+    </div></section>
+    <section class="section cta-section" aria-label="Contact">
         <div class="section-inner">
-            <div class="story-grid">
-                <div class="story-portrait reveal">
-                    <picture>
-                        <source srcset="images/about-brian-400w.webp 400w, images/about-brian-800w.webp 800w, images/about-brian-1200w.webp 1200w" sizes="(max-width:768px) 280px, 400px" type="image/webp">
-                        <img src="images/about-brian-1200w.webp" alt="Brian Lee Westfall — 3D Pool and Landscape Designer, Fort Worth Texas" width="400" height="500" loading="eager">
-                    </picture>
-                </div>
-                <div class="story-content reveal">
-                    <p class="section-label">My Story</p>
-                    <h2>Hello, I'm Brian Westfall</h2>
-                    <p>For over two decades, my passion has been helping people create the outdoor oasis they've always dreamed of. After years of hands-on experience owning a successful pool construction company, my journey brought me to Fort Worth, where I met my incredible wife, Julie. Her inspiration has been the foundation for this chapter of my career, allowing me to focus on the part of the process I love most: the design.</p>
-                    <p>I now combine my deep understanding of construction with state-of-the-art technology to help my clients see and experience their vision before a single stone is laid.</p>
-                    <p>Understanding my client's unique tastes and aspirations is the heart of what I do. My sophisticated yet approachable design process is built on a simple foundation: to reflect your aspirations and enhance your lifestyle.</p>
-                    <p>I enhance projects by incorporating natural elements — light, water, and location — to create a space that perfectly reflects my clients' desires. By extensively integrating unique aquatic features, my designs stand out and deliver that "wow factor" you're seeking.</p>
-                </div>
+            <div class="cta-inner">
+                <h2 class="reveal section-title">Let's Begin Your Journey</h2>
+                <p class="reveal section-subtitle" style="font-family:var(--font-elegant);font-size:1.15rem;color:var(--text-secondary);font-style:italic;">Ready to create your dream outdoor space? Let's bring your vision to life.</p>
+                <a href="tel:9404334333" class="btn-primary reveal">Call (940) 433-4333</a>
             </div>
         </div>
-    </section>
-    <section class="section julie">
-        <div class="section-inner">
-            <div class="julie-grid">
-                <div class="julie-content reveal">
-                    <p class="section-label">The Foundation</p>
-                    <h2>Creating Dreams Together</h2>
-                    <p>My wife Julie has been the inspiration behind everything I do. Her encouragement gave me the freedom to focus entirely on design — the part of this work that lights me up every single day. Together, we've built not just a business, but a life centered around creativity, craftsmanship, and helping families realize their vision of the perfect outdoor space.</p>
-                    <p>Every project begins with a conversation, and every conversation begins with understanding what matters most to you. That personal connection is what transforms a design from good to extraordinary.</p>
-                </div>
-                <div class="julie-photo reveal">
-                    <picture>
-                        <source srcset="images/about-couple-400w.webp 400w, images/about-couple-800w.webp 800w, images/about-couple-1200w.webp 1200w" sizes="(max-width:900px) 100vw, 450px" type="image/webp">
-                        <img src="images/about-couple-1200w.webp" alt="Brian and Julie Westfall" width="450" height="338" loading="lazy">
-                    </picture>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="section studio">
-        <div class="section-inner">
-            <div class="studio-header reveal">
-                <p class="section-label">The Design Studio</p>
-                <h2>Where Vision Meets Technology</h2>
-                <p>A high-performance digital design studio built to bring your vision to life with photorealistic accuracy</p>
-            </div>
-            <div class="studio-photos">
-                <figure class="studio-photo reveal">
-                    <picture>
-                        <source srcset="images/about-studio-monitors-400w.webp 400w, images/about-studio-monitors-800w.webp 800w, images/about-studio-monitors-1200w.webp 1200w" sizes="(max-width:900px) 100vw, 50vw" type="image/webp">
-                        <img src="images/about-studio-monitors-1200w.webp" alt="Triple-monitor design workstation" width="600" height="338" loading="lazy">
-                    </picture>
-                    <figcaption><strong>Command Center</strong> — Triple curved monitors for immersive design work</figcaption>
-                </figure>
-                <figure class="studio-photo reveal">
-                    <picture>
-                        <source srcset="images/about-studio-wide-400w.webp 400w, images/about-studio-wide-800w.webp 800w, images/about-studio-wide-1200w.webp 1200w" sizes="(max-width:900px) 100vw, 50vw" type="image/webp">
-                        <img src="images/about-studio-wide-1200w.webp" alt="Full design studio with multi-computer setup" width="600" height="338" loading="lazy">
-                    </picture>
-                    <figcaption><strong>Full Studio</strong> — Multi-system rendering powered by RTX 4090 graphics</figcaption>
-                </figure>
-            </div>
-            <p class="tech-label reveal">My Digital Toolkit Includes Technology From</p>
-            <div class="tech-grid reveal">
-                <a href="https://www.nvidia.com/" target="_blank" rel="noopener" class="tech-logo" title="NVIDIA RTX 4090"><img src="images/logo-nvidia.webp" alt="NVIDIA RTX 4090" width="90" height="90" loading="lazy"></a>
-                <a href="https://www.intel.com/" target="_blank" rel="noopener" class="tech-logo" title="Intel Core i9"><img src="images/logo-intel.webp" alt="Intel" width="90" height="90" loading="lazy"></a>
-                <a href="https://www.dell.com/en-us/gaming" target="_blank" rel="noopener" class="tech-logo" title="Alienware"><img src="images/logo-alienware.webp" alt="Alienware" width="90" height="90" loading="lazy"></a>
-                <a href="https://us.msi.com/" target="_blank" rel="noopener" class="tech-logo" title="MSI"><img src="images/logo-msi.webp" alt="MSI" width="90" height="90" loading="lazy"></a>
-                <a href="https://www.asus.com/us/" target="_blank" rel="noopener" class="tech-logo" title="ASUS ROG"><img src="images/logo-asus.webp" alt="ASUS ROG" width="90" height="90" loading="lazy"></a>
-                <a href="https://secretlab.co/" target="_blank" rel="noopener" class="tech-logo" title="Secretlab"><img src="images/logo-secretlab.webp" alt="Secretlab" width="90" height="90" loading="lazy"></a>
-                <a href="https://www.logitechg.com/" target="_blank" rel="noopener" class="tech-logo" title="Logitech G"><img src="images/logo-logitech.webp" alt="Logitech" width="90" height="90" loading="lazy"></a>
-                <a href="https://www.razer.com/" target="_blank" rel="noopener" class="tech-logo" title="Razer"><img src="images/logo-razer.webp" alt="Razer" width="90" height="90" loading="lazy"></a>
-            </div>
-        </div>
-    </section>
-    <section class="cta-section">
-        <h2 class="reveal">Let's Begin Your Journey</h2>
-        <p class="reveal" style="font-family:var(--font-elegant);font-size:1.15rem;color:var(--text-secondary);font-style:italic;max-width:500px;margin:0 auto 2rem;">Ready to create your dream outdoor space? Let's bring your vision to life.</p>
-        <a href="tel:9404334333" class="btn-primary reveal">Call (940) 433-4333</a>
     </section>
     </main>
     <div id="site-footer"></div>
