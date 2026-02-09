@@ -1,4 +1,18 @@
-/* BLW Initials Box — Header */
+/* BLW Crystal Logo — Header */
+.nav-logo-img {
+    width: 44px; height: 44px;
+    border-radius: 10px;
+    margin-right: 0.75rem;
+    flex-shrink: 0;
+    object-fit: contain;
+    transition: all 0.3s;
+}
+.nav-brand:hover .nav-logo-img {
+    filter: brightness(1.15);
+    box-shadow: 0 4px 12px rgba(196,154,60,0.3);
+}
+
+/* Legacy BLW text box — keep as fallback */
 .nav-logo {
     display: flex; align-items: center; justify-content: center;
     width: 44px; height: 44px;
@@ -15,5 +29,5 @@
 
 /* Footer Full Logo */
 .footer-logo-link { display: block; margin-bottom: 0.5rem; }
-.footer-logo-full { max-width: 280px; height: auto; transition: opacity 0.3s; }
+.footer-logo-full { max-width: 320px; width: 100%; height: auto; transition: opacity 0.3s; }
 .footer-logo-link:hover .footer-logo-full { opacity: 0.85; }
