@@ -1,13 +1,10 @@
 <!-- Shared Header — Brian Lee Westfall | AI Vision Designs -->
-<!-- TeslaQuake-style nav: Full logo left | Core pages center | Dropdown | CTA right -->
 <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
-        <!-- LEFT: Full logo (has name + brand built in) -->
         <a href="." class="nav-brand" aria-label="Brian Lee Westfall — AI Vision Designs — Home">
-            <img src="images/logo-nav-full.webp" alt="Brian Lee Westfall — AI Vision Designs" class="nav-logo-full" width="198" height="50">
+            <div class="nav-logo">BLW</div>
+            <span class="nav-brand-text">Brian Lee Westfall<span class="nav-brand-sub">AI Vision Designs</span></span>
         </a>
-
-        <!-- CENTER + RIGHT: Core pages, dropdown, CTA -->
         <ul class="nav-links">
             <li><a href="." data-page="home">Home</a></li>
             <li><a href="about.html" data-page="about">About</a></li>
@@ -26,15 +23,11 @@
             </li>
             <li class="nav-cta-wrap"><a href=".#contact" class="nav-cta">Get Started</a></li>
         </ul>
-
-        <!-- MOBILE: Hamburger -->
         <button class="hamburger" aria-label="Open menu" aria-expanded="false">
             <span></span><span></span><span></span>
         </button>
     </div>
 </nav>
-
-<!-- Mobile overlay + slide-out menu -->
 <div class="mobile-overlay" aria-hidden="true"></div>
 <div class="mobile-menu" role="dialog" aria-label="Mobile navigation">
     <a href=".">Home</a>
