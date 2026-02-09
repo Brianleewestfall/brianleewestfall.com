@@ -1,3 +1,5 @@
+# TEMPORARY: Block all crawlers during development
+# TODO: Remove this block when ready to launch
 User-agent: *
-Allow: /
-Sitemap: https://brianleewestfall.com/sitemap.xml
+Disallow: /
+# Sitemap: https://brianleewestfall.com/sitemap.xml
