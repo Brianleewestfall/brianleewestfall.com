@@ -1,27 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://brianleewestfall.com/</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://brianleewestfall.com/about.html</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://brianleewestfall.com/pool-safety.html</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://brianleewestfall.com/forensic-visualization.html</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+  <url><loc>https://brianleewestfall.com/</loc><lastmod>2026-02-09</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://brianleewestfall.com/about.html</loc><lastmod>2026-02-09</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brianleewestfall.com/forensic-visualization.html</loc><lastmod>2026-02-09</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://brianleewestfall.com/pool-safety.html</loc><lastmod>2026-02-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://brianleewestfall.com/inspections.html</loc><lastmod>2026-02-09</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brianleewestfall.com/architectural-visualization.html</loc><lastmod>2026-02-09</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://brianleewestfall.com/pool-landscape-design.html</loc><lastmod>2026-02-09</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://brianleewestfall.com/commercial-visualization.html</loc><lastmod>2026-02-09</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://brianleewestfall.com/plans.html</loc><lastmod>2026-02-09</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>
