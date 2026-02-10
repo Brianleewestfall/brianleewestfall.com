@@ -73,6 +73,8 @@
                 (page === 'home' && (currentPage === '' || currentPage === 'index.html')) ||
                 (page === 'about' && currentPage === 'about.html') ||
                 (page === 'safety' && currentPage === 'pool-safety.html') ||
+                (page === 'plans' && currentPage === 'plans.html') ||
+                (page === 'inspections' && currentPage === 'inspections.html') ||
                 (page === 'services' && (
                     currentPage === 'architectural-visualization.html' ||
                     currentPage === 'forensic-visualization.html' ||
@@ -134,7 +136,41 @@
         }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
         document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(function(el) { ro.observe(el); });
 
-        // --- Lazy load Vimeo iframes ---
+        // --- Gold divider lines on sections ---
+        var lineObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(e) {
+                if (e.isIntersecting) {
+                    e.target.classList.add('line-visible');
+                    lineObserver.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.05 });
+        document.querySelectorAll('.section').forEach(function(el) { lineObserver.observe(el); });
+
+        // --- Video Slide-In + Autoplay ---
+        var videoObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(e) {
+                if (e.isIntersecting) {
+                    // Slide in
+                    e.target.classList.add('video-visible');
+
+                    // Find iframe and trigger autoplay
+                    var iframe = e.target.querySelector('iframe[data-src]');
+                    if (iframe) {
+                        var src = iframe.getAttribute('data-src');
+                        // Switch autoplay=0 to autoplay=1 so it plays on slide-in
+                        src = src.replace('autoplay=0', 'autoplay=1');
+                        iframe.src = src;
+                        iframe.removeAttribute('data-src');
+                    }
+
+                    videoObserver.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.25, rootMargin: '0px 0px -50px 0px' });
+        document.querySelectorAll('.video-row').forEach(function(el) { videoObserver.observe(el); });
+
+        // --- Lazy load remaining iframes (non-video-row) ---
         var vo = new IntersectionObserver(function(entries) {
             entries.forEach(function(e) {
                 if (e.isIntersecting) {
@@ -147,6 +183,29 @@
                 }
             });
         }, { rootMargin: '200px' });
-        document.querySelectorAll('iframe[data-src]').forEach(function(el) { vo.observe(el); });
+        document.querySelectorAll('iframe[data-src]').forEach(function(el) {
+            // Skip iframes inside video-rows (handled by videoObserver)
+            if (!el.closest('.video-row')) {
+                vo.observe(el);
+            }
+        });
+
+        // --- Hero Parallax ---
+        var heroImg = document.querySelector('.hero-bg-image');
+        if (heroImg && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            var ticking = false;
+            window.addEventListener('scroll', function() {
+                if (!ticking) {
+                    requestAnimationFrame(function() {
+                        var scrollY = window.scrollY;
+                        if (scrollY < 900) {
+                            heroImg.style.transform = 'translateY(' + (scrollY * 0.35) + 'px) scale(1.05)';
+                        }
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            }, { passive: true });
+        }
     }
 })();
