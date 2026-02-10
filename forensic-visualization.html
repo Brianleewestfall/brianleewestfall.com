@@ -3,337 +3,230 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Forensic Visualization & Litigation Support | Brian Lee Westfall</title>
-<meta name="description" content="Licensed insurance adjuster creates forensic 3D animations for pool accident & premises liability cases. 20+ years construction experience. Nationwide service. Free consultation.">
-<meta name="keywords" content="forensic pool animation, pool accident reconstruction, premises liability visualization, expert witness graphics, pool drowning litigation support, forensic animation, accident reconstruction">
+<!-- DEV: Remove before launch --><meta name="robots" content="noindex, nofollow">
+<title>Forensic Visualization & Litigation Support | AI Vision Designs — Brian Lee Westfall</title>
+<meta name="description" content="Licensed insurance adjuster creates forensic 3D animations for pool accident & premises liability cases. 20+ years construction experience. Nationwide service.">
 <link rel="canonical" href="https://brianleewestfall.com/forensic-visualization.html">
-<meta property="og:title" content="Forensic Visualization & Litigation Support | Brian Lee Westfall">
+<meta property="og:title" content="Forensic Visualization & Litigation Support | AI Vision Designs — Brian Lee Westfall">
 <meta property="og:description" content="Licensed insurance adjuster creates forensic 3D animations for pool accident & premises liability cases. 20+ years construction experience.">
 <meta property="og:url" content="https://brianleewestfall.com/forensic-visualization.html">
 <meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 
-<!-- Schema.org Structured Data -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  "name": "Brian Lee Westfall - Forensic Visualization",
+  "name": "AI Vision Designs — Forensic Visualization",
   "description": "Forensic visualization and litigation support for personal injury attorneys. Specializing in pool accident reconstruction, premises liability, and construction defect documentation.",
   "url": "https://brianleewestfall.com/forensic-visualization",
   "telephone": "+19404334333",
   "email": "brianleewestfall@gmail.com",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Fort Worth",
-    "addressRegion": "TX",
-    "postalCode": "76244",
-    "addressCountry": "US"
-  },
+  "address": { "@type": "PostalAddress", "addressLocality": "Fort Worth", "addressRegion": "TX", "postalCode": "76244", "addressCountry": "US" },
   "areaServed": "US",
   "priceRange": "$2,500 - $25,000",
-  "hasCredential": {
-    "@type": "EducationalOccupationalCredential",
-    "credentialCategory": "license",
-    "name": "Texas All-Lines Insurance Adjuster License",
-    "recognizedBy": {
-      "@type": "Organization",
-      "name": "Texas Department of Insurance"
-    }
-  }
+  "hasCredential": { "@type": "EducationalOccupationalCredential", "credentialCategory": "license", "name": "Texas All-Lines Insurance Adjuster License", "recognizedBy": { "@type": "Organization", "name": "Texas Department of Insurance" } }
 }
 </script>
 
+<link rel="stylesheet" href="css/global.css">
 <style>
-  :root {
-    --navy: #111214;
-    --navy-light: #1A1B1E;
-    --navy-mid: #222326;
-    --gold: #C49A3C;
-    --gold-light: #D4AF5E;
-    --gold-pale: #E8D5A8;
-    --blue: #3498DB;
-    --blue-light: #5DADE2;
-    --blue-pale: #7EC8E3;
-    --white: #F8F6F0;
-    --text-secondary: #9CA3AF;
-    --red-alert: #C0392B;
-    --red-soft: rgba(192, 57, 43, 0.15);
-    --font-heading: 'Playfair Display', Georgia, serif;
-    --font-body: 'DM Sans', -apple-system, sans-serif;
-    --font-elegant: 'Cormorant Garamond', Georgia, serif;
+  :root{--blue:#3498DB;--blue-light:#5DADE2;--blue-pale:#7EC8E3;--red-alert:#C0392B;--red-soft:rgba(192,57,43,0.15)}
+
+  /* HERO */
+  .f-hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden;padding:8rem 2rem 6rem}
+  .f-hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 20% 50%,rgba(192,57,43,0.06) 0%,transparent 60%),radial-gradient(ellipse at 80% 50%,rgba(196,154,60,0.05) 0%,transparent 50%),linear-gradient(180deg,var(--navy) 0%,#0A0B0D 100%);z-index:0}
+  .f-hero-grid{position:absolute;inset:0;z-index:0;opacity:.03;background-image:linear-gradient(rgba(196,154,60,0.3) 1px,transparent 1px),linear-gradient(90deg,rgba(196,154,60,0.3) 1px,transparent 1px);background-size:80px 80px}
+  .f-hero-content{position:relative;z-index:1;max-width:900px;animation:fadeUp 1.2s cubic-bezier(0.22,1,0.36,1)}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
+  @keyframes pulse{0%,100%{opacity:.4}50%{opacity:1}}
+  .f-hero-badge{display:inline-flex;align-items:center;gap:.75rem;background:rgba(192,57,43,0.1);border:1px solid rgba(192,57,43,0.25);padding:.5rem 1.5rem;border-radius:6px;margin-bottom:2.5rem;font-size:.7rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:#E74C3C}
+  .f-hero-badge-dot{width:6px;height:6px;background:#E74C3C;border-radius:50%;animation:pulse 2s infinite}
+  .f-hero h1{font-family:var(--font-heading);font-size:clamp(2.2rem,5vw,3.8rem);font-weight:600;line-height:1.15;margin-bottom:1.5rem}
+  .f-hero h1 em{font-style:italic;color:var(--blue)}
+  .f-hero-sub{font-family:var(--font-elegant);font-size:1.35rem;color:var(--text-secondary);line-height:1.7;max-width:700px;margin:0 auto 2.5rem}
+  .f-hero-ctas{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:3rem}
+  .btn-ghost{display:inline-flex;align-items:center;gap:.5rem;background:transparent;color:var(--white);padding:1rem 2.25rem;border-radius:8px;font-size:.9rem;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;text-decoration:none;border:1.5px solid rgba(255,255,255,0.25);transition:all .3s}
+  .btn-ghost:hover{border-color:var(--blue);color:var(--blue);transform:translateY(-3px)}
+  .f-hero-trust{display:flex;gap:2.5rem;justify-content:center;flex-wrap:wrap}
+  .f-hero-trust span{font-size:.7rem;font-weight:500;letter-spacing:1px;color:var(--text-secondary);display:flex;align-items:center;gap:.5rem}
+  .f-hero-trust .check{color:var(--blue);font-weight:700}
+
+  /* SECTIONS */
+  .f-section{padding:6rem 2rem;position:relative}
+  .f-inner{max-width:1200px;margin:0 auto}
+  .f-eyebrow{font-size:.75rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--blue);margin-bottom:1rem}
+  .f-title{font-family:var(--font-heading);font-size:clamp(2rem,4vw,2.8rem);font-weight:600;line-height:1.2;margin-bottom:1.25rem}
+  .f-subtitle{font-family:var(--font-elegant);font-size:1.15rem;color:var(--text-secondary);max-width:700px;line-height:1.7;margin-bottom:2rem}
+  .f-line{width:60px;height:2px;background:linear-gradient(90deg,var(--blue),var(--blue-light));margin-bottom:2rem;border-radius:1px}
+
+  /* IMPACT STATS */
+  .impact{background:linear-gradient(180deg,#0A0B0D 0%,var(--navy) 100%)}
+  .impact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;max-width:1000px;margin:0 auto}
+  .impact-card{text-align:center;padding:2rem 1rem;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);border-radius:12px}
+  .impact-num{font-family:var(--font-heading);font-size:clamp(1.8rem,3vw,2.4rem);font-weight:700;color:var(--blue);line-height:1;margin-bottom:.5rem}
+  .impact-label{font-size:.78rem;color:var(--text-secondary);line-height:1.4}
+  .impact-label strong{color:var(--white)}
+  .impact-source{text-align:center;margin-top:2rem;font-size:.72rem;color:rgba(156,163,175,0.5);font-style:italic}
+
+  /* SPECIALTIES */
+  .specialties{background:var(--navy-light)}
+  .spec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+  .spec-card{padding:2.5rem 2rem;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);border-radius:16px;position:relative;overflow:hidden;transition:all .4s}
+  .spec-card::before{content:'';position:absolute;bottom:0;left:0;width:100%;height:3px;background:var(--red-alert);border-radius:0 0 16px 16px;transform:scaleX(0);transition:transform .4s;transform-origin:left}
+  .spec-card:hover::before{transform:scaleX(1)}
+  .spec-card:hover{background:rgba(255,255,255,0.04);border-color:rgba(192,57,43,0.2);transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,0.3)}
+  .spec-icon{font-size:2rem;margin-bottom:1.5rem;display:block}
+  .spec-card h3{font-family:var(--font-heading);font-size:1.4rem;font-weight:600;margin-bottom:1rem}
+  .spec-list{list-style:none;padding:0;margin-bottom:1.5rem}
+  .spec-list li{font-size:.85rem;color:rgba(255,255,255,0.85);padding:.35rem 0 .35rem 1.2rem;position:relative;line-height:1.5}
+  .spec-list li::before{content:'—';position:absolute;left:0;color:var(--blue);font-weight:300}
+  .spec-quote{font-family:var(--font-elegant);font-size:1rem;font-style:italic;color:var(--text-secondary);line-height:1.6;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.06)}
+
+  /* COMPARISON */
+  .comparison{background:var(--navy)}
+  .comp-table{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;border:1px solid rgba(255,255,255,0.08);border-radius:16px;overflow:hidden}
+  .comp-col{padding:3rem}
+  .comp-col.without{background:rgba(192,57,43,0.04);border-right:1px solid rgba(255,255,255,0.08)}
+  .comp-col.with{background:rgba(196,154,60,0.04)}
+  .comp-header{font-family:var(--font-heading);font-size:1.1rem;font-weight:600;margin-bottom:2rem;padding-bottom:1rem;border-bottom:2px solid;letter-spacing:1px}
+  .without .comp-header{color:#E74C3C;border-color:rgba(192,57,43,0.3)}
+  .with .comp-header{color:var(--gold);border-color:rgba(196,154,60,0.3)}
+  .comp-item{padding:.75rem 0;font-size:.9rem;color:rgba(255,255,255,0.85);line-height:1.5;display:flex;align-items:flex-start;gap:.75rem}
+  .comp-item .ico{flex-shrink:0;margin-top:2px}
+  .without .comp-item .ico{color:#E74C3C}
+  .with .comp-item .ico{color:var(--gold)}
+
+  /* HYPOTHETICAL DEMO */
+  .demo{background:var(--navy-light);overflow:hidden}
+  .demo-layout{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+  .demo-images{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+  .demo-images img{width:100%;border-radius:12px;aspect-ratio:16/10;object-fit:cover;border:1px solid rgba(255,255,255,0.06)}
+  .demo-images .hero-img{grid-column:1/-1;aspect-ratio:16/9}
+  .demo-disclaimer{display:inline-flex;align-items:center;gap:.5rem;background:rgba(192,57,43,0.08);border:1px solid rgba(192,57,43,0.2);padding:.4rem 1rem;border-radius:6px;font-size:.7rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#E74C3C;margin-bottom:1.5rem}
+  .demo-video-box{margin-top:2rem;background:rgba(255,255,255,0.02);border:1px solid rgba(52,152,219,0.2);border-radius:12px;padding:2.5rem;text-align:center;position:relative;overflow:hidden}
+  .demo-video-box::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,var(--blue),transparent)}
+  .demo-coming{font-family:var(--font-heading);font-size:1.1rem;color:var(--blue);letter-spacing:2px;text-transform:uppercase;margin-bottom:.5rem}
+  .demo-video-box p{font-size:.85rem;color:var(--text-secondary);line-height:1.6}
+  .demo-note{margin-top:1.5rem;font-size:.78rem;color:rgba(156,163,175,0.6);font-style:italic;line-height:1.6}
+
+  /* CREDENTIALS */
+  .credentials{background:linear-gradient(180deg,var(--navy) 0%,var(--navy-light) 100%)}
+  .cred-layout{display:grid;grid-template-columns:1fr 1.4fr;gap:5rem;align-items:start}
+  .license-card{background:linear-gradient(135deg,var(--navy-mid) 0%,rgba(196,154,60,0.06) 100%);border:1px solid rgba(196,154,60,0.2);border-radius:16px;padding:3rem;position:relative;overflow:hidden}
+  .license-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--blue),var(--blue-light));border-radius:16px 16px 0 0}
+  .license-header{font-size:.65rem;letter-spacing:3px;text-transform:uppercase;color:var(--blue);margin-bottom:1.5rem}
+  .license-title{font-family:var(--font-heading);font-size:1.6rem;font-weight:600;margin-bottom:.5rem}
+  .license-number{font-size:.85rem;color:var(--blue-pale);margin-bottom:1.5rem;font-weight:500}
+  .license-states{font-size:.8rem;color:var(--text-secondary);line-height:1.8}
+  .license-states strong{color:rgba(255,255,255,0.85)}
+  .stats-row{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:1.5rem}
+  .mini-stat{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06);border-radius:12px;padding:1.5rem;text-align:center}
+  .mini-stat-num{font-family:var(--font-heading);font-size:1.8rem;color:var(--blue);line-height:1;margin-bottom:.3rem}
+  .mini-stat-label{font-size:.65rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--text-secondary)}
+  .cred-text h3{font-family:var(--font-heading);font-size:1.3rem;font-weight:600;margin:2rem 0 1rem;color:var(--blue-pale)}
+  .cred-text p{font-size:.95rem;color:rgba(255,255,255,0.85);line-height:1.7;margin-bottom:1rem}
+  .cred-bold{font-family:var(--font-heading);font-size:1.2rem;font-weight:400;color:white;font-style:italic;padding:1.5rem 0;border-top:1px solid rgba(52,152,219,0.2);border-bottom:1px solid rgba(52,152,219,0.2);margin:2rem 0}
+
+  /* TIERS */
+  .pricing{background:var(--navy-light)}
+  .tiers-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+  .tier-card{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06);border-radius:16px;padding:3rem 2.5rem;position:relative;overflow:hidden;transition:all .4s}
+  .tier-card.featured{border-color:rgba(196,154,60,0.3);background:rgba(196,154,60,0.04)}
+  .tier-card.featured::before{content:'MOST REQUESTED';position:absolute;top:0;left:0;right:0;background:var(--gold);color:var(--navy);font-size:.6rem;font-weight:700;letter-spacing:3px;text-align:center;padding:.5rem;border-radius:16px 16px 0 0}
+  .tier-card:hover{transform:translateY(-4px);border-color:rgba(196,154,60,0.2);box-shadow:0 12px 40px rgba(0,0,0,0.3)}
+  .tier-num{font-size:.65rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--blue);margin-bottom:1rem}
+  .tier-name{font-family:var(--font-heading);font-size:1.5rem;font-weight:600;margin-bottom:.75rem}
+  .tier-price{font-family:var(--font-heading);font-size:2.2rem;color:var(--blue);margin-bottom:.5rem}
+  .tier-timeline{font-size:.75rem;color:var(--text-secondary);letter-spacing:1px;margin-bottom:2rem;padding-bottom:2rem;border-bottom:1px solid rgba(255,255,255,0.06)}
+  .tier-features{list-style:none;padding:0;margin-bottom:2rem}
+  .tier-features li{font-size:.85rem;color:rgba(255,255,255,0.85);padding:.45rem 0 .45rem 1.5rem;position:relative;line-height:1.4}
+  .tier-features li::before{content:'✓';position:absolute;left:0;color:var(--blue);font-weight:700;font-size:.8rem}
+  .tier-best{font-size:.8rem;color:var(--text-secondary);font-style:italic;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.06);line-height:1.5}
+
+  /* PROCESS */
+  .process{background:var(--navy)}
+  .process-timeline{max-width:900px;margin:0 auto;position:relative}
+  .process-timeline::before{content:'';position:absolute;left:28px;top:0;bottom:0;width:1px;background:rgba(52,152,219,0.2)}
+  .process-step{display:flex;gap:2.5rem;margin-bottom:3rem;position:relative}
+  .step-marker{width:56px;height:56px;flex-shrink:0;background:var(--navy);border:1px solid rgba(52,152,219,0.3);border-radius:12px;display:flex;align-items:center;justify-content:center;font-family:var(--font-heading);font-size:1.1rem;color:var(--blue);position:relative;z-index:1;transition:all .3s}
+  .process-step:hover .step-marker{background:var(--blue);color:var(--navy)}
+  .step-content h3{font-family:var(--font-heading);font-size:1.3rem;font-weight:600;margin-bottom:.5rem}
+  .step-content p{font-size:.9rem;color:var(--text-secondary);line-height:1.6;max-width:600px}
+
+  /* FAQ */
+  .faq{background:var(--navy-light)}
+  .faq-list{max-width:800px;margin:0 auto}
+  .faq-item{border-bottom:1px solid rgba(255,255,255,0.06);overflow:hidden}
+  .faq-q{width:100%;background:none;border:none;color:white;padding:1.5rem 0;font-family:var(--font-body);font-size:1rem;font-weight:500;text-align:left;cursor:pointer;display:flex;justify-content:space-between;align-items:center;transition:color .3s}
+  .faq-q:hover{color:var(--blue)}
+  .faq-toggle{font-size:1.5rem;color:var(--blue);transition:transform .3s;flex-shrink:0;margin-left:1rem}
+  .faq-item.open .faq-toggle{transform:rotate(45deg)}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .4s ease}
+  .faq-item.open .faq-a{max-height:300px;padding-bottom:1.5rem}
+  .faq-a p{font-size:.9rem;color:var(--text-secondary);line-height:1.7}
+
+  /* CTA */
+  .f-cta{background:radial-gradient(ellipse at 50% 50%,rgba(196,154,60,0.08) 0%,transparent 60%),var(--navy);text-align:center;padding:8rem 2rem;position:relative}
+  .f-cta::before{content:'';position:absolute;top:0;left:10%;right:10%;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);opacity:.3}
+  .f-cta h2{font-family:var(--font-heading);font-size:clamp(2rem,4vw,2.8rem);font-weight:600;margin-bottom:1.5rem}
+  .f-cta h2 em{color:var(--blue);font-style:italic}
+  .f-cta>p{font-family:var(--font-elegant);font-size:1.2rem;color:var(--text-secondary);margin-bottom:2.5rem;max-width:600px;margin-left:auto;margin-right:auto;line-height:1.7}
+  .f-cta-actions{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:3rem}
+  .f-cta-row{display:flex;gap:3rem;justify-content:center;flex-wrap:wrap}
+  .f-cta-item{font-size:.8rem;color:var(--text-secondary);letter-spacing:1px}
+  .f-cta-item a{color:var(--blue-pale);text-decoration:none;transition:color .3s}
+  .f-cta-item a:hover{color:var(--gold)}
+
+  /* RESPONSIVE */
+  @media(max-width:1024px){
+    .spec-grid,.tiers-grid{grid-template-columns:1fr;max-width:600px;margin:0 auto}
+    .comp-table{grid-template-columns:1fr}
+    .cred-layout{grid-template-columns:1fr;gap:3rem}
+    .demo-layout{grid-template-columns:1fr}
+    .impact-grid{grid-template-columns:repeat(2,1fr)}
   }
-
-  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body { font-family: var(--font-body); background: var(--navy); color: var(--white); line-height: 1.7; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
-  body::before { content: ''; position: fixed; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.03; z-index: 9999; pointer-events: none; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E"); }
-  img { max-width: 100%; height: auto; display: block; }
-  a { color: var(--gold); text-decoration: none; transition: color 0.3s ease; }
-  a:hover { color: var(--gold-light); }
-  :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
-
-  /* ===== NAV ===== */
-  .nav { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; padding: 1.25rem 0; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
-  .nav.scrolled { background: rgba(17, 18, 20, 0.95); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); padding: 0.75rem 0; border-bottom: 1px solid rgba(196, 154, 60, 0.15); }
-  .nav-inner { max-width: 1340px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
-  .nav-brand { display: flex; align-items: center; gap: 0.75rem; text-decoration: none; }
-  .nav-logo { width: 40px; height: 40px; background: linear-gradient(135deg, var(--gold), var(--gold-light)); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-family: var(--font-heading); font-weight: 700; font-size: 0.85rem; color: var(--navy); }
-  .nav-brand-text { font-family: var(--font-heading); font-size: 1.15rem; font-weight: 500; color: var(--white); letter-spacing: 0.5px; }
-  .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
-  .nav-links a { font-size: 0.82rem; font-weight: 500; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 1.5px; text-decoration: none; }
-  .nav-links a:hover, .nav-links a.active { color: var(--gold); }
-  .nav-cta { background: linear-gradient(135deg, var(--gold), var(--gold-light)); color: var(--navy) !important; padding: 0.6rem 1.4rem; border-radius: 6px; font-weight: 600 !important; transition: transform 0.3s ease, box-shadow 0.3s ease !important; }
-  .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 4px 20px rgba(196, 154, 60, 0.4); color: var(--navy) !important; }
-  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 8px; }
-  .hamburger span { width: 26px; height: 2px; background: var(--white); transition: all 0.3s ease; }
-  .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
-  .hamburger.active span:nth-child(2) { opacity: 0; }
-  .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
-  .mobile-menu { display: none; position: fixed; top: 0; right: -100%; width: 300px; height: 100vh; background: var(--navy-light); border-left: 1px solid rgba(196, 154, 60, 0.2); padding: 5rem 2rem 2rem; z-index: 999; transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
-  .mobile-menu.open { right: 0; }
-  .mobile-menu a { display: block; padding: 1rem 0; font-size: 1rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 1.5px; font-weight: 500; border-bottom: 1px solid rgba(196, 154, 60, 0.1); }
-  .mobile-menu a:hover { color: var(--gold); }
-  .mobile-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 998; opacity: 0; transition: opacity 0.3s; }
-  .mobile-overlay.open { opacity: 1; }
-
-  /* ===== ANIMATIONS ===== */
-  @keyframes fadeUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
-  @keyframes pulse { 0%, 100% { opacity: 0.4; } 50% { opacity: 1; } }
-  .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
-  .reveal.visible { opacity: 1; transform: translateY(0); }
-  .reveal-delay-1 { transition-delay: 0.15s; }
-  .reveal-delay-2 { transition-delay: 0.3s; }
-  .reveal-delay-3 { transition-delay: 0.45s; }
-  .reveal-delay-4 { transition-delay: 0.6s; }
-  .reveal-delay-5 { transition-delay: 0.75s; }
-
-  /* ===== COMMON ===== */
-  section { padding: 6rem 2rem; position: relative; }
-  .section-inner { max-width: 1200px; margin: 0 auto; }
-  .section-eyebrow { font-size: 0.75rem; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--blue); margin-bottom: 1rem; }
-  .section-title { font-family: var(--font-heading); font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 600; line-height: 1.2; margin-bottom: 1.25rem; }
-  .section-subtitle { font-family: var(--font-elegant); font-size: 1.15rem; color: var(--text-secondary); max-width: 700px; line-height: 1.7; margin-bottom: 2rem; }
-  .gold-line { width: 60px; height: 2px; background: linear-gradient(90deg, var(--blue), var(--blue-light)); margin-bottom: 2rem; border-radius: 1px; }
-  .btn-primary { display: inline-flex; align-items: center; gap: 0.5rem; background: linear-gradient(135deg, var(--gold), var(--gold-light)); color: var(--navy); padding: 1rem 2.25rem; border-radius: 8px; font-family: var(--font-body); font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; text-decoration: none; border: none; cursor: pointer; transition: transform 0.3s ease, box-shadow 0.3s ease; }
-  .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(196, 154, 60, 0.4); color: var(--navy); }
-  .btn-ghost { display: inline-flex; align-items: center; gap: 0.5rem; background: transparent; color: var(--white); padding: 1rem 2.25rem; border-radius: 8px; font-family: var(--font-body); font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; text-decoration: none; border: 1.5px solid rgba(255,255,255,0.25); cursor: pointer; transition: all 0.3s ease; }
-  .btn-ghost:hover { border-color: var(--blue); color: var(--blue); transform: translateY(-3px); }
-
-  /* ===== HERO ===== */
-  .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; position: relative; overflow: hidden; padding: 8rem 2rem 6rem; }
-  .hero-bg { position: absolute; inset: 0; background: radial-gradient(ellipse at 20% 50%, rgba(192,57,43,0.06) 0%, transparent 60%), radial-gradient(ellipse at 80% 50%, rgba(196,154,60,0.05) 0%, transparent 50%), linear-gradient(180deg, var(--navy) 0%, #0A0B0D 100%); z-index: 0; }
-  .hero-grid { position: absolute; inset: 0; z-index: 0; opacity: 0.03; background-image: linear-gradient(rgba(196,154,60,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(196,154,60,0.3) 1px, transparent 1px); background-size: 80px 80px; }
-  .hero-content { position: relative; z-index: 1; max-width: 900px; animation: fadeUp 1.2s cubic-bezier(0.22, 1, 0.36, 1); }
-  .hero-badge { display: inline-flex; align-items: center; gap: 0.75rem; background: rgba(192,57,43,0.1); border: 1px solid rgba(192,57,43,0.25); padding: 0.5rem 1.5rem; border-radius: 6px; margin-bottom: 2.5rem; font-size: 0.7rem; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: #E74C3C; }
-  .hero-badge-dot { width: 6px; height: 6px; background: #E74C3C; border-radius: 50%; animation: pulse 2s infinite; }
-  .hero h1 { font-family: var(--font-heading); font-size: clamp(2.4rem, 5vw, 3.8rem); font-weight: 600; line-height: 1.15; margin-bottom: 1.5rem; }
-  .hero h1 em { font-style: italic; color: var(--blue); }
-  .hero-sub { font-family: var(--font-elegant); font-size: 1.35rem; color: var(--text-secondary); line-height: 1.7; max-width: 700px; margin: 0 auto 2.5rem; }
-  .hero-ctas { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 3rem; }
-  .hero-trust { display: flex; gap: 2.5rem; justify-content: center; flex-wrap: wrap; }
-  .hero-trust span { font-size: 0.7rem; font-weight: 500; letter-spacing: 1px; color: var(--text-secondary); display: flex; align-items: center; gap: 0.5rem; }
-  .hero-trust .check { color: var(--blue); font-weight: 700; }
-
-  /* ===== VIDEO CASE STUDY ===== */
-  .case-study { background: linear-gradient(180deg, #0A0B0D 0%, var(--navy) 50%, var(--navy-light) 100%); text-align: center; }
-  .video-frame { max-width: 960px; margin: 0 auto 2rem; position: relative; aspect-ratio: 16/9; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; overflow: hidden; }
-  .video-placeholder { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 1rem; background: radial-gradient(ellipse at center, rgba(196,154,60,0.05) 0%, transparent 70%), linear-gradient(135deg, var(--navy-mid) 0%, var(--navy) 100%); }
-  .play-btn { width: 80px; height: 80px; border: 2px solid var(--blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s ease; }
-  .play-btn:hover { background: var(--blue); transform: scale(1.1); }
-  .play-btn::after { content: ''; width: 0; height: 0; border-style: solid; border-width: 12px 0 12px 22px; border-color: transparent transparent transparent var(--blue); margin-left: 4px; transition: border-color 0.3s; }
-  .play-btn:hover::after { border-color: transparent transparent transparent var(--navy); }
-  .video-label { font-size: 0.7rem; letter-spacing: 3px; text-transform: uppercase; color: var(--text-secondary); }
-  .case-meta { display: flex; gap: 3rem; justify-content: center; margin-top: 2rem; flex-wrap: wrap; }
-  .case-meta-item { text-align: center; }
-  .case-meta-label { font-size: 0.65rem; letter-spacing: 2px; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 0.3rem; }
-  .case-meta-value { font-family: var(--font-heading); font-size: 1rem; color: var(--gold-pale); }
-
-  /* ===== SPECIALTY AREAS ===== */
-  .specialties { background: var(--navy-light); }
-  .specialties-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 1200px; margin: 0 auto; }
-  .specialty-card { padding: 2.5rem 2rem; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; position: relative; overflow: hidden; transition: all 0.4s ease; }
-  .specialty-card::before { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 3px; background: var(--red-alert); border-radius: 0 0 16px 16px; transform: scaleX(0); transition: transform 0.4s ease; transform-origin: left; }
-  .specialty-card:hover::before { transform: scaleX(1); }
-  .specialty-card:hover { background: rgba(255,255,255,0.04); border-color: rgba(192,57,43,0.2); transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.3); }
-  .specialty-icon { font-size: 2rem; margin-bottom: 1.5rem; display: block; }
-  .specialty-card h3 { font-family: var(--font-heading); font-size: 1.4rem; font-weight: 600; margin-bottom: 1rem; }
-  .specialty-list { list-style: none; margin-bottom: 1.5rem; }
-  .specialty-list li { font-size: 0.85rem; color: rgba(255,255,255,0.85); padding: 0.35rem 0; padding-left: 1.2rem; position: relative; line-height: 1.5; }
-  .specialty-list li::before { content: '—'; position: absolute; left: 0; color: var(--blue); font-weight: 300; }
-  .specialty-quote { font-family: var(--font-elegant); font-size: 1rem; font-style: italic; color: var(--text-secondary); line-height: 1.6; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.06); }
-
-  /* ===== COMPARISON ===== */
-  .comparison { background: var(--navy); }
-  .comparison-table { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; overflow: hidden; }
-  .comparison-col { padding: 3rem; }
-  .comparison-col.without { background: rgba(192,57,43,0.04); border-right: 1px solid rgba(255,255,255,0.08); }
-  .comparison-col.with { background: rgba(196,154,60,0.04); }
-  .comparison-header { font-family: var(--font-heading); font-size: 1.1rem; font-weight: 600; margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 2px solid; letter-spacing: 1px; }
-  .without .comparison-header { color: #E74C3C; border-color: rgba(192,57,43,0.3); }
-  .with .comparison-header { color: var(--gold); border-color: rgba(196,154,60,0.3); }
-  .comparison-item { padding: 0.75rem 0; font-size: 0.9rem; color: rgba(255,255,255,0.85); line-height: 1.5; display: flex; align-items: flex-start; gap: 0.75rem; }
-  .comparison-item .icon { flex-shrink: 0; margin-top: 2px; }
-  .without .comparison-item .icon { color: #E74C3C; }
-  .with .comparison-item .icon { color: var(--gold); }
-
-  /* ===== CREDENTIALS ===== */
-  .credentials { background: linear-gradient(180deg, var(--navy) 0%, var(--navy-light) 100%); }
-  .credentials-layout { display: grid; grid-template-columns: 1fr 1.4fr; gap: 5rem; max-width: 1200px; margin: 0 auto; align-items: start; }
-  .license-card { background: linear-gradient(135deg, var(--navy-mid) 0%, rgba(196,154,60,0.06) 100%); border: 1px solid rgba(196,154,60,0.2); border-radius: 16px; padding: 3rem; position: relative; overflow: hidden; }
-  .license-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--blue), var(--blue-light)); border-radius: 16px 16px 0 0; }
-  .license-header { font-size: 0.65rem; letter-spacing: 3px; text-transform: uppercase; color: var(--blue); margin-bottom: 1.5rem; }
-  .license-title { font-family: var(--font-heading); font-size: 1.6rem; font-weight: 600; margin-bottom: 0.5rem; }
-  .license-number { font-size: 0.85rem; color: var(--blue-pale); margin-bottom: 1.5rem; font-weight: 500; }
-  .license-states { font-size: 0.8rem; color: var(--text-secondary); line-height: 1.8; }
-  .license-states strong { color: rgba(255,255,255,0.85); }
-  .stats-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 1.5rem; }
-  .mini-stat { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; padding: 1.5rem; text-align: center; }
-  .mini-stat-number { font-family: var(--font-heading); font-size: 1.8rem; color: var(--blue); line-height: 1; margin-bottom: 0.3rem; }
-  .mini-stat-label { font-size: 0.65rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-secondary); }
-  .credentials-text h3 { font-family: var(--font-heading); font-size: 1.3rem; font-weight: 600; margin: 2rem 0 1rem; color: var(--blue-pale); }
-  .credentials-text p { font-size: 0.95rem; color: rgba(255,255,255,0.85); line-height: 1.7; margin-bottom: 1rem; }
-  .credentials-text .bold-statement { font-family: var(--font-heading); font-size: 1.2rem; font-weight: 400; color: white; font-style: italic; padding: 1.5rem 0; border-top: 1px solid rgba(52,152,219,0.2); border-bottom: 1px solid rgba(52,152,219,0.2); margin: 2rem 0; }
-
-  /* ===== SERVICE TIERS ===== */
-  .pricing { background: var(--navy-light); }
-  .tiers-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1200px; margin: 0 auto; }
-  .tier-card { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; padding: 3rem 2.5rem; position: relative; overflow: hidden; transition: all 0.4s ease; }
-  .tier-card.featured { border-color: rgba(196,154,60,0.3); background: rgba(196,154,60,0.04); }
-  .tier-card.featured::before { content: 'MOST POPULAR'; position: absolute; top: 0; left: 0; right: 0; background: var(--gold); color: var(--navy); font-size: 0.6rem; font-weight: 700; letter-spacing: 3px; text-align: center; padding: 0.5rem; border-radius: 16px 16px 0 0; }
-  .tier-card:hover { transform: translateY(-4px); border-color: rgba(196,154,60,0.2); box-shadow: 0 12px 40px rgba(0,0,0,0.3); }
-  .tier-number { font-size: 0.65rem; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--blue); margin-bottom: 1rem; }
-  .tier-name { font-family: var(--font-heading); font-size: 1.5rem; font-weight: 600; margin-bottom: 0.75rem; }
-  .tier-price { font-family: var(--font-heading); font-size: 2.2rem; color: var(--blue); margin-bottom: 0.5rem; }
-  .tier-timeline { font-size: 0.75rem; color: var(--text-secondary); letter-spacing: 1px; margin-bottom: 2rem; padding-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
-  .tier-features { list-style: none; margin-bottom: 2rem; }
-  .tier-features li { font-size: 0.85rem; color: rgba(255,255,255,0.85); padding: 0.45rem 0; padding-left: 1.5rem; position: relative; line-height: 1.4; }
-  .tier-features li::before { content: '✓'; position: absolute; left: 0; color: var(--blue); font-weight: 700; font-size: 0.8rem; }
-  .tier-best { font-size: 0.8rem; color: var(--text-secondary); font-style: italic; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.06); line-height: 1.5; }
-
-  /* ===== PROCESS ===== */
-  .process { background: var(--navy); }
-  .process-timeline { max-width: 900px; margin: 0 auto; position: relative; }
-  .process-timeline::before { content: ''; position: absolute; left: 28px; top: 0; bottom: 0; width: 1px; background: rgba(52,152,219,0.2); }
-  .process-step { display: flex; gap: 2.5rem; margin-bottom: 3rem; position: relative; }
-  .step-marker { width: 56px; height: 56px; flex-shrink: 0; background: var(--navy); border: 1px solid rgba(52,152,219,0.3); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-family: var(--font-heading); font-size: 1.1rem; color: var(--blue); position: relative; z-index: 1; transition: all 0.3s ease; }
-  .process-step:hover .step-marker { background: var(--blue); color: var(--navy); }
-  .step-content h3 { font-family: var(--font-heading); font-size: 1.3rem; font-weight: 600; margin-bottom: 0.5rem; }
-  .step-content p { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; max-width: 600px; }
-
-  /* ===== FAQ ===== */
-  .faq { background: var(--navy-light); }
-  .faq-list { max-width: 800px; margin: 0 auto; }
-  .faq-item { border-bottom: 1px solid rgba(255,255,255,0.06); overflow: hidden; }
-  .faq-question { width: 100%; background: none; border: none; color: white; padding: 1.5rem 0; font-family: var(--font-body); font-size: 1rem; font-weight: 500; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: color 0.3s; }
-  .faq-question:hover { color: var(--blue); }
-  .faq-toggle { font-size: 1.5rem; color: var(--blue); transition: transform 0.3s; flex-shrink: 0; margin-left: 1rem; }
-  .faq-item.open .faq-toggle { transform: rotate(45deg); }
-  .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s ease; }
-  .faq-item.open .faq-answer { max-height: 300px; padding-bottom: 1.5rem; }
-  .faq-answer p { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7; }
-
-  /* ===== CTA SECTION ===== */
-  .cta-section { background: radial-gradient(ellipse at 50% 50%, rgba(196,154,60,0.08) 0%, transparent 60%), var(--navy); text-align: center; padding: 8rem 2rem; }
-  .cta-section h2 { font-family: var(--font-heading); font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 600; margin-bottom: 1.5rem; }
-  .cta-section h2 em { color: var(--blue); font-style: italic; }
-  .cta-section > p { font-family: var(--font-elegant); font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 2.5rem; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.7; }
-  .cta-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-bottom: 3rem; }
-  .cta-contact-row { display: flex; gap: 3rem; justify-content: center; flex-wrap: wrap; }
-  .cta-contact-item { font-size: 0.8rem; color: var(--text-secondary); letter-spacing: 1px; }
-  .cta-contact-item a { color: var(--blue-pale); text-decoration: none; transition: color 0.3s; }
-  .cta-contact-item a:hover { color: var(--gold); }
-
-  /* ===== FOOTER ===== */
-  .footer { background: var(--navy); border-top: 1px solid rgba(196,154,60,0.1); padding: 4rem 2rem 2rem; }
-  .footer-inner { max-width: 1200px; margin: 0 auto; }
-  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
-  .footer-brand p { color: var(--text-secondary); font-size: 0.9rem; line-height: 1.7; margin-top: 1rem; max-width: 300px; }
-  .footer h4 { font-family: var(--font-heading); font-size: 1rem; font-weight: 500; margin-bottom: 1.25rem; color: var(--gold-pale); }
-  .footer-links { list-style: none; }
-  .footer-links li { margin-bottom: 0.6rem; }
-  .footer-links a, .footer-links li { color: var(--text-secondary); font-size: 0.88rem; }
-  .footer-links a:hover { color: var(--gold); }
-  .footer-bottom { border-top: 1px solid rgba(196,154,60,0.1); padding-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
-  .footer-bottom p { font-size: 0.8rem; color: var(--text-secondary); }
-  .footer-domains { font-size: 0.75rem; color: rgba(156,163,175,0.5); }
-
-  /* ===== RESPONSIVE ===== */
-  @media (max-width: 1024px) {
-    .specialties-grid, .tiers-grid { grid-template-columns: 1fr; max-width: 600px; margin: 0 auto; }
-    .comparison-table { grid-template-columns: 1fr; }
-    .credentials-layout { grid-template-columns: 1fr; gap: 3rem; }
-    .footer-grid { grid-template-columns: 1fr 1fr; }
-    .hero h1 { font-size: 2.8rem; }
-  }
-  @media (max-width: 768px) {
-    .nav-links { display: none; }
-    .hamburger { display: flex; }
-    .mobile-menu { display: block; }
-    section { padding: 4rem 1.25rem; }
-    .hero { padding: 6rem 1.25rem 4rem; }
-    .hero h1 { font-size: 2.2rem; }
-    .hero-ctas { flex-direction: column; align-items: center; }
-    .hero-trust { flex-direction: column; align-items: center; gap: 0.75rem; }
-    .comparison-col { padding: 2rem 1.5rem; }
-    .footer-grid { grid-template-columns: 1fr; }
-    .footer-bottom { flex-direction: column; text-align: center; }
-    .cta-actions { flex-direction: column; align-items: center; }
-    .cta-contact-row { flex-direction: column; align-items: center; gap: 1rem; }
-    .process-step { gap: 1.5rem; }
-    .stats-row { grid-template-columns: 1fr 1fr; }
+  @media(max-width:768px){
+    .f-hero{padding:8rem 1.5rem 4rem}
+    .f-hero h1{font-size:2.2rem}
+    .f-hero-ctas{flex-direction:column;align-items:center}
+    .f-hero-trust{flex-direction:column;align-items:center;gap:.75rem}
+    .f-section{padding:4rem 1.25rem}
+    .comp-col{padding:2rem 1.5rem}
+    .f-cta-actions{flex-direction:column;align-items:center}
+    .f-cta-row{flex-direction:column;align-items:center;gap:1rem}
+    .process-step{gap:1.5rem}
+    .impact-grid{grid-template-columns:1fr 1fr}
+    .demo-images{grid-template-columns:1fr}
+    .demo-images .hero-img{aspect-ratio:16/10}
   }
 </style>
 </head>
 <body>
+<a href="#main-content" class="skip-nav">Skip to main content</a>
+<div id="site-header"></div>
 
-<!-- ===== NAV ===== -->
-<nav class="nav" role="navigation" aria-label="Main navigation">
-    <div class="nav-inner">
-        <a href="/" class="nav-brand" aria-label="Brian Lee Westfall — Home">
-            <div class="nav-logo" aria-hidden="true">BLW</div>
-            <span class="nav-brand-text">Brian Lee Westfall</span>
-        </a>
-        <ul class="nav-links">
-            <li><a href="/">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="forensic-visualization.html" class="active">Forensic</a></li>
-            <li><a href="pool-safety.html">Pool Safety</a></li>
-            <li><a href="#contact" class="nav-cta">Free Consultation</a></li>
-        </ul>
-        <button class="hamburger" aria-label="Open menu" aria-expanded="false">
-            <span></span><span></span><span></span>
-        </button>
-    </div>
-</nav>
+<main id="main-content">
 
-<div class="mobile-menu" role="dialog" aria-label="Mobile navigation">
-    <a href="/">Home</a>
-    <a href="about.html">About</a>
-    <a href="forensic-visualization.html">Forensic Visualization</a>
-    <a href="pool-safety.html">Pool Safety</a>
-    <a href="#contact">Free Consultation</a>
-</div>
-<div class="mobile-overlay"></div>
-
-<!-- ===== HERO ===== -->
-<section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-grid"></div>
-  <div class="hero-content">
-    <div class="hero-badge">
-      <span class="hero-badge-dot"></span>
+<!-- HERO -->
+<section class="f-hero">
+  <div class="f-hero-bg"></div>
+  <div class="f-hero-grid"></div>
+  <div class="f-hero-content">
+    <div class="f-hero-badge">
+      <span class="f-hero-badge-dot"></span>
       Litigation Support Services
     </div>
     <h1>Forensic Visualization<br>for <em>High-Value</em><br>Premises Liability Cases</h1>
-    <p class="hero-sub">Licensed Insurance Professional with 20+ years of construction expertise.<br>Photorealistic 3D accident reconstructions that strengthen your case<br>and expedite resolution.</p>
-    <div class="hero-ctas">
-      <a href="#contact" class="btn-primary">Schedule Free Consultation</a>
-      <a href="#case-study" class="btn-ghost">▶ View Case Study</a>
+    <p class="f-hero-sub">Licensed Insurance Professional with 20+ years of construction expertise. Photorealistic 3D accident reconstructions that strengthen your case and expedite resolution.</p>
+    <div class="f-hero-ctas">
+      <a href="tel:9404334333" class="btn-primary">Schedule Free Consultation</a>
+      <a href="#demo" class="btn-ghost">View Hypothetical Demo</a>
     </div>
-    <div class="hero-trust">
+    <div class="f-hero-trust">
       <span><span class="check">✓</span> Licensed Adjuster — TX #2270028</span>
       <span><span class="check">✓</span> Reciprocal: NJ, NY, PA, FL, CA, AZ</span>
       <span><span class="check">✓</span> Nationwide Remote Service</span>
@@ -342,425 +235,407 @@
   </div>
 </section>
 
-<!-- ===== VIDEO CASE STUDY ===== -->
-<section class="case-study" id="case-study">
-  <div class="section-eyebrow reveal">Case Study Demo</div>
-  <h2 class="section-title reveal reveal-delay-1" style="margin: 0 auto 1rem; text-align: center;">Commercial Pool Facility Reconstruction</h2>
-  <p class="section-subtitle reveal reveal-delay-2" style="margin: 0 auto 3rem; text-align: center;">90-second forensic animation demonstrating our ability to recreate complex commercial properties to exact scale, documenting code violations and safety failures.</p>
-
-  <div class="video-frame reveal reveal-delay-3">
-    <div class="video-placeholder">
-      <div class="play-btn"></div>
-      <span class="video-label">90-Second Forensic Animation</span>
+<!-- IMPACT STATS -->
+<section class="f-section impact">
+  <div class="f-inner">
+    <div class="f-eyebrow reveal" style="text-align:center;">Why Visual Evidence Matters</div>
+    <h2 class="f-title reveal" style="text-align:center;margin:0 auto 3rem;">The Numbers Don't Lie</h2>
+    <div class="impact-grid">
+      <div class="impact-card reveal">
+        <div class="impact-num">95%</div>
+        <div class="impact-label"><strong>Message retention</strong> when jurors watch video vs. 10% from text alone</div>
+      </div>
+      <div class="impact-card reveal">
+        <div class="impact-num">50%+</div>
+        <div class="impact-label"><strong>Increased recall</strong> of spoken testimony when paired with visual aids</div>
+      </div>
+      <div class="impact-card reveal">
+        <div class="impact-num">99%</div>
+        <div class="impact-label"><strong>Admittance rate</strong> for properly prepared forensic animations as demonstrative evidence</div>
+      </div>
+      <div class="impact-card reveal">
+        <div class="impact-num">2×</div>
+        <div class="impact-label"><strong>Information retained</strong> by jury members using visual presentations vs. verbal-only</div>
+      </div>
     </div>
-    <!-- Replace with: <iframe src="https://player.vimeo.com/video/YOUR_ID" ...></iframe> -->
+    <p class="impact-source reveal">Sources: Edgar Dale Cone of Experience, American Bar Association, Consumer Behavior Studies, Courtroom Animation Industry Data</p>
   </div>
+</section>
 
-  <div class="case-meta reveal reveal-delay-4">
-    <div class="case-meta-item">
-      <div class="case-meta-label">Location</div>
-      <div class="case-meta-value">Monmouth Beach, NJ</div>
-    </div>
-    <div class="case-meta-item">
-      <div class="case-meta-label">Property</div>
-      <div class="case-meta-value">14-Story Luxury Condominium</div>
-    </div>
-    <div class="case-meta-item">
-      <div class="case-meta-label">Units</div>
-      <div class="case-meta-value">89 Residential</div>
-    </div>
-    <div class="case-meta-item">
-      <div class="case-meta-label">Case Type</div>
-      <div class="case-meta-value">Premises Liability</div>
+<!-- SPECIALTIES -->
+<section class="f-section specialties" id="specialties">
+  <div class="f-inner">
+    <div class="f-eyebrow reveal">Who I Serve</div>
+    <h2 class="f-title reveal">Specialized Litigation Support for<br>Personal Injury Attorneys</h2>
+    <div class="f-line reveal"></div>
+
+    <div class="spec-grid">
+      <div class="spec-card reveal">
+        <span class="spec-icon">🏊</span>
+        <h3>Pool &amp; Aquatic Cases</h3>
+        <ul class="spec-list">
+          <li>Pool drowning &amp; near-drowning incidents</li>
+          <li>Diving board &amp; shallow water accidents</li>
+          <li>Drain entrapment injuries</li>
+          <li>Chemical exposure incidents</li>
+          <li>Slip-and-fall on pool decks</li>
+          <li>Lifeguard negligence</li>
+          <li>Equipment failure analysis</li>
+        </ul>
+        <p class="spec-quote">"Unlike general animation studios, I have 20+ years hands-on experience in pool construction, safety codes, and hydraulic systems. I know how pools fail."</p>
+      </div>
+
+      <div class="spec-card reveal">
+        <span class="spec-icon">🏢</span>
+        <h3>Premises Liability</h3>
+        <ul class="spec-list">
+          <li>Commercial property accidents</li>
+          <li>Condo &amp; HOA pool facilities</li>
+          <li>Hotel &amp; resort incidents</li>
+          <li>Municipal pool facilities</li>
+          <li>Apartment complex liability</li>
+          <li>Airbnb &amp; VRBO rental properties</li>
+          <li>Country club &amp; private facilities</li>
+        </ul>
+        <p class="spec-quote">"As a Licensed Insurance Adjuster, I understand how carriers evaluate claims. I know what they look for, what they deny, and how to withstand scrutiny."</p>
+      </div>
+
+      <div class="spec-card reveal">
+        <span class="spec-icon">🔨</span>
+        <h3>Construction Defects</h3>
+        <ul class="spec-list">
+          <li>Pool construction defect documentation</li>
+          <li>Structural failure analysis</li>
+          <li>Building code violation visualization</li>
+          <li>Contractor negligence</li>
+          <li>Material failure documentation</li>
+          <li>HOA dispute visualization</li>
+          <li>Expert witness collaboration</li>
+        </ul>
+        <p class="spec-quote">"Forensic-grade reconstructions that clearly demonstrate how construction failures directly caused client injuries."</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ===== SPECIALTY AREAS ===== -->
-<section class="specialties" id="specialties">
-  <div class="section-eyebrow reveal">Who I Serve</div>
-  <h2 class="section-title reveal reveal-delay-1">Specialized Litigation Support for<br>Personal Injury Attorneys</h2>
-  <div class="gold-line reveal reveal-delay-2"></div>
+<!-- COMPARISON -->
+<section class="f-section comparison">
+  <div class="f-inner">
+    <div class="f-eyebrow reveal" style="text-align:center;">The Difference</div>
+    <h2 class="f-title reveal" style="text-align:center;margin:0 auto 3rem;">Professional Visualization<br>Changes the Outcome</h2>
 
-  <div class="specialties-grid">
-    <div class="specialty-card reveal reveal-delay-1">
-      <span class="specialty-icon">🏊</span>
-      <h3>Pool & Aquatic Cases</h3>
-      <ul class="specialty-list">
-        <li>Pool drowning & near-drowning incidents</li>
-        <li>Diving board & shallow water accidents</li>
-        <li>Drain entrapment injuries</li>
-        <li>Chemical exposure incidents</li>
-        <li>Slip-and-fall on pool decks</li>
-        <li>Lifeguard negligence</li>
-        <li>Equipment failure analysis</li>
-      </ul>
-      <p class="specialty-quote">"Unlike general animation studios, I have 20+ years hands-on experience in pool construction, safety codes, and hydraulic systems. I know how pools fail."</p>
-    </div>
-
-    <div class="specialty-card reveal reveal-delay-2">
-      <span class="specialty-icon">🏢</span>
-      <h3>Premises Liability</h3>
-      <ul class="specialty-list">
-        <li>Commercial property accidents</li>
-        <li>Condo & HOA pool facilities</li>
-        <li>Hotel & resort incidents</li>
-        <li>Municipal pool facilities</li>
-        <li>Apartment complex liability</li>
-        <li>Airbnb & VRBO rental properties</li>
-        <li>Country club & private facilities</li>
-      </ul>
-      <p class="specialty-quote">"As a Licensed Insurance Adjuster, I understand how carriers evaluate claims. I know what they look for, what they deny, and how to withstand scrutiny."</p>
-    </div>
-
-    <div class="specialty-card reveal reveal-delay-3">
-      <span class="specialty-icon">🔨</span>
-      <h3>Construction Defects</h3>
-      <ul class="specialty-list">
-        <li>Pool construction defect documentation</li>
-        <li>Structural failure analysis</li>
-        <li>Building code violation visualization</li>
-        <li>Contractor negligence</li>
-        <li>Material failure documentation</li>
-        <li>HOA dispute visualization</li>
-        <li>Expert witness collaboration</li>
-      </ul>
-      <p class="specialty-quote">"Forensic-grade reconstructions that clearly demonstrate how construction failures directly caused client injuries."</p>
+    <div class="comp-table reveal">
+      <div class="comp-col without">
+        <div class="comp-header">Without Forensic Animation</div>
+        <div class="comp-item"><span class="ico">✕</span> Jury struggles to understand complex spatial relationships</div>
+        <div class="comp-item"><span class="ico">✕</span> Expert testimony relies on verbal descriptions alone</div>
+        <div class="comp-item"><span class="ico">✕</span> Defense argues "could have happened many ways"</div>
+        <div class="comp-item"><span class="ico">✕</span> Settlement negotiations drag on for months</div>
+        <div class="comp-item"><span class="ico">✕</span> Insurance adjusters low-ball offers with impunity</div>
+      </div>
+      <div class="comp-col with">
+        <div class="comp-header">With Westfall Visualization</div>
+        <div class="comp-item"><span class="ico">✓</span> Clear 3D representation shows exactly what happened</div>
+        <div class="comp-item"><span class="ico">✓</span> Expert can point to visual evidence during testimony</div>
+        <div class="comp-item"><span class="ico">✓</span> Precise reconstruction eliminates alternative theories</div>
+        <div class="comp-item"><span class="ico">✓</span> Visual evidence expedites mediation and settlement</div>
+        <div class="comp-item"><span class="ico">✓</span> Compelling evidence justifies full case value</div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ===== COMPARISON ===== -->
-<section class="comparison">
-  <div class="section-eyebrow reveal" style="text-align: center;">The Difference</div>
-  <h2 class="section-title reveal reveal-delay-1" style="text-align: center; margin: 0 auto 3rem;">Professional Visualization<br>Changes the Outcome</h2>
+<!-- HYPOTHETICAL DEMO -->
+<section class="f-section demo" id="demo">
+  <div class="f-inner">
+    <div class="demo-layout">
+      <div class="reveal">
+        <div class="demo-disclaimer">⚠ Hypothetical Demonstration Only</div>
+        <div class="f-eyebrow">Forensic Capability Preview</div>
+        <h2 class="f-title">Photorealistic Environment<br>Reconstruction</h2>
+        <p style="font-size:.95rem;color:rgba(255,255,255,0.85);line-height:1.7;margin-bottom:1rem;">The images shown here are from an original architectural visualization project — a beachfront condominium development designed and rendered entirely by Brian Lee Westfall using Structure Studios, Lumion, Luminar NEO, and Photoshop.</p>
+        <p style="font-size:.95rem;color:rgba(255,255,255,0.85);line-height:1.7;margin-bottom:1rem;">This 12-story high-rise was modeled floor-by-floor with individual balconies, window variations, and poolside detail to demonstrate the level of environmental accuracy achievable for forensic reconstructions.</p>
+        <p style="font-size:.95rem;color:var(--text-secondary);line-height:1.7;margin-bottom:1.5rem;">Compare these renders against any real-world building to judge the fidelity for yourself. This same precision is applied to forensic accident scene reconstruction — recreating the exact environment so a jury can see what happened, from any angle, at any time of day.</p>
 
-  <div class="comparison-table reveal reveal-delay-2">
-    <div class="comparison-col without">
-      <div class="comparison-header">Without Forensic Animation</div>
-      <div class="comparison-item"><span class="icon">✕</span> Jury struggles to understand complex spatial relationships</div>
-      <div class="comparison-item"><span class="icon">✕</span> Expert testimony relies on verbal descriptions alone</div>
-      <div class="comparison-item"><span class="icon">✕</span> Defense argues "could have happened many ways"</div>
-      <div class="comparison-item"><span class="icon">✕</span> Settlement negotiations drag on for months</div>
-      <div class="comparison-item"><span class="icon">✕</span> Insurance adjusters low-ball offers with impunity</div>
-    </div>
-    <div class="comparison-col with">
-      <div class="comparison-header">With Westfall Visualization</div>
-      <div class="comparison-item"><span class="icon">✓</span> Clear 3D representation shows exactly what happened</div>
-      <div class="comparison-item"><span class="icon">✓</span> Expert can point to visual evidence during testimony</div>
-      <div class="comparison-item"><span class="icon">✓</span> Precise reconstruction eliminates alternative theories</div>
-      <div class="comparison-item"><span class="icon">✓</span> Visual evidence expedites mediation and settlement</div>
-      <div class="comparison-item"><span class="icon">✓</span> Compelling evidence justifies full case value</div>
+        <div class="demo-video-box">
+          <div class="demo-coming">Coming Soon</div>
+          <p>Hypothetical Forensic Reenactment Animation</p>
+          <p style="margin-top:.75rem;font-size:.78rem;color:rgba(156,163,175,0.5);">A 2-minute demonstrative video using this condominium environment as a stage for a completely fictional premises liability scenario. No real events are depicted.</p>
+          <!-- Future: Replace with Vimeo embed -->
+          <!-- <iframe src="https://player.vimeo.com/video/YOUR_ID" width="100%" height="100%" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe> -->
+        </div>
+
+        <p class="demo-note">Disclaimer: This is a hypothetical demonstration created solely to showcase forensic visualization capabilities. No actual incident is depicted or referenced. All scenarios are entirely fictional and for illustrative purposes only.</p>
+      </div>
+
+      <div class="demo-images reveal">
+        <img class="hero-img" src="https://hhqbugfxtblrmzxnxfes.supabase.co/storage/v1/object/public/website-assets/1blw_commercial_condo-05-800w.webp" alt="Beachfront condominium — twin towers with ocean reflection at sunset" loading="lazy">
+        <img src="https://hhqbugfxtblrmzxnxfes.supabase.co/storage/v1/object/public/website-assets/1blw_commercial_condo-01-800w.webp" alt="Aerial courtyard view with pool — photorealistic architectural render" loading="lazy">
+        <img src="https://hhqbugfxtblrmzxnxfes.supabase.co/storage/v1/object/public/website-assets/1blw_commercial_condo-03-800w.webp" alt="Skyline sunset view with illuminated fountains — demonstrating lighting accuracy" loading="lazy">
+        <img src="https://hhqbugfxtblrmzxnxfes.supabase.co/storage/v1/object/public/website-assets/1blw_commercial_condo-02-800w.webp" alt="Pool deck detail — showing environmental accuracy for forensic scene staging" loading="lazy">
+        <img src="https://hhqbugfxtblrmzxnxfes.supabase.co/storage/v1/object/public/website-assets/1blw_commercial_condo-06-800w.webp" alt="LED fountains at dusk — nighttime lighting reconstruction capability" loading="lazy">
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ===== CREDENTIALS ===== -->
-<section class="credentials" id="credentials">
-  <div class="credentials-layout">
-    <div class="credential-visual reveal">
-      <div class="license-card">
-        <div class="license-header">Professional License</div>
-        <div class="license-title">Texas All-Lines Insurance Adjuster</div>
-        <div class="license-number">License #2270028 — Issued 2017 — Current</div>
-        <div class="license-states">
-          <strong>Reciprocal Jurisdictions:</strong><br>
-          New Jersey • New York • Pennsylvania • Florida • California • Arizona<br>
-          + 30 additional states
+<!-- CREDENTIALS -->
+<section class="f-section credentials" id="credentials">
+  <div class="f-inner">
+    <div class="cred-layout">
+      <div class="reveal">
+        <div class="license-card">
+          <div class="license-header">Professional License</div>
+          <div class="license-title">Texas All-Lines Insurance Adjuster</div>
+          <div class="license-number">License #2270028 — Issued 2017 — Current</div>
+          <div class="license-states">
+            <strong>Reciprocal Jurisdictions:</strong><br>
+            New Jersey • New York • Pennsylvania • Florida • California • Arizona<br>
+            + 30 additional states
+          </div>
+        </div>
+        <div class="stats-row">
+          <div class="mini-stat">
+            <div class="mini-stat-num">20+</div>
+            <div class="mini-stat-label">Years Experience</div>
+          </div>
+          <div class="mini-stat">
+            <div class="mini-stat-num">150+</div>
+            <div class="mini-stat-label">Pool Inspections</div>
+          </div>
+          <div class="mini-stat">
+            <div class="mini-stat-num">Dual</div>
+            <div class="mini-stat-label">RTX 4090 GPUs</div>
+          </div>
+          <div class="mini-stat">
+            <div class="mini-stat-num">$1M</div>
+            <div class="mini-stat-label">E&amp;O Coverage</div>
+          </div>
         </div>
       </div>
-      <div class="stats-row">
-        <div class="mini-stat">
-          <div class="mini-stat-number">20+</div>
-          <div class="mini-stat-label">Years Experience</div>
-        </div>
-        <div class="mini-stat">
-          <div class="mini-stat-number">25+</div>
-          <div class="mini-stat-label">Cases Supported</div>
-        </div>
-        <div class="mini-stat">
-          <div class="mini-stat-number">150+</div>
-          <div class="mini-stat-label">Inspections</div>
-        </div>
-        <div class="mini-stat">
-          <div class="mini-stat-number">$1M</div>
-          <div class="mini-stat-label">E&O Coverage</div>
-        </div>
-      </div>
-    </div>
 
-    <div class="credentials-text reveal reveal-delay-2">
-      <div class="section-eyebrow">Unique Qualifications</div>
-      <h2 class="section-title">Licensed Professional +<br>Technical Expert</h2>
+      <div class="cred-text reveal">
+        <div class="f-eyebrow">Unique Qualifications</div>
+        <h2 class="f-title">The Expert Who Builds<br>What Others Only Animate</h2>
 
-      <p>I'm not a graphic designer who learned to make pool animations. I'm a pool construction professional who learned forensic visualization.</p>
+        <p>I'm not a graphic designer who learned to make pool animations. I'm a pool construction professional who learned forensic visualization. When I create a reconstruction, I'm not guessing how a pool drain works or estimating code requirements — I know them because I've built, inspected, and repaired pools across 20+ years.</p>
 
-      <div class="bold-statement">"My animations don't just look good. They hold up in court."</div>
+        <div class="cred-bold">"My animations don't just look good. They hold up in court."</div>
 
-      <h3>Why This Matters for Your Case</h3>
-      <p>When I create a reconstruction, I'm not guessing how a pool drain works or estimating code requirements. I know them because I've built, inspected, and repaired thousands of pools across 20+ years.</p>
+        <h3>Why This Matters for Your Case</h3>
+        <p>When opposing counsel questions the accuracy of my work, I defend it with the authority of someone who has secured building permits in 12+ jurisdictions, consulted on construction defect cases, and managed projects from design through final inspection. Combined with my insurance adjuster license, I understand how carriers evaluate claims from the inside — what they look for, what they deny, and how to withstand their scrutiny.</p>
 
-      <p>When opposing counsel questions the accuracy of my work, I defend it with the authority of someone who has secured building permits in 12+ jurisdictions, consulted on construction defect cases, and managed projects from $500K to $5M.</p>
+        <h3>Technical Capabilities</h3>
+        <p>Dual NVIDIA RTX 4090 GPUs deliver cinema-quality 4K rendering with real-time ray tracing. Professional video production through DaVinci Resolve Studio. To-scale architectural modeling from as-built drawings, survey data, and site photography.</p>
 
-      <h3>Technical Capabilities</h3>
-      <p>Dual NVIDIA RTX 4090 GPUs deliver cinema-quality 4K rendering with real-time ray tracing. Professional video production through DaVinci Resolve Studio. To-scale architectural modeling from as-built drawings and survey data.</p>
-
-      <h3>Daubert Compliance</h3>
-      <p>All work product created following Federal Rules of Evidence 702 and Daubert v. Merrell Dow Pharmaceuticals standards. Comprehensive technical documentation, methodology reports, and source material records accompany every deliverable.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ===== SERVICE TIERS ===== -->
-<section class="pricing" id="services">
-  <div class="section-eyebrow reveal" style="text-align: center;">Services & Pricing</div>
-  <h2 class="section-title reveal reveal-delay-1" style="text-align: center; margin: 0 auto 1rem;">Transparent Pricing for<br>Litigation Support</h2>
-  <p class="section-subtitle reveal reveal-delay-2" style="text-align: center; margin: 0 auto 4rem;">50% retainer upon engagement. Remainder due upon delivery of draft materials.</p>
-
-  <div class="tiers-grid">
-    <div class="tier-card reveal reveal-delay-1">
-      <div class="tier-number">Tier 1</div>
-      <div class="tier-name">Case Assessment & Consultation</div>
-      <div class="tier-price">$2,500</div>
-      <div class="tier-timeline">5–7 Business Days</div>
-      <ul class="tier-features">
-        <li>Initial case review (2–4 hours)</li>
-        <li>Evidence analysis — photos, reports, depositions</li>
-        <li>Feasibility assessment for visualization</li>
-        <li>Preliminary concept sketches</li>
-        <li>Written assessment report (15–20 pages)</li>
-        <li>60-minute video consultation</li>
-        <li>Cost estimate for full production</li>
-      </ul>
-      <p class="tier-best">Best for determining if forensic animation will strengthen your case before committing to full production.</p>
-    </div>
-
-    <div class="tier-card featured reveal reveal-delay-2">
-      <div class="tier-number">Tier 2</div>
-      <div class="tier-name">Static Demonstrative Exhibits</div>
-      <div class="tier-price">$4,000 – $8,000</div>
-      <div class="tier-timeline">2–3 Weeks</div>
-      <ul class="tier-features">
-        <li>Everything in Tier 1</li>
-        <li>Detailed 3D scene reconstruction</li>
-        <li>10–15 high-resolution 4K images</li>
-        <li>Annotated diagrams with measurements</li>
-        <li>Multiple camera angles</li>
-        <li>Code violation documentation</li>
-        <li>Print-ready formats (24"×36")</li>
-        <li>PowerPoint presentation file</li>
-      </ul>
-      <p class="tier-best">Best for mediation, arbitration, or cases where visual evidence is critical but full animation isn't needed.</p>
-    </div>
-
-    <div class="tier-card reveal reveal-delay-3">
-      <div class="tier-number">Tier 3</div>
-      <div class="tier-name">Full Forensic Animation</div>
-      <div class="tier-price">$10,000 – $25,000</div>
-      <div class="tier-timeline">4–6 Weeks</div>
-      <ul class="tier-features">
-        <li>Everything in Tiers 1 & 2</li>
-        <li>Complete animated sequence (60–180 sec)</li>
-        <li>Professional text overlays & annotations</li>
-        <li>Expert witness collaboration</li>
-        <li>Three revision rounds</li>
-        <li>Courtroom-ready formats (4K, 1080p, DVD)</li>
-        <li>Technical documentation package</li>
-        <li>Expert affidavit of accuracy</li>
-      </ul>
-      <p class="tier-best">Best for trial preparation, complex multi-factor cases, and maximum settlement leverage.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ===== PROCESS ===== -->
-<section class="process" id="process">
-  <div class="section-eyebrow reveal" style="text-align: center;">How It Works</div>
-  <h2 class="section-title reveal reveal-delay-1" style="text-align: center; margin: 0 auto 4rem;">From Evidence to<br>Courtroom-Ready Exhibits</h2>
-
-  <div class="process-timeline">
-    <div class="process-step reveal">
-      <div class="step-marker">01</div>
-      <div class="step-content">
-        <h3>Free Case Consultation</h3>
-        <p>30-minute call to discuss your case, evaluate visualization potential, and determine the right service tier. No obligation.</p>
-      </div>
-    </div>
-    <div class="process-step reveal reveal-delay-1">
-      <div class="step-marker">02</div>
-      <div class="step-content">
-        <h3>Evidence Review & Assessment</h3>
-        <p>Analysis of photos, depositions, architectural plans, expert reports, and all available documentation. Written feasibility report delivered.</p>
-      </div>
-    </div>
-    <div class="process-step reveal reveal-delay-2">
-      <div class="step-marker">03</div>
-      <div class="step-content">
-        <h3>3D Scene Reconstruction</h3>
-        <p>To-scale digital replica built from source data. Expert witness collaboration ensures technical accuracy of every detail.</p>
-      </div>
-    </div>
-    <div class="process-step reveal reveal-delay-3">
-      <div class="step-marker">04</div>
-      <div class="step-content">
-        <h3>Review & Refinement</h3>
-        <p>Draft delivery with video review session. Multiple revision rounds included. Your expert approves technical accuracy before final render.</p>
-      </div>
-    </div>
-    <div class="process-step reveal reveal-delay-4">
-      <div class="step-marker">05</div>
-      <div class="step-content">
-        <h3>Final Delivery & Trial Support</h3>
-        <p>Courtroom-ready files in multiple formats. Technical documentation package. Remote support available through trial preparation.</p>
+        <h3>Daubert Compliance</h3>
+        <p>All work product follows Federal Rules of Evidence 702 and Daubert v. Merrell Dow Pharmaceuticals standards. Comprehensive technical documentation, methodology reports, and source material records accompany every deliverable. Forensic animations are prepared as demonstrative evidence — the same evidentiary standard as traditional charts, diagrams, and models — requiring authentication by your expert witness as a fair and accurate visual representation of their testimony.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== FAQ ===== -->
-<section class="faq" id="faq">
-  <div class="section-eyebrow reveal" style="text-align: center;">Questions</div>
-  <h2 class="section-title reveal reveal-delay-1" style="text-align: center; margin: 0 auto 3rem;">Frequently Asked</h2>
+<!-- SERVICE TIERS -->
+<section class="f-section pricing" id="services">
+  <div class="f-inner">
+    <div class="f-eyebrow reveal" style="text-align:center;">Services &amp; Investment</div>
+    <h2 class="f-title reveal" style="text-align:center;margin:0 auto 1rem;">Transparent Pricing for<br>Litigation Support</h2>
+    <p class="f-subtitle reveal" style="text-align:center;margin:0 auto 4rem;">50% retainer upon engagement. Remainder due upon delivery of draft materials.</p>
 
-  <div class="faq-list">
-    <div class="faq-item reveal">
-      <button class="faq-question">
-        How long does a typical project take?
-        <span class="faq-toggle">+</span>
-      </button>
-      <div class="faq-answer">
-        <p>Most projects complete in 4–6 weeks from contract signing to final delivery. Rush service (2–3 weeks) is available for urgent trial dates at a 50% premium. Simple static exhibits can be delivered in as little as 2 weeks.</p>
+    <div class="tiers-grid">
+      <div class="tier-card reveal">
+        <div class="tier-num">Tier 1</div>
+        <div class="tier-name">Case Assessment &amp; Consultation</div>
+        <div class="tier-price">$2,500</div>
+        <div class="tier-timeline">5–7 Business Days</div>
+        <ul class="tier-features">
+          <li>Initial case review (2–4 hours)</li>
+          <li>Evidence analysis — photos, reports, depositions</li>
+          <li>Feasibility assessment for visualization</li>
+          <li>Preliminary concept sketches</li>
+          <li>Written assessment report (15–20 pages)</li>
+          <li>60-minute video consultation</li>
+          <li>Cost estimate for full production</li>
+        </ul>
+        <p class="tier-best">Best for determining if forensic animation will strengthen your case before committing to full production.</p>
       </div>
-    </div>
-    <div class="faq-item reveal reveal-delay-1">
-      <button class="faq-question">
-        What if the animation gets excluded from evidence?
-        <span class="faq-toggle">+</span>
-      </button>
-      <div class="faq-answer">
-        <p>All animations are created following Daubert standards. However, even if excluded as direct evidence, they remain valuable for mediation, expert witness preparation, and internal case evaluation. Admissibility is ultimately the court's decision based on your legal strategy.</p>
+
+      <div class="tier-card featured reveal">
+        <div class="tier-num">Tier 2</div>
+        <div class="tier-name">Static Demonstrative Exhibits</div>
+        <div class="tier-price">$4,000 – $8,000</div>
+        <div class="tier-timeline">2–3 Weeks</div>
+        <ul class="tier-features">
+          <li>Everything in Tier 1</li>
+          <li>Detailed 3D scene reconstruction</li>
+          <li>10–15 high-resolution 4K images</li>
+          <li>Annotated diagrams with measurements</li>
+          <li>Multiple camera angles</li>
+          <li>Code violation documentation</li>
+          <li>Print-ready formats (24"×36")</li>
+          <li>PowerPoint presentation file</li>
+        </ul>
+        <p class="tier-best">Best for mediation, arbitration, or cases where visual evidence is critical but full animation isn't needed.</p>
       </div>
-    </div>
-    <div class="faq-item reveal reveal-delay-2">
-      <button class="faq-question">
-        Can you testify as an expert witness?
-        <span class="faq-toggle">+</span>
-      </button>
-      <div class="faq-answer">
-        <p>I can testify to the accuracy and methodology of the animation itself. I typically work alongside your retained expert witness — accident reconstructionist, engineer, or pool safety expert — rather than providing independent opinions on liability.</p>
-      </div>
-    </div>
-    <div class="faq-item reveal reveal-delay-3">
-      <button class="faq-question">
-        What makes you different from other forensic animation companies?
-        <span class="faq-toggle">+</span>
-      </button>
-      <div class="faq-answer">
-        <p>Three key differences: I have 20+ years hands-on pool construction experience, not just animation skills. I'm a licensed insurance adjuster, so I understand claims from the carrier's perspective. And I work directly with you — no junior animators — ensuring expert-level quality throughout.</p>
-      </div>
-    </div>
-    <div class="faq-item reveal reveal-delay-4">
-      <button class="faq-question">
-        Do you work on a contingency basis?
-        <span class="faq-toggle">+</span>
-      </button>
-      <div class="faq-answer">
-        <p>No. Like other expert witnesses and consultants, I work on a flat-fee or hourly basis. This preserves credibility as an independent expert and ensures ethical compliance.</p>
-      </div>
-    </div>
-    <div class="faq-item reveal reveal-delay-5">
-      <button class="faq-question">
-        How is confidential case information handled?
-        <span class="faq-toggle">+</span>
-      </button>
-      <div class="faq-answer">
-        <p>All case materials are stored on encrypted drives, transmitted via secure channels, and protected by strict confidentiality agreements. Professional liability insurance ($1M E&O) is maintained and attorney work-product privilege guidelines are followed.</p>
+
+      <div class="tier-card reveal">
+        <div class="tier-num">Tier 3</div>
+        <div class="tier-name">Full Forensic Animation</div>
+        <div class="tier-price">$10,000 – $25,000</div>
+        <div class="tier-timeline">4–6 Weeks</div>
+        <ul class="tier-features">
+          <li>Everything in Tiers 1 &amp; 2</li>
+          <li>Complete animated sequence (60–180 sec)</li>
+          <li>Professional text overlays &amp; annotations</li>
+          <li>Expert witness collaboration</li>
+          <li>Three revision rounds</li>
+          <li>Courtroom-ready formats (4K, 1080p)</li>
+          <li>Technical documentation package</li>
+          <li>Expert affidavit of accuracy</li>
+        </ul>
+        <p class="tier-best">Best for trial preparation, complex multi-factor cases, and maximum settlement leverage.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== CTA ===== -->
-<section class="cta-section" id="contact">
+<!-- PROCESS -->
+<section class="f-section process" id="process">
+  <div class="f-inner">
+    <div class="f-eyebrow reveal" style="text-align:center;">How It Works</div>
+    <h2 class="f-title reveal" style="text-align:center;margin:0 auto 4rem;">From Evidence to<br>Courtroom-Ready Exhibits</h2>
+
+    <div class="process-timeline">
+      <div class="process-step reveal">
+        <div class="step-marker">01</div>
+        <div class="step-content">
+          <h3>Free Case Consultation</h3>
+          <p>30-minute call to discuss your case, evaluate visualization potential, and determine the right service tier. No obligation.</p>
+        </div>
+      </div>
+      <div class="process-step reveal">
+        <div class="step-marker">02</div>
+        <div class="step-content">
+          <h3>Evidence Review &amp; Assessment</h3>
+          <p>Analysis of photos, depositions, architectural plans, expert reports, and all available documentation. Written feasibility report delivered.</p>
+        </div>
+      </div>
+      <div class="process-step reveal">
+        <div class="step-marker">03</div>
+        <div class="step-content">
+          <h3>3D Scene Reconstruction</h3>
+          <p>To-scale digital replica built from source data. Expert witness collaboration ensures technical accuracy of every detail.</p>
+        </div>
+      </div>
+      <div class="process-step reveal">
+        <div class="step-marker">04</div>
+        <div class="step-content">
+          <h3>Review &amp; Refinement</h3>
+          <p>Draft delivery with video review session. Multiple revision rounds included. Your expert approves technical accuracy before final render.</p>
+        </div>
+      </div>
+      <div class="process-step reveal">
+        <div class="step-marker">05</div>
+        <div class="step-content">
+          <h3>Final Delivery &amp; Trial Support</h3>
+          <p>Courtroom-ready files in multiple formats. Technical documentation package. Remote support available through trial preparation.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="f-section faq" id="faq">
+  <div class="f-inner">
+    <div class="f-eyebrow reveal" style="text-align:center;">Questions</div>
+    <h2 class="f-title reveal" style="text-align:center;margin:0 auto 3rem;">Frequently Asked</h2>
+
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          What's the difference between a forensic animation and a simulation?
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-a">
+          <p>An animation is a demonstrative aid — it visually illustrates witness testimony or expert opinions for the jury. A simulation uses mathematical models to predict outcomes. Animations have a lower evidentiary bar and are admissible in virtually all jurisdictions as demonstrative evidence, similar to charts and diagrams. All of my work is prepared as animation, not simulation, which simplifies admissibility.</p>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          How long does a typical project take?
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Most projects complete in 4–6 weeks from contract signing to final delivery. Rush service (2–3 weeks) is available for urgent trial dates at a 50% premium. Simple static exhibits can be delivered in as little as 2 weeks.</p>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          Can you testify as an expert witness?
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-a">
+          <p>I can testify to the accuracy and methodology of the animation itself. I typically work alongside your retained expert witness — accident reconstructionist, engineer, or pool safety expert — rather than providing independent opinions on liability.</p>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          What makes you different from other forensic animation companies?
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Three key differences: I have 20+ years hands-on pool construction experience, not just animation skills. I'm a licensed insurance adjuster, so I understand claims from the carrier's perspective. And I work directly with you — no junior animators — ensuring expert-level quality throughout.</p>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          Will the animation be admissible in court?
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-a">
+          <p>Forensic animations prepared as demonstrative evidence have an industry-wide admittance rate above 99% when properly prepared. All animations follow Daubert standards with comprehensive documentation. Even in cases where an animation is challenged, it remains valuable for mediation, expert preparation, and internal case evaluation. Admissibility is ultimately the court's decision based on your legal strategy.</p>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          How is confidential case information handled?
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-a">
+          <p>All case materials are stored on encrypted drives, transmitted via secure channels, and protected by strict confidentiality agreements. Professional liability insurance ($1M E&amp;O) is maintained and attorney work-product privilege guidelines are followed.</p>
+        </div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" onclick="this.parentElement.classList.toggle('open')">
+          Do you work on a contingency basis?
+          <span class="faq-toggle">+</span>
+        </button>
+        <div class="faq-a">
+          <p>No. Like other expert witnesses and consultants, I work on a flat-fee or hourly basis. This preserves credibility as an independent expert and ensures ethical compliance.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="f-cta" id="contact">
   <h2 class="reveal">Ready to Strengthen<br>Your <em>Case</em>?</h2>
-  <p class="reveal reveal-delay-1">Schedule a free 30-minute consultation to discuss your case<br>and see how forensic visualization can accelerate resolution.</p>
-  <div class="cta-actions reveal reveal-delay-2">
-    <a href="/cdn-cgi/l/email-protection#480a3a212926042d2d1f2d3b3c2e292424082f25292124662b2725773b3d2a222d2b3c750e273a2d263b212b6d7a781e213b3d29242132293c2127266d7a780b27263b3d243c293c212726" class="btn-primary">Schedule Free Consultation</a>
+  <p class="reveal">Schedule a free 30-minute consultation to discuss your case and see how forensic visualization can accelerate resolution.</p>
+  <div class="f-cta-actions reveal">
+    <a href="mailto:brianleewestfall@gmail.com?subject=Forensic%20Visualization%20Inquiry" class="btn-primary">Schedule Free Consultation</a>
     <a href="tel:9404334333" class="btn-ghost">Call (940) 433-4333</a>
   </div>
-  <div class="cta-contact-row reveal reveal-delay-3">
-    <div class="cta-contact-item">✉ <a href="/cdn-cgi/l/email-protection#4406362d252a0821211321373022252828042329252d286a272b29"><span class="__cf_email__" data-cfemail="2567574c444b6940407240565143444949654248444c490b464a48">[email&#160;protected]</span></a></div>
-    <div class="cta-contact-item">☎ <a href="tel:9404334333">(940) 433-4333</a></div>
-    <div class="cta-contact-item">◉ Fort Worth, TX — Serving Nationwide</div>
+  <div class="f-cta-row reveal">
+    <div class="f-cta-item">✉ <a href="mailto:brianleewestfall@gmail.com">brianleewestfall@gmail.com</a></div>
+    <div class="f-cta-item">☎ <a href="tel:9404334333">(940) 433-4333</a></div>
+    <div class="f-cta-item">◉ Fort Worth, TX — Serving Nationwide</div>
   </div>
 </section>
 
-<!-- ===== FOOTER ===== -->
-<footer class="footer" role="contentinfo">
-    <div class="footer-inner">
-        <div class="footer-grid">
-            <div class="footer-brand">
-                <a href="/" class="nav-brand"><div class="nav-logo" aria-hidden="true">BLW</div><span class="nav-brand-text">Brian Lee Westfall</span></a>
-                <p>Forensic Visualization Specialist & Licensed Insurance Professional. 20+ years of construction expertise powering court-admissible demonstrative evidence for personal injury attorneys nationwide.</p>
-            </div>
-            <div><h4>Services</h4><ul class="footer-links"><li><a href="/">Pool Design</a></li><li><a href="#services">Forensic Visualization</a></li><li><a href="#case-study">Case Studies</a></li><li><a href="pool-safety.html">Pool Safety</a></li></ul></div>
-            <div><h4>Forensic</h4><ul class="footer-links"><li><a href="#specialties">Pool & Aquatic Cases</a></li><li><a href="#specialties">Premises Liability</a></li><li><a href="#specialties">Construction Defects</a></li><li><a href="#faq">FAQ</a></li></ul></div>
-            <div><h4>Contact</h4><ul class="footer-links"><li><a href="tel:9404334333">(940) 433-4333</a></li><li><a href="/cdn-cgi/l/email-protection#7436061d151a3811112311070012151818341319151d185a171b19">Email Us</a></li><li>Fort Worth, TX</li><li>Serving Nationwide</li></ul></div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Brian Lee Westfall. All rights reserved.</p>
-            <p>Licensed Insurance Professional — TX #2270028</p>
-        </div>
-    </div>
-</footer>
-
-<!-- ===== JAVASCRIPT ===== -->
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-  // Nav scroll effect
-  const nav = document.querySelector('.nav');
-  window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 50);
-  });
-
-  // Hamburger menu
-  const hamburger = document.querySelector('.hamburger');
-  const mobileMenu = document.querySelector('.mobile-menu');
-  const mobileOverlay = document.querySelector('.mobile-overlay');
-
-  hamburger.addEventListener('click', () => {
-    const isOpen = mobileMenu.classList.contains('open');
-    hamburger.classList.toggle('active');
-    mobileMenu.classList.toggle('open');
-    mobileOverlay.classList.toggle('open');
-    hamburger.setAttribute('aria-expanded', !isOpen);
-    document.body.style.overflow = isOpen ? '' : 'hidden';
-  });
-
-  mobileOverlay.addEventListener('click', () => {
-    hamburger.classList.remove('active');
-    mobileMenu.classList.remove('open');
-    mobileOverlay.classList.remove('open');
-    hamburger.setAttribute('aria-expanded', 'false');
-    document.body.style.overflow = '';
-  });
-
-  document.querySelectorAll('.mobile-menu a').forEach(link => {
-    link.addEventListener('click', () => {
-      hamburger.classList.remove('active');
-      mobileMenu.classList.remove('open');
-      mobileOverlay.classList.remove('open');
-      hamburger.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
-    });
-  });
-
-  // Scroll reveal
-  const revealElements = document.querySelectorAll('.reveal');
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-  revealElements.forEach(el => revealObserver.observe(e
+</main>
+<div id="site-footer"></div>
+<script src="js/layout.js"></script>
+</body>
+</html>
